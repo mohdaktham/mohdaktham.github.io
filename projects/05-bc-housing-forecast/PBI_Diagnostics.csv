@@ -1,0 +1,25 @@
+Regional_District,Target,Winning_Model,OOT_WAPE,Naive_WAPE,Skill_vs_Naive_Pct,OOT_MASE,OOT_R2_vs_Naive,Beats_Naive,Intermittent_Data,Top_Features
+British Columbia (Total),Total,Pooled Ridge v13,0.1110370738637141,0.2069961237268718,46.4,0.7669491357987865,0.7273741441561263,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Capital,Total,Pooled Ridge v13,0.2709478005748973,0.3050186356938545,11.2,0.8126408930510748,0.2931037102661654,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Central Okanagan,Total,Pooled Ridge v13,0.3252916346461335,0.5022286821705426,35.2,1.7021217743937622,0.4594618776156187,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Fraser Valley,Total,Pooled Ridge v13,0.2649594841803568,0.3112480739599384,14.9,1.0654928379328497,0.225345237822464,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Fraser-Fort George,Total,Pooled Ridge v13,0.9999999996061552,1.0,0.0,3.358606304651958,1.2286146544582264e-09,True,True,ys_lag1 | ucs_lag6 | ys_lag3
+Metro Vancouver,Total,Pooled Ridge v13,0.0864014731980298,0.233781734894674,63.0,0.4869485892716103,0.8472242132655088,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Nanaimo,Total,Pooled Ridge v13,0.9767984435648968,0.9833420093701198,0.7,1.2393856077200571,0.2007412771448851,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Thompson-Nicola,Total,Pooled Ridge v13,0.8144280879982022,0.8717948717948717,6.6,0.8784842297508698,0.1300042950470871,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+British Columbia (Total),Multi,Pooled Ridge v13,0.11937279410367,0.2458259877631442,51.4,0.7470911729630486,0.7652448816690304,True,False,ucs_lag12 | ys_lag1 | ucs_lag6
+Capital,Multi,Pooled Ridge v13,0.2969671685109524,0.3265746738008072,9.1,0.8218988071697274,0.2531168461609834,True,False,ucs_lag12 | ys_lag1 | ucs_lag6
+Central Okanagan,Multi,Pooled Ridge v13,0.363654725363975,0.5616629165327331,35.3,1.8374444349039607,0.4922905704905949,True,False,ucs_lag12 | ys_lag1 | ucs_lag6
+Fraser Valley,Multi,Pooled Ridge v13,0.3429351643558699,0.3584628307433851,4.3,1.1353487460937883,0.0778403489362228,True,False,ucs_lag12 | ys_lag1 | ucs_lag6
+Fraser-Fort George,Multi,Pooled Ridge v13,0.9999999990795918,1.0,0.0,2.6715165056552723,1.8033112780813095e-09,True,True,ucs_lag12 | ys_lag1 | ucs_lag6
+Metro Vancouver,Multi,Pooled Ridge v13,0.0935836202351919,0.2750142473337132,66.0,0.4824350296899973,0.8524837143894033,True,False,ucs_lag12 | ys_lag1 | ucs_lag6
+Nanaimo,Multi,Pooled Ridge v13,1.3226762442404845,1.276052449965493,-3.7,1.214548718570635,0.0969393440874084,False,False,ucs_lag12 | ys_lag1 | ucs_lag6
+Thompson-Nicola,Multi,Pooled Ridge v13,0.9807382828210596,1.0999131190269331,10.8,0.9984121733793608,0.2231665118626208,True,False,ucs_lag12 | ys_lag1 | ucs_lag6
+British Columbia (Total),Single,Pooled Ridge v13,0.1316982748885203,0.2212178065836602,40.5,0.9747792149867696,0.6237353442880236,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Capital,Single,Pooled Ridge v13,0.3353334512153251,0.4434389140271494,24.4,0.6253898119711971,0.3076760911102301,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Central Okanagan,Single,Pooled Ridge v13,0.1560439074325417,0.6616008105369808,76.4,0.2357227268198487,0.939925612184246,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Fraser Valley,Single,Pooled Ridge v13,0.267274335532032,0.3141797961075069,14.9,1.001785525103127,0.3833359521456063,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Fraser-Fort George,Single,Pooled Ridge v13,1.0000000005892955,1.0,-0.0,5.408229918275222,1.494004586710673e-09,False,True,ys_lag1 | ucs_lag6 | ys_lag3
+Metro Vancouver,Single,Pooled Ridge v13,0.1798946702130248,0.2715222348916761,33.7,0.8907920643772966,0.3897506671740451,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Nanaimo,Single,Pooled Ridge v13,0.1859630998953556,0.3983050847457627,53.3,0.2581605386782583,0.7879925212104123,True,False,ys_lag1 | ucs_lag6 | ys_lag3
+Thompson-Nicola,Single,Pooled Ridge v13,0.2932937138588926,0.3241106719367588,9.5,0.1424247785149709,0.2752287654763929,True,False,ys_lag1 | ucs_lag6 | ys_lag3

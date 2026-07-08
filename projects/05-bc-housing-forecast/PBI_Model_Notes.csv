@@ -1,0 +1,13 @@
+Item,Value
+Model,Pooled Ridge v13
+Approach,One pooled cross-district Ridge per target type on level-scaled units; 8 features; damped recursion; clipped bias correction
+Targets,"3-month-smoothed CMHC completions: Total / Multi / Single, 7 CMHC districts + BC total"
+Training data,"2020-01 to 2025-12-01, 24 series"
+Holdout,"Out-of-time, last 12 months (2025-01-01 onward), never used in fitting or selection"
+Headline skill,Volume-weighted OOT WAPE 15.1% vs seasonal-naive 27.5%; 22/24 series beat naive
+Prediction intervals,Empirical (conformal-style) from 8 rolling-origin backtests; pooled residual quantiles by target and horizon bucket; widths grow ~sqrt(h) beyond 12m
+Realized coverage,95% band -> 98% of 12-month unseen holdout actuals inside (after conformal calibration); 80% band -> 83% of 12-month unseen holdout actuals inside (after conformal calibration); 50% band -> 52% of 12-month unseen holdout actuals inside (after conformal calibration)
+Scenarios,"Baseline: 5y mortgage rate flat at last value. Downside/Upside: +/-100bp phased over 6 months, flowing through the rate_d12 feature"
+Driver assumption,Under-construction stock held flat over forecast horizon; economic drivers per scenario
+Known limits,Fraser-Fort George (all) and Nanaimo Multi are burst-reported/intermittent; monthly point forecasts unreliable there — use intervals and annual sums. Regime changes (policy shocks) not forecastable.
+Retraining,Re-run script when new CMHC months land; quarterly recommended

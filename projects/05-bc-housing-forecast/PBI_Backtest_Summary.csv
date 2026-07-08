@@ -1,0 +1,25 @@
+Regional_District,Target_Type,Actual_Total,Model_Total,Naive_Total,Model_WAPE,Naive_WAPE,Winner
+British Columbia (Total),Multi,38572.2,36793.9,29090.1,0.119,0.246,Model
+British Columbia (Total),Single,3908.8,4157.2,4695.3,0.132,0.221,Model
+British Columbia (Total),Total,42480.6,40983.6,33785.4,0.111,0.207,Model
+Capital,Multi,3551.0,3613.6,3994.7,0.297,0.327,Model
+Capital,Single,294.7,391.0,418.6,0.335,0.443,Model
+Capital,Total,3845.7,3948.1,4413.4,0.271,0.305,Model
+Central Okanagan,Multi,3110.9,2287.7,1612.4,0.364,0.562,Model
+Central Okanagan,Single,329.0,379.2,540.7,0.156,0.662,Model
+Central Okanagan,Total,3440.1,2609.0,2152.9,0.325,0.502,Model
+Fraser Valley,Multi,1587.3,1987.7,1432.5,0.343,0.358,Model
+Fraser Valley,Single,359.8,456.0,471.9,0.267,0.313,Model
+Fraser Valley,Total,1947.0,2248.6,1904.4,0.265,0.311,Model
+Fraser-Fort George,Multi,795.6,0.0,0.0,1.0,1.0,Naive
+Fraser-Fort George,Single,344.9,0.0,0.0,1.0,1.0,Naive
+Fraser-Fort George,Total,1140.7,0.0,0.0,1.0,1.0,Naive
+Metro Vancouver,Multi,28660.2,27237.3,20778.4,0.094,0.275,Model
+Metro Vancouver,Single,2338.6,2757.8,2973.6,0.18,0.272,Model
+Metro Vancouver,Total,30999.0,30444.9,23752.0,0.086,0.234,Model
+Nanaimo,Multi,483.09999999999997,964.9,990.8,1.322,1.276,Naive
+Nanaimo,Single,157.4,155.9,190.0,0.185,0.399,Model
+Nanaimo,Total,640.3,1092.5,1180.4,0.977,0.983,Model
+Thompson-Nicola,Multi,383.7,700.8000000000001,281.7,0.981,1.1,Model
+Thompson-Nicola,Single,84.4,61.9,100.4,0.293,0.322,Model
+Thompson-Nicola,Total,468.1,822.1999999999999,382.0,0.814,0.872,Model

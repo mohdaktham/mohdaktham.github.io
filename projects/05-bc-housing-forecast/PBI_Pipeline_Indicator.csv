@@ -1,0 +1,25 @@
+Regional_District,Target_Type,UC_Current_3mAvg,Completions_Trailing_12m,Months_Of_Pipeline,Hist_18m_Conversion_Ratio,Implied_Next_18m_Completions,Model_Next_18m_Completions
+British Columbia (Total),Total,83068.0,42481.0,23.5,0.77,63576.0,68978.0
+British Columbia (Total),Multi,78980.0,38572.0,24.6,0.7,55463.0,60596.0
+British Columbia (Total),Single,4089.0,3909.0,12.6,1.33,5432.0,5283.0
+Capital,Total,8855.0,3846.0,27.6,0.89,7925.0,7323.0
+Capital,Multi,8517.0,3551.0,28.8,0.84,7184.0,7133.0
+Capital,Single,338.0,295.0,13.8,1.45,490.0,420.0
+Central Okanagan,Total,6070.0,3440.0,21.2,0.99,6033.0,5815.0
+Central Okanagan,Multi,5735.0,3111.0,22.1,0.9,5185.0,4475.0
+Central Okanagan,Single,336.0,329.0,12.2,1.32,442.0,506.0
+Fraser Valley,Total,4087.0,1947.0,25.2,1.01,4138.0,3835.0
+Fraser Valley,Multi,3721.0,1587.0,28.1,0.91,3372.0,3662.0
+Fraser Valley,Single,366.0,360.0,12.2,1.53,561.0,534.0
+Fraser-Fort George,Total,582.0,1141.0,6.1,1.07,625.0,440.0
+Fraser-Fort George,Multi,499.0,796.0,7.5,0.87,434.0,438.0
+Fraser-Fort George,Single,83.0,345.0,2.9,1.3,109.0,68.0
+Metro Vancouver,Total,61943.0,30999.0,24.0,0.7,43485.0,50962.0
+Metro Vancouver,Multi,59084.0,28660.0,24.7,0.66,38934.0,45108.0
+Metro Vancouver,Single,2859.0,2339.0,14.7,1.25,3581.0,3366.0
+Nanaimo,Total,901.0,640.0,16.9,0.99,891.0,1261.0
+Nanaimo,Multi,801.0,483.0,19.9,0.88,703.0,966.0
+Nanaimo,Single,99.0,157.0,7.6,1.58,157.0,190.0
+Thompson-Nicola,Total,630.0,468.0,16.1,1.18,743.0,273.0
+Thompson-Nicola,Multi,622.0,384.0,19.5,1.02,632.0,220.0
+Thompson-Nicola,Single,7.0,84.0,1.0,1.76,13.0,49.0
