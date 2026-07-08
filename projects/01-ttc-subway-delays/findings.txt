@@ -1,0 +1,62 @@
+TTC SUBWAY DELAY ANALYSIS - KEY FINDINGS
+=============================================
+
+records_raw: 64485
+delay_incidents: 22814
+total_delay_minutes: 181700
+total_delay_days: 126.2
+avg_delay_min: 8.0
+median_delay_min: 5.0
+
+BY LINE
+                           incidents  total_min  avg_min
+LineName                                                
+Line 1 (Yonge-University)      13078     100290      7.7
+Line 2 (Bloor-Danforth)         8922      74329      8.3
+Line 4 (Sheppard)                814       7081      8.7
+
+TOP 10 STATIONS (by delay minutes)
+               size   sum
+StationClean             
+EGLINTON        718  5873
+KIPLING         825  5434
+ST GEORGE       773  5382
+KENNEDY         771  4752
+BLOOR           781  4659
+FINCH           706  4638
+WILSON          714  4440
+DAVISVILLE      533  4012
+SHEPPARD WEST   353  3882
+VICTORIA PARK   365  3775
+
+TOP 10 CAUSES (by delay minutes)
+                                                     size    sum
+DESCRIPTION                                                     
+DISORDERLY PATRON                                    2939  19385
+INJURED/ILL CUSTOMER ON TRAIN - MEDICAL AID REFUSED  1601  11460
+UNAUTHORIZED AT TRACK LEVEL                           864  11230
+SECURITY OTHER                                       1236  11164
+OPTO (COMMUNICATIONS) TRAIN DOOR MONITORING          1777   9741
+INJURED/ILL CUSTOMER ON TRAIN - TRANSPORTED           844   9658
+PAA - NO TROUBLE FOUND                               1963   8082
+WEATHER REPORTS / RELATED PROBLEMS                    296   5077
+PRIORITY ONE - TRAIN IN CONTACT WITH PERSON            61   4959
+UNSANITARY VEHICLE                                   1006   4645
+
+PEAK HOURS (top 5 by incidents)
+Hour
+8     1504
+6     1431
+16    1427
+17    1419
+15    1263
+
+DELAY MINUTES BY DAY OF WEEK
+Day
+Monday       27287
+Tuesday      27542
+Wednesday    26815
+Thursday     27547
+Friday       26970
+Saturday     21428
+Sunday       24111
