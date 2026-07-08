@@ -16,5 +16,8 @@ Data Analyst based in Toronto/Waterloo · MSc Management Analytics, Wilfrid Laur
 
 Every project includes reproducible code, the data (or its public source), and a README with business findings.
 
-## Contact
-Mohammadaktham@gmail.com · [LinkedIn](https://linkedin.com/in/mo-maghaireh-868554170)
+## More on GitHub
+
+| Project | Stack | Repo |
+|---------|-------|------|
+| Walmart Retail Sales Fo

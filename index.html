@@ -150,25 +150,23 @@ footer{border-top:1px solid var(--border);padding:36px 0;color:var(--muted);font
   </div>
 </section>
 
-<section id="skills">
+<section id="more-projects">
   <div class="wrap">
-    <h2>Skills</h2>
-    <p class="section-sub">The toolkit behind the projects above.</p>
-    <div class="skills">
-      <div class="skill-box"><h4>Querying &amp; Databases</h4><p>SQL (joins, CTEs, window functions), SQLite/PostgreSQL patterns, data modeling &amp; normalization, Python (pandas, NumPy), R</p></div>
-      <div class="skill-box"><h4>Visualization &amp; BI</h4><p>Power BI (DAX, data modeling, scheduled refresh), Tableau, Matplotlib/Seaborn, Excel dashboards, KPI design</p></div>
-      <div class="skill-box"><h4>Analysis &amp; Modeling</h4><p>Time-series forecasting (Ridge, ARIMAX, XGBoost), regression, classification, cohort &amp; RFM analysis, statistical inference, backtesting</p></div>
-      <div class="skill-box"><h4>Business &amp; Delivery</h4><p>Stakeholder reporting, requirements documentation, gap &amp; cost-benefit analysis, technical-to-business translation, Git/GitHub, Jira, Agile</p></div>
-    </div>
-  </div>
-</section>
+    <h2>More on GitHub</h2>
+    <p class="section-sub">Academic and research projects from my graduate work — full code in the repos.</p>
+    <div class="grid">
 
-<footer>
-  <div class="wrap">
-    Mo Maghaireh · Toronto/Waterloo, ON · <a href="mailto:Mohammadaktham@gmail.com">Mohammadaktham@gmail.com</a> ·
-    <a href="https://github.com/mohdaktham" target="_blank">github.com/mohdaktham</a>
-  </div>
-</footer>
+      <div class="card">
+        <span class="badge">Deep Learning · MGTA 611</span>
+        <h3>Walmart Retail Sales Forecasting</h3>
+        <p>Weekly sales prediction across 45 stores using the Walmart dataset: advanced feature engineering
+        (holidays, rolling statistics, markdowns), an XGBoost baseline with a custom holiday-weighted loss,
+        a tuned LSTM (TensorFlow/Keras), and SHAP-based interpretation to explain store-level demand drivers.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">SHAP</span><span class="tag">Keras</span></div>
+        <div class="proj-link"><a href="https://github.com/mohdaktham/projects/tree/main/611-group-project" target="_blank">View on GitHub →</a></div>
+      </div>
 
-</body>
-</html>
+      <div class="card">
+        <span class="badge">Client Analysis · MGTA 621</span>
+        <h3>BC Housing: Starts vs Registrations as Leading Indicators</h3>
+        <p>Field project for BC Housing answering which measure better predicts
