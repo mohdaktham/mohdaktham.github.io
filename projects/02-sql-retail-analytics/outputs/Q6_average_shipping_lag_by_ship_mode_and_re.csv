@@ -1,0 +1,17 @@
+ship_mode,region,avg_ship_days,orders
+First Class,Central,2.2,174
+First Class,East,2.2,233
+First Class,South,2.2,124
+First Class,West,2.1,256
+Same Day,Central,0.0,62
+Same Day,East,0.0,74
+Same Day,South,0.0,39
+Same Day,West,0.1,89
+Second Class,Central,3.4,224
+Second Class,East,3.3,266
+Second Class,South,3.2,164
+Second Class,West,3.1,310
+Standard Class,Central,5.0,715
+Standard Class,East,5.0,828
+Standard Class,South,5.0,495
+Standard Class,West,5.0,956
