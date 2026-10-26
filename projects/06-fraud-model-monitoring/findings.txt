@@ -1,0 +1,39 @@
+FRAUD MODEL MONITORING, SIMULATED DATA: KEY FINDINGS
+====================================================
+Report as of 2026-01; labels mature after 2 months
+Transactions per month: 100,000; alert cut-off set for a 1.0% alert rate (score >= 0.0825)
+
+BASELINE (2025-03, out-of-time validation)
+  AUC 0.957, Gini 0.913, KS 0.785
+  fraud cases caught 44.7%, fraud dollars caught 55.7%
+  3.5 false alarms per fraud caught
+
+2025-06  ONLINE SPENDING SHIFT  status: amber
+  score PSI 0.044; largest input shift: card_present (CSI 0.168)
+  AUC 0.943 (baseline 0.957); fraud cases caught 43.9% (baseline 44.7%)
+  alert rate 1.4%; reasons: CSI on card_present 0.17
+
+2025-08  DISTANCE FEED FAULT  status: red
+  score PSI 0.073; largest input shift: distance_from_home (CSI 0.779)
+  AUC 0.909 (baseline 0.957); fraud cases caught 25.9% (baseline 44.7%)
+  alert rate 0.6%; reasons: CSI on distance_from_home 0.78; AUC down 0.047; detection down 19 pts
+
+2025-10  NEW FRAUD PATTERN  status: red
+  score PSI 0.000; no input moved (largest CSI 0.000)
+  AUC 0.710 (baseline 0.957); fraud cases caught 34.2% (baseline 44.7%)
+  alert rate 1.0%; reasons: AUC down 0.246; detection down 10 pts
+
+New-pattern share of fraud from 2025-10: 36.1%
+
+MONTH BY MONTH
+  month   status   auc  detection_rate  alert_rate  score_psi        top_feature  top_csi  labels_mature
+2025-03 baseline 0.957           0.447       0.010      0.000               hour    0.000           True
+2025-04    green 0.960           0.454       0.010      0.000      merchant_risk    0.000           True
+2025-05    green 0.955           0.450       0.009      0.000               hour    0.000           True
+2025-06    amber 0.943           0.439       0.014      0.044       card_present    0.168           True
+2025-07    green 0.947           0.412       0.009      0.000             amount    0.000           True
+2025-08      red 0.909           0.259       0.006      0.073 distance_from_home    0.779           True
+2025-09    green 0.949           0.436       0.010      0.000             amount    0.000           True
+2025-10      red 0.710           0.342       0.010      0.000   account_age_days    0.000           True
+2025-11  pending 0.705           0.268       0.009      0.000   account_age_days    0.000          False
+2025-12  pending 0.682           0.254       0.009      0.000   account_age_days    0.000          False

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mo Maghaireh | Data Analyst and Data Science | Toronto</title>
+<meta name="description" content="Data analytics and data science portfolio of Mo Maghaireh: SQL, Python, Power BI, model monitoring. Toronto, ON.">
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3;
+  --muted:#8b949e; --accent:#58a6ff; --accent2:#3fb950; --tag:#1f2937;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+header{padding:72px 0 48px;border-bottom:1px solid var(--border)}
+h1{font-size:2.4rem;letter-spacing:-.5px}
+.subtitle{font-size:1.15rem;color:var(--accent);margin-top:4px;font-weight:600}
+.blurb{color:var(--muted);max-width:640px;margin-top:16px}
+.links{margin-top:20px;display:flex;gap:14px;flex-wrap:wrap}
+.links a{border:1px solid var(--border);padding:8px 16px;border-radius:8px;font-size:.9rem;background:var(--panel)}
+.links a:hover{border-color:var(--accent);text-decoration:none}
+section{padding:48px 0}
+h2{font-size:1.5rem;margin-bottom:8px}
+.section-sub{color:var(--muted);margin-bottom:28px;font-size:.95rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card.featured{grid-column:1/-1}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:8px}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.92rem;flex:1}
+.metrics{display:flex;gap:20px;margin:16px 0;flex-wrap:wrap}
+.metric b{display:block;font-size:1.25rem;color:var(--text)}
+.metric span{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tag{background:var(--tag);border:1px solid var(--border);color:var(--muted);font-size:.75rem;padding:3px 10px;border-radius:99px}
+.card img{width:100%;border-radius:8px;margin:14px 0 4px;border:1px solid var(--border)}
+.proj-link{margin-top:14px;font-size:.88rem;font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.skill-box{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px}
+.skill-box h4{font-size:.95rem;margin-bottom:8px;color:var(--accent)}
+.skill-box p{color:var(--muted);font-size:.88rem}
+footer{border-top:1px solid var(--border);padding:36px 0;color:var(--muted);font-size:.88rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Mo Maghaireh</h1>
+    <div class="subtitle">Data Analyst · Data Science</div>
+    <p class="blurb">I build models, and the checks that tell you whether to trust them, in SQL, Python and Power BI.
+    MSc in Management Analytics from Wilfrid Laurier University (2026), with recent consulting work forecasting housing
+    supply for BC Housing. Based in Toronto and looking for data analyst and data science roles.</p>
+    <div class="links">
+      <a href="mailto:mohammadaktham@gmail.com">✉ Email</a>
+      <a href="https://linkedin.com/in/mo-maghaireh" target="_blank">LinkedIn</a>
+      <a href="https://github.com/mohdaktham" target="_blank">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="section-sub">End-to-end analyses with reproducible code, findings and a business recommendation.</p>
+    <div class="grid">
+
+      <div class="card featured">
+        <span class="badge">Featured · Client engagement</span>
+        <h3>BC Housing: Housing Completions Forecast</h3>
+        <p>36-month forecasts of housing completions for every BC regional district, built on 36+ years of CMHC data merged
+        with economic indicators. Pooled Ridge model with leakage-free feature engineering, calibrated 50/80/95% prediction
+        intervals, ±100bp mortgage-rate scenarios, and a Power BI dashboard presented to agency staff and programme leads.
+        Consulting engagement through Wilfrid Laurier University, January to August 2026; my part was the data preparation,
+        the forecasting models and the Power BI build.</p>
+        <div class="metrics">
+          <div class="metric"><b>11.1%</b><span>WAPE vs 20.7% naive</span></div>
+          <div class="metric"><b>36 mo</b><span>forecast horizon</span></div>
+          <div class="metric"><b>83%</b><span>coverage of 80% PI</span></div>
+          <div class="metric"><b>8</b><span>Power BI data feeds</span></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Time series</span><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+        <div class="proj-link"><a href="projects/05-bc-housing-forecast/README.md">Read the case study →</a></div>
+      </div>
+
+      <div class="card featured">
+        <span class="badge">Model monitoring · Simulated data</span>
+        <h3>Fraud Model Monitoring: Data Faults, Drift and New Fraud Patterns</h3>
+        <p>A year of simulated card transactions with three planted events, and the monthly report that has to catch them.
+        A gradient-boosted fraud model is checked every month for ranking power (AUC, KS), score and input shift (PSI, CSI),
+        alert volume, and fraud cases and dollars caught, with fraud labels arriving two months late. The report told a
+        broken data feed apart from a real change in fraud: the feed fault showed up as a 0.78 input shift, while the new
+        fraud pattern moved no input at all and only appeared in outcomes once labels matured.</p>
+        <img src="projects/06-fraud-model-monitoring/charts/performance.png" alt="AUC, KS and share of fraud caught by month, with the three events marked">
+        <div class="metrics">
+          <div class="metric"><b>0.957</b><span>baseline AUC</span></div>
+          <div class="metric"><b>0.710</b><span>AUC after new pattern</span></div>
+          <div class="metric"><b>0.78</b><span>CSI on faulty feed</span></div>
+          <div class="metric"><b>6</b><span>unit tests</span></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">PSI / CSI</span><span class="tag">AUC / KS</span><span class="tag">pytest</span></div>
+        <div class="proj-link"><a href="projects/06-fraud-model-monitoring/README.md">Report, charts and code →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Machine Learning</span>
+        <h3>Customer Churn: Drivers &amp; Revenue at Risk</h3>
+        <p>Logistic regression on 7,032 telco customers (test AUC 0.837), chosen for interpretability so every coefficient
+        maps to an action. Found $445K of annualized revenue in high-risk accounts and a top-decile targeting lift of 2.5×,
+        translated into a 3-point retention playbook.</p>
+        <img src="assets/churn.png" alt="Churn drivers by contract and tenure">
+        <div class="metrics">
+          <div class="metric"><b>0.837</b><span>test AUC</span></div>
+          <div class="metric"><b>$445K</b><span>revenue at risk</span></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Classification</span><span class="tag">EDA</span></div>
+        <div class="proj-link"><a href="projects/03-customer-churn/README.md">Model &amp; playbook →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">SQL</span>
+        <h3>Retail Sales Analytics in SQL</h3>
+        <p>Normalized a flat retail file into a 4-table schema, then answered business questions in 7
+        queries: YoY growth, discount-driven losses (Tables lose $17.7K at 26% avg discount),
+        12-month cohort retention, and RFM segmentation that found 82 high-value at-risk customers.</p>
+        <div class="metrics">
+          <div class="metric"><b>7</b><span>analytical queries</span></div>
+          <div class="metric"><b>$2.3M</b><span>revenue analyzed</span></div>
+          <div class="metric"><b>4</b><span>table schema</span></div>
+        </div>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">CTEs</span><span class="tag">Window functions</span><span class="tag">SQLite</span><span class="tag">RFM</span></div>
+        <div class="proj-link"><a href="projects/02-sql-retail-analytics/README.md">Queries &amp; results →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Toronto Open Data</span>
+        <h3>TTC Subway Delay Analysis</h3>
+        <p>64,485 real delay records (2024 to 2025) cleaned, joined to the TTC's cause-code table, and quantified:
+        126 days of lost service time, peaks at 8&nbsp;AM and between 4 and 5&nbsp;PM, and top causes that are people-related,
+        not mechanical, pointing investment toward platform safety and station staffing.</p>
+        <img src="assets/ttc.png" alt="TTC delay hours by line">
+        <div class="metrics">
+          <div class="metric"><b>64K+</b><span>records analyzed</span></div>
+          <div class="metric"><b>126</b><span>days lost service</span></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Matplotlib</span><span class="tag">Open Data</span></div>
+        <div class="proj-link"><a href="projects/01-ttc-subway-delays/README.md">Code &amp; findings →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Advanced Excel</span>
+        <h3>Executive KPI Dashboard in Excel</h3>
+        <p>Three-sheet workbook with 6 live KPI cards and 4 native Excel charts: monthly revenue trend, category
+        profitability, segment mix and regional sales. Every number is a live formula referencing the data sheet,
+        delivered with zero formula errors and finance-standard formatting.</p>
+        <div class="metrics">
+          <div class="metric"><b>27</b><span>live formulas</span></div>
+          <div class="metric"><b>0</b><span>formula errors</span></div>
+          <div class="metric"><b>4</b><span>native charts</span></div>
+        </div>
+        <div class="tags"><span class="tag">Excel</span><span class="tag">openpyxl</span><span class="tag">Dashboards</span><span class="tag">KPI design</span></div>
+        <div class="proj-link"><a href="projects/04-excel-kpi-dashboard/README.md">Workbook details →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="more-projects">
+  <div class="wrap">
+    <h2>More on GitHub</h2>
+    <p class="section-sub">Graduate coursework and research projects, with full code in the repos.</p>
+    <div class="grid">
+
+      <div class="card">
+        <span class="badge">Deep Learning · MGTA 611</span>
+        <h3>Walmart Retail Sales Forecasting</h3>
+        <p>Weekly sales prediction across 45 stores using the Walmart dataset: feature engineering
+        (holidays, rolling statistics, markdowns), an XGBoost baseline with a custom holiday-weighted loss,
+        a tuned LSTM (TensorFlow/Keras), and SHAP-based interpretation to explain store-level demand drivers.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">SHAP</span><span class="tag">Keras</span></div>
+        <div class="proj-link"><a href="https://github.com/mohdaktham/projects/tree/main/611-group-project" target="_blank">View on GitHub →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Client Analysis · MGTA 621</span>
+        <h3>BC Housing: Starts vs Registrations as Leading Indicators</h3>
+        <p>Field project for BC Housing on which measure, housing starts or new home registrations, better predicts
+        completions. Quantified conversion rates and time lags from registration to start to completion, and how
+        housing activity by construction type moves with economic drivers, across 36 years of CMHC data.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Regression</span><span class="tag">CMHC data</span><span class="tag">Time lags</span></div>
+        <div class="proj-link"><a href="https://github.com/mohdaktham/projects/tree/main/621%20Field%20Project" target="_blank">View on GitHub →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Research · INDUCE Lab, UAE University</span>
+        <h3>Vehicular Network Simulation with NS-3 and SUMO</h3>
+        <p>Simulation framework for vehicular ad hoc network (VANET) research, linking SUMO traffic simulation with
+        NS-3 network simulation, with systematic validation checks added to the data collection pipeline.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">NS-3</span><span class="tag">SUMO</span><span class="tag">Simulation</span></div>
+        <div class="proj-link"><a href="https://github.com/mohdaktham/NS-3_Sumo" target="_blank">View on GitHub →</a></div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Web App · Finance</span>
+        <h3>BackTest Buddy: Equity Strategy Backtester</h3>
+        <p>Web application for testing equity trading strategies against historical prices: users define their own entry
+        and exit rules and get back risk-adjusted results, including the Sharpe ratio and maximum drawdown.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Backtrader</span><span class="tag">yfinance</span></div>
+        <div class="proj-link"><a href="https://github.com/mohdaktham/projects/tree/main/BackTest%20Buddy" target="_blank">View on GitHub →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="section-sub">The toolkit behind the projects above.</p>
+    <div class="skills">
+      <div class="skill-box"><h4>Querying &amp; Data</h4><p>SQL (joins, CTEs, window functions, subqueries), SQLite and MySQL, data modelling and normalization, Python (pandas, NumPy), R</p></div>
+      <div class="skill-box"><h4>Models &amp; Statistics</h4><p>Classification and regression (logistic, Ridge, gradient boosting), time-series forecasting (ARIMAX, XGBoost, LSTM), statistical inference, missing-data imputation, out-of-time validation, prediction intervals</p></div>
+      <div class="skill-box"><h4>Monitoring &amp; Data Quality</h4><p>AUC, Gini and KS; PSI and CSI drift checks; alert, detection and false-alarm rates; validation and quality-control checks; root-cause investigation; unit testing with pytest</p></div>
+      <div class="skill-box"><h4>BI &amp; Communication</h4><p>Power BI (DAX, data modelling), Tableau, Matplotlib, Excel dashboards; presenting models and dashboards to non-technical audiences; Git and GitHub; Agile sprints</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Mo Maghaireh · Toronto, ON · <a href="mailto:mohammadaktham@gmail.com">mohammadaktham@gmail.com</a> ·
+    <a href="https://linkedin.com/in/mo-maghaireh" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/mohdaktham" target="_blank">github.com/mohdaktham</a>
+  </div>
+</footer>
+
+</body>
+</html>

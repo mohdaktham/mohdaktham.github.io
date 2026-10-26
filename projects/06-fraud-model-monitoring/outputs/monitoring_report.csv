@@ -1,0 +1,11 @@
+month,transactions,fraud_rate,labels_mature,auc,gini,ks,alert_rate,detection_rate,precision,false_positives_per_fraud,value_detection_rate,score_psi,top_feature,top_csi,csi_amount,csi_hour,csi_merchant_risk,csi_distance_from_home,csi_velocity_24h,csi_card_present,csi_account_age_days,status,reason
+2025-03,100000,0.0050,True,0.9566,0.9132,0.7846,0.0100,0.4467,0.2220,3.5045,0.5570,0.0000,hour,0.0001,0.0000,0.0001,0.0000,0.0000,0.0000,0.0000,0.0000,baseline,out-of-time validation month
+2025-04,100000,0.0050,True,0.9602,0.9204,0.7906,0.0100,0.4536,0.2250,3.4444,0.4747,0.0003,merchant_risk,0.0002,0.0001,0.0001,0.0002,0.0001,0.0000,0.0000,0.0001,green,within thresholds
+2025-05,100000,0.0048,True,0.9545,0.9090,0.7812,0.0091,0.4498,0.2368,3.2233,0.5724,0.0002,hour,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0000,0.0001,green,within thresholds
+2025-06,100000,0.0064,True,0.9433,0.8866,0.7642,0.0138,0.4393,0.2041,3.9007,0.5494,0.0440,card_present,0.1684,0.0002,0.0001,0.0001,0.0001,0.0000,0.1684,0.0001,amber,CSI on card_present 0.17
+2025-07,100000,0.0047,True,0.9469,0.8938,0.7685,0.0094,0.4124,0.2044,3.8912,0.5311,0.0002,amount,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0000,0.0001,green,within thresholds
+2025-08,100000,0.0047,True,0.9092,0.8183,0.6617,0.0060,0.2589,0.2050,3.8780,0.3196,0.0731,distance_from_home,0.7787,0.0001,0.0003,0.0001,0.7787,0.0000,0.0000,0.0001,red,CSI on distance_from_home 0.78; AUC down 0.047; detection down 19 pts
+2025-09,100000,0.0049,True,0.9494,0.8988,0.7619,0.0098,0.4365,0.2178,3.5915,0.5005,0.0003,amount,0.0002,0.0002,0.0002,0.0001,0.0001,0.0000,0.0000,0.0001,green,within thresholds
+2025-10,100000,0.0055,True,0.7102,0.4205,0.4787,0.0099,0.3418,0.1915,4.2222,0.6062,0.0002,account_age_days,0.0002,0.0001,0.0001,0.0002,0.0000,0.0000,0.0000,0.0002,red,AUC down 0.246; detection down 10 pts
+2025-11,100000,0.0055,False,0.7051,0.4102,0.4695,0.0094,0.2682,0.1557,5.4218,0.4362,0.0001,account_age_days,0.0001,0.0001,0.0000,0.0000,0.0001,0.0000,0.0000,0.0001,pending,inputs and scores stable; performance waits for labels to mature
+2025-12,100000,0.0059,False,0.6821,0.3642,0.4353,0.0094,0.2542,0.1597,5.2600,0.4829,0.0002,account_age_days,0.0002,0.0001,0.0001,0.0001,0.0001,0.0000,0.0000,0.0002,pending,inputs and scores stable; performance waits for labels to mature
