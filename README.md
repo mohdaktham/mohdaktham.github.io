@@ -2,7 +2,7 @@
 
 Data analyst based in Toronto, ON · MSc in Management Analytics, Wilfrid Laurier University (2026) · BSc in Computer Science and Software Engineering
 
-**Live site:** https://mohdaktham.github.io
+**Live site:** https://momaghaireh.github.io
 
 ## Projects
 
