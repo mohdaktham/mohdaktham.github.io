@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="case">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,6 +32,7 @@
       </button>
     </nav>
   </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
 </header>
 <main id="main">
 
@@ -40,7 +41,7 @@
     <div class="wrap">
       <p class="crumb"><a href="../../#work">All work</a></p>
       <p class="kicker">SQL</p>
-      <h1>Retail sales analytics in SQL</h1>
+      <h1 style="view-transition-name:title-02-sql-retail-analytics">Retail sales analytics in SQL</h1>
       <p class="lede">A national retailer wants to know where profit is actually made, which discounting destroys margin, and which customers are worth retention spend. Seven SQL queries answer it.</p>
       <p class="context">Data: Superstore retail dataset, 9,994 order lines from 2015 to 2018.</p>
       <p class="tools">SQL, SQLite, CTEs, Window functions, Python</p>
@@ -56,7 +57,7 @@
 python build_db.py      # builds superstore.db from superstore.csv
 python run_queries.py   # runs all 7 queries, exports to outputs/</code></pre></section>
     </div>
-    <nav class="toc" aria-label="On this page">
+    <nav class="toc" aria-label="On this page" data-toc>
       <p>On this page</p>
       <ol><li><a href="#the-question">The question</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#sql-techniques-used">SQL techniques used</a></li><li><a href="#run-it">Run it</a></li></ol>
     </nav>

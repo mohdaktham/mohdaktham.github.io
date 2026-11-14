@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="case">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,6 +32,7 @@
       </button>
     </nav>
   </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
 </header>
 <main id="main">
 
@@ -40,7 +41,7 @@
     <div class="wrap">
       <p class="crumb"><a href="../../#work">All work</a></p>
       <p class="kicker">Software, live app</p>
-      <h1>Tessera, a SQL workbench</h1>
+      <h1 style="view-transition-name:title-tessera">Tessera, a SQL workbench</h1>
       <p class="lede">Tessera turns CSV, JSON and SQLite files into tables you can query with SQL, chart and pin to a dashboard. It runs as a website and as a desktop app, and the data never leaves your machine.</p>
       <p class="context">Open the live app and choose Load sample data to try it with 60,000 orders and a ready-made dashboard.</p>
       <p class="tools">TypeScript, React, SQLite (WebAssembly), Electron, Playwright</p>
@@ -54,7 +55,7 @@
       
       <section class="block"><h2 id="what-it-does">What it does</h2><ul><li><strong>Brings data in:</strong> import CSV, TSV, JSON or a SQLite database by file picker or drag and drop, with column types inferred from the data.</li><li><strong>Queries it:</strong> a SQL editor with autocomplete that knows your tables, multiple tabs, and SQLite 3 with CTEs and window functions.</li><li><strong>Explains itself:</strong> a query-plan view that flags full table scans, and a column profile with completeness, range, median and a histogram.</li><li><strong>Shows the answer:</strong> bar, line, area, scatter and pie charts, pinned to a dashboard that re-runs its queries when the data changes.</li></ul></section><figure class="fig"><img src="../../assets/img/tessera-dashboard.webp" alt="Tessera&#x27;s dashboard showing revenue, orders and growth charts" width="1600" height="1000" loading="lazy"><figcaption>The dashboard: each tile is a saved query.</figcaption></figure><section class="block"><h2 id="how-it-is-built">How it is built</h2><ul><li><strong>SQL runs off the main thread.</strong> SQLite is compiled to WebAssembly and runs in a Web Worker, so a heavy query never freezes the interface.</li><li><strong>One codebase, two hosts.</strong> A thin platform layer hides whether the app is inside Electron or a browser, which is how the same code ships as a website.</li><li><strong>The page is treated as untrusted.</strong> The desktop shell is sandboxed, every message between processes is validated, and a strict content security policy blocks remote and inline scripts.</li><li><strong>It works on a phone.</strong> Below tablet width the sidebar becomes a drawer and the toolbars collapse to icons.</li></ul></section><figure class="fig"><img src="../../assets/img/tessera-phone.webp" alt="Tessera on a phone: the query editor, the sidebar drawer and the dashboard" width="1600" height="1069" loading="lazy"><figcaption>The same app at phone width.</figcaption></figure><section class="block"><h2 id="how-it-is-tested">How it is tested</h2><ul><li><strong>82 unit and component tests</strong> cover the query engine against a real SQLite build, file parsing, type inference, sorting and charts.</li><li><strong>9 desktop tests</strong> launch the real app and check the full path: load data, run SQL, handle an error, pin a chart, and survive a restart.</li><li><strong>11 browser tests</strong> run the website at desktop and phone sizes behind its production security headers, and fail on any policy violation.</li><li>All of it runs on Windows, macOS and Linux on every change.</li></ul></section>
     </div>
-    <nav class="toc" aria-label="On this page">
+    <nav class="toc" aria-label="On this page" data-toc>
       <p>On this page</p>
       <ol><li><a href="#what-it-does">What it does</a></li><li><a href="#how-it-is-built">How it is built</a></li><li><a href="#how-it-is-tested">How it is tested</a></li></ol>
     </nav>

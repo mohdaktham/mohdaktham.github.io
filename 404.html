@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="page">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,12 +32,13 @@
       </button>
     </nav>
   </div>
+  
 </header>
 <main id="main">
 
 <section class="hero">
   <div class="wrap">
-    <h1>That page isn't here.</h1>
+    <h1><span class="word" style="--i:0">That</span> <span class="word" style="--i:1">page</span> <span class="word" style="--i:2">isn&#x27;t</span> <span class="word" style="--i:3">here.</span></h1>
     <p class="intro">The link may be old. Every project is listed on the home page.</p>
     <p class="actions"><a class="btn btn-solid" href="/">Go to the home page</a></p>
   </div>

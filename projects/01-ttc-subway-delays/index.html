@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="case">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,6 +32,7 @@
       </button>
     </nav>
   </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
 </header>
 <main id="main">
 
@@ -40,7 +41,7 @@
     <div class="wrap">
       <p class="crumb"><a href="../../#work">All work</a></p>
       <p class="kicker">Toronto Open Data</p>
-      <h1>TTC subway delay analysis</h1>
+      <h1 style="view-transition-name:title-01-ttc-subway-delays">TTC subway delay analysis</h1>
       <p class="lede">The TTC logs every subway delay. This project works out where service time is actually lost, and what would give riders the biggest reliability improvement per dollar.</p>
       <p class="context">Data: 64,485 delay records for 2024 and 2025 from the City of Toronto Open Data portal.</p>
       <p class="tools">Python, pandas, NumPy, Matplotlib</p>
@@ -55,7 +56,7 @@
       <section class="block"><h2 id="the-question">The question</h2><p>Where is subway service time actually being lost, and what would give riders the biggest reliability improvement per dollar?</p></section><section class="block"><h2 id="what-i-did">What I did</h2><ul><li>Combined and cleaned two years of raw delay logs from Excel and CSV extracts, standardized station names, and joined the TTC&#x27;s delay-code lookup table to translate codes into readable causes.</li><li>Filtered to <strong>22,814 true delay incidents</strong> across Lines 1, 2 and 4, and measured lost service time by line, station, hour, weekday and cause.</li><li>Wrote one analysis script that regenerates every chart and a findings summary from the raw files.</li></ul></section><section class="block"><h2 id="what-i-found">What I found</h2><ul><li><strong>126 days of service time lost:</strong> 181,700 delay minutes over the period, averaging 8.0 minutes per incident.</li><li><strong>Line 1 loses the most time</strong> (100,290 minutes across 13,078 incidents), but Line 2 delays run longer on average, 8.3 against 7.7 minutes.</li><li><strong>Delays peak at 8 AM and between 4 and 5 PM</strong>, exactly when capacity matters most.</li><li><strong>The top causes are people, not equipment:</strong> disorderly patrons, medical emergencies and unauthorized track-level access dominate, which supports investment in platform safety and station staffing over purely mechanical fixes.</li><li>Eglinton, Kipling, St George and Kennedy are the highest-loss stations, all major interchange or terminal points.</li></ul></section><figure class="fig plate"><img src="charts/delay_by_hour.png" alt="Delay incidents by hour of day, peaking at 8 AM and late afternoon" width="1200" height="600" loading="lazy"><figcaption>Delays cluster around the morning and afternoon peaks.</figcaption></figure><figure class="fig plate"><img src="charts/top_stations.png" alt="The ten stations with the most delay minutes" width="1200" height="675" loading="lazy"><figcaption>Stations with the most service time lost.</figcaption></figure><section class="block"><h2 id="run-it">Run it</h2><pre><code>pip install pandas numpy matplotlib openpyxl
 python ttc_delay_analysis.py</code></pre></section>
     </div>
-    <nav class="toc" aria-label="On this page">
+    <nav class="toc" aria-label="On this page" data-toc>
       <p>On this page</p>
       <ol><li><a href="#the-question">The question</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#run-it">Run it</a></li></ol>
     </nav>
