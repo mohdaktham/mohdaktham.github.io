@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BC Housing completions forecast | Mo Maghaireh</title>
+<meta name="description" content="36-month forecasts of housing completions for every BC regional district, with error cut nearly in half against a naive forecast.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BC Housing completions forecast | Mo Maghaireh">
+<meta property="og:description" content="36-month forecasts of housing completions for every BC regional district, with error cut nearly in half against a naive forecast.">
+<meta property="og:url" content="https://mohdaktham.github.io/projects/05-bc-housing-forecast/">
+<meta property="og:image" content="https://mohdaktham.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mohdaktham.github.io/projects/05-bc-housing-forecast/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="../../">Mo Maghaireh</a>
+    <nav aria-label="Main">
+      <a href="../../#work">Work</a>
+      <a href="../../#skills">Skills</a>
+      <a href="../../#about">About</a>
+      <button type="button" class="theme" id="theme-toggle" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18Z" fill="currentColor"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="case">
+  <header class="case-head">
+    <div class="wrap">
+      <p class="crumb"><a href="../../#work">All work</a></p>
+      <p class="kicker">Client engagement</p>
+      <h1>BC Housing completions forecast</h1>
+      <p class="lede">Monthly housing completions, forecast 36 months ahead for every regional district in British Columbia, with calibrated uncertainty bands and mortgage-rate scenarios, delivered as an interactive Power BI dashboard.</p>
+      <p class="context">Consulting engagement with BC Housing through Wilfrid Laurier University, January to August 2026. My part was the data preparation, the forecasting models and the Power BI build. The results and the dashboard were presented to agency staff and programme leads.</p>
+      <p class="tools">Python, scikit-learn, Time series, Power BI, DAX</p>
+      <p class="actions"><a class="btn btn-solid" href="https://github.com/mohdaktham/mohdaktham.github.io/tree/main/projects/05-bc-housing-forecast">Read the write-up on GitHub</a></p>
+    </div>
+  </header>
+  <div class="wrap case-body">
+    <div class="case-main">
+      
+      <dl class="stats stat-strip"><div class="stat"><dt>forecast error (WAPE), against 20.7% for a naive forecast</dt><dd>11.1%</dd></div><div class="stat"><dt>forecast horizon</dt><dd>36 months</dd></div><div class="stat"><dt>of actuals inside the 80% band</dt><dd>83%</dd></div><div class="stat"><dt>data feeds into Power BI</dt><dd>8</dd></div></dl>
+      <figure class="evidence check"><p class="evidence-title">The check</p><div class="bars" role="img" aria-label="This model 11.1%; Naive forecast 20.7%"><div class="bar"><span class="bar-label">This model</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:53.6%"></span></span><span class="bar-value">11.1%</span></div><div class="bar"><span class="bar-label">Naive forecast</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:100.0%"></span></span><span class="bar-value">20.7%</span></div></div><figcaption>Forecast error (WAPE) on the BC total series over 12 months the model never saw. Lower is better.</figcaption></figure>
+      <section class="block"><h2 id="the-question">The question</h2><p>How many homes will be completed in each BC regional district over the next 36 months, how wide is the uncertainty around that number, and how does it move if mortgage rates change?</p></section><section class="block"><h2 id="what-i-did">What I did</h2><ul><li>Merged more than 36 years of CMHC housing data with economic indicators: mortgage rates, the policy rate and building permits.</li><li>Fitted one <strong>pooled Ridge regression</strong> across all districts, using lags of the target, lags of the under-construction pipeline, seasonal encodings and 12-month mortgage-rate changes with a 6-month lag.</li><li>Scaled each district using only past data (shifted trailing means), so districts of very different sizes share one model with <strong>no look-ahead leakage</strong>.</li><li>Built empirical 50, 80 and 95% prediction intervals from the backtest errors.</li><li>Added a scenario engine: the baseline against mortgage-rate paths 100 basis points higher and lower, with a table of forecast change per 100 basis points.</li><li>Cross-checked the forecasts against units physically under construction, using 18-month conversion ratios.</li><li>Wrote the outputs as eight data feeds for the Power BI dashboard, covering forecasts, scenarios, backtests, diagnostics and rate sensitivity.</li></ul></section><section class="block"><h2 id="what-i-found">What I found</h2><ul><li><strong>11.1% error against 20.7% for the naive benchmark</strong> on the BC total series, over 12 months held out of training.</li><li><strong>The model beats naive on the large majority of the 24 regional series</strong>, not only on the provincial total.</li><li><strong>The uncertainty bands hold up:</strong> 83% of held-out actuals landed inside the 80% band.</li></ul></section><section class="block"><h2 id="what-is-published">What is published</h2><p>This is a write-up only. The forecasting script, its outputs and the model card belong to the client engagement and are not published, and the CMHC source workbook is not shared for data-sharing reasons.</p></section>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol><li><a href="#the-question">The question</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#what-is-published">What is published</a></li></ol>
+    </nav>
+  </div>
+  <nav class="pager" aria-label="Other projects">
+    <div class="wrap pager-inner">
+      <a href="../../projects/04-excel-kpi-dashboard/"><span>Previous</span>Executive KPI dashboard in Excel</a>
+      <a href="../../projects/06-fraud-model-monitoring/"><span>Next</span>Fraud model monitoring</a>
+    </div>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Mo Maghaireh, Toronto</p>
+    <p>
+      <a href="mailto:mohammadaktham@gmail.com">mohammadaktham@gmail.com</a>
+      <a href="https://linkedin.com/in/mo-maghaireh">LinkedIn</a>
+      <a href="https://github.com/mohdaktham">GitHub</a>
+      <a href="https://github.com/mohdaktham/mohdaktham.github.io">Source for this site</a>
+    </p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
