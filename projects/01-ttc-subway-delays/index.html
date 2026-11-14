@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TTC subway delay analysis | Mo Maghaireh</title>
+<meta name="description" content="Two years of real subway delay logs, cleaned and quantified: 126 days of service lost, and the leading causes are people, not equipment.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TTC subway delay analysis | Mo Maghaireh">
+<meta property="og:description" content="Two years of real subway delay logs, cleaned and quantified: 126 days of service lost, and the leading causes are people, not equipment.">
+<meta property="og:url" content="https://mohdaktham.github.io/projects/01-ttc-subway-delays/">
+<meta property="og:image" content="https://mohdaktham.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mohdaktham.github.io/projects/01-ttc-subway-delays/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="../../">Mo Maghaireh</a>
+    <nav aria-label="Main">
+      <a href="../../#work">Work</a>
+      <a href="../../#skills">Skills</a>
+      <a href="../../#about">About</a>
+      <button type="button" class="theme" id="theme-toggle" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18Z" fill="currentColor"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="case">
+  <header class="case-head">
+    <div class="wrap">
+      <p class="crumb"><a href="../../#work">All work</a></p>
+      <p class="kicker">Toronto Open Data</p>
+      <h1>TTC subway delay analysis</h1>
+      <p class="lede">The TTC logs every subway delay. This project works out where service time is actually lost, and what would give riders the biggest reliability improvement per dollar.</p>
+      <p class="context">Data: 64,485 delay records for 2024 and 2025 from the City of Toronto Open Data portal.</p>
+      <p class="tools">Python, pandas, NumPy, Matplotlib</p>
+      <p class="actions"><a class="btn btn-solid" href="https://github.com/mohdaktham/mohdaktham.github.io/tree/main/projects/01-ttc-subway-delays">View the code on GitHub</a></p>
+    </div>
+  </header>
+  <div class="wrap case-body">
+    <div class="case-main">
+      
+      <dl class="stats stat-strip"><div class="stat"><dt>raw records</dt><dd>64,485</dd></div><div class="stat"><dt>delay incidents after cleaning</dt><dd>22,814</dd></div><div class="stat"><dt>of service time lost</dt><dd>126 days</dd></div><div class="stat"><dt>average delay, median 5</dt><dd>8.0 min</dd></div></dl>
+      
+      <section class="block"><h2 id="the-question">The question</h2><p>Where is subway service time actually being lost, and what would give riders the biggest reliability improvement per dollar?</p></section><section class="block"><h2 id="what-i-did">What I did</h2><ul><li>Combined and cleaned two years of raw delay logs from Excel and CSV extracts, standardized station names, and joined the TTC&#x27;s delay-code lookup table to translate codes into readable causes.</li><li>Filtered to <strong>22,814 true delay incidents</strong> across Lines 1, 2 and 4, and measured lost service time by line, station, hour, weekday and cause.</li><li>Wrote one analysis script that regenerates every chart and a findings summary from the raw files.</li></ul></section><section class="block"><h2 id="what-i-found">What I found</h2><ul><li><strong>126 days of service time lost:</strong> 181,700 delay minutes over the period, averaging 8.0 minutes per incident.</li><li><strong>Line 1 loses the most time</strong> (100,290 minutes across 13,078 incidents), but Line 2 delays run longer on average, 8.3 against 7.7 minutes.</li><li><strong>Delays peak at 8 AM and between 4 and 5 PM</strong>, exactly when capacity matters most.</li><li><strong>The top causes are people, not equipment:</strong> disorderly patrons, medical emergencies and unauthorized track-level access dominate, which supports investment in platform safety and station staffing over purely mechanical fixes.</li><li>Eglinton, Kipling, St George and Kennedy are the highest-loss stations, all major interchange or terminal points.</li></ul></section><figure class="fig plate"><img src="charts/delay_by_hour.png" alt="Delay incidents by hour of day, peaking at 8 AM and late afternoon" width="1200" height="600" loading="lazy"><figcaption>Delays cluster around the morning and afternoon peaks.</figcaption></figure><figure class="fig plate"><img src="charts/top_stations.png" alt="The ten stations with the most delay minutes" width="1200" height="675" loading="lazy"><figcaption>Stations with the most service time lost.</figcaption></figure><section class="block"><h2 id="run-it">Run it</h2><pre><code>pip install pandas numpy matplotlib openpyxl
+python ttc_delay_analysis.py</code></pre></section>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol><li><a href="#the-question">The question</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#run-it">Run it</a></li></ol>
+    </nav>
+  </div>
+  <nav class="pager" aria-label="Other projects">
+    <div class="wrap pager-inner">
+      <a href="../../projects/02-sql-retail-analytics/"><span>Previous</span>Retail sales analytics in SQL</a>
+      <a href="../../projects/04-excel-kpi-dashboard/"><span>Next</span>Executive KPI dashboard in Excel</a>
+    </div>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Mo Maghaireh, Toronto</p>
+    <p>
+      <a href="mailto:mohammadaktham@gmail.com">mohammadaktham@gmail.com</a>
+      <a href="https://linkedin.com/in/mo-maghaireh">LinkedIn</a>
+      <a href="https://github.com/mohdaktham">GitHub</a>
+      <a href="https://github.com/mohdaktham/mohdaktham.github.io">Source for this site</a>
+    </p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
