@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,13 +32,14 @@
       </button>
     </nav>
   </div>
+  
 </header>
 <main id="main">
 
-<section class="hero">
+<section class="hero hero-home">
   <div class="wrap hero-grid">
-    <div>
-      <h1>I build models, and the checks that tell you whether to trust them.</h1>
+    <div class="hero-copy">
+      <h1><span class="word" style="--i:0">I</span> <span class="word" style="--i:1">build</span> <span class="word" style="--i:2">models,</span> <span class="word" style="--i:3">and</span> <span class="word" style="--i:4">the</span> <span class="word" style="--i:5">checks</span> <span class="word" style="--i:6">that</span> <span class="word" style="--i:7">tell</span> <span class="word" style="--i:8">you</span> <span class="word" style="--i:9">whether</span> <span class="word" style="--i:10">to</span> <span class="word" style="--i:11">trust</span> <span class="word" style="--i:12">them.</span></h1>
       <p class="intro">I&#x27;m a data analyst in Toronto working in SQL, Python and Power BI. I hold an MSc in Management Analytics from Wilfrid Laurier University (2026), and most recently forecast housing supply for BC Housing. I&#x27;m looking for data analyst and data science roles.</p>
       <p class="actions">
         <a class="btn btn-solid" href="mailto:mohammadaktham@gmail.com">Email me</a>
@@ -46,79 +47,76 @@
         <a class="btn" href="https://github.com/mohdaktham">GitHub</a>
       </p>
     </div>
-    <figure class="evidence hero-evidence">
-      <p class="evidence-title">For example: forecasting housing completions for BC Housing</p>
-      <div class="bars" role="img" aria-label="This model 11.1%; Naive forecast 20.7%"><div class="bar"><span class="bar-label">This model</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:53.6%"></span></span><span class="bar-value">11.1%</span></div><div class="bar"><span class="bar-label">Naive forecast</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:100.0%"></span></span><span class="bar-value">20.7%</span></div></div>
-      <figcaption>Forecast error on 12 months the model never saw. Lower is better. <a href="projects/05-bc-housing-forecast/">Read the case study</a></figcaption>
-    </figure>
+    <figure class="evidence hero-evidence" data-slides><div class="slides-head"><p class="evidence-label" id="slides-label">For example</p><div class="tabs" role="tablist" aria-labelledby="slides-label" hidden><button type="button" role="tab" id="tab-0" aria-controls="slide-0" aria-selected="true">Forecasting<span class="tab-progress"></span></button><button type="button" role="tab" id="tab-1" aria-controls="slide-1" aria-selected="false" tabindex="-1">Monitoring<span class="tab-progress"></span></button><button type="button" role="tab" id="tab-2" aria-controls="slide-2" aria-selected="false" tabindex="-1">Targeting<span class="tab-progress"></span></button></div></div><div class="slides"><div class="slide" id="slide-0"><p class="evidence-title">Forecasting housing completions for BC Housing</p><div class="bars" role="img" aria-label="This model 11.1%; Naive forecast 20.7%"><div class="bar"><span class="bar-label">This model</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:53.6%;--i:0"></span></span><span class="bar-value">11.1%</span></div><div class="bar"><span class="bar-label">Naive forecast</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:100.0%;--i:1"></span></span><span class="bar-value">20.7%</span></div></div><p class="slide-caption">Forecast error on 12 months the model never saw. Lower is better. <a href="projects/05-bc-housing-forecast/">Read the case study</a></p></div><div class="slide" id="slide-1" hidden><p class="evidence-title">Monitoring a fraud model on simulated data</p><div class="bars" role="img" aria-label="Baseline AUC 0.957; New fraud pattern 0.710"><div class="bar"><span class="bar-label">Baseline AUC</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:95.7%;--i:0"></span></span><span class="bar-value">0.957</span></div><div class="bar"><span class="bar-label">New fraud pattern</span><span class="bar-track"><span class="bar-fill tone-fault" style="width:71.0%;--i:1"></span></span><span class="bar-value">0.710</span></div></div><p class="slide-caption">No input and no score shifted that month. Only outcome monitoring caught the drop. <a href="projects/06-fraud-model-monitoring/">Read the case study</a></p></div><div class="slide" id="slide-2" hidden><p class="evidence-title">Finding the customers most likely to churn</p><div class="bars" role="img" aria-label="Model&#x27;s top 20% 2.5x; No targeting 1.0x"><div class="bar"><span class="bar-label">Model&#x27;s top 20%</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:100.0%;--i:0"></span></span><span class="bar-value">2.5x</span></div><div class="bar"><span class="bar-label">No targeting</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:40.0%;--i:1"></span></span><span class="bar-value">1.0x</span></div></div><p class="slide-caption">Churners reached per customer contacted, on a held-out test set (AUC 0.837). <a href="projects/03-customer-churn/">Read the case study</a></p></div></div></figure>
   </div>
 </section>
 
 <section id="work" class="section">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <h2>Selected work</h2>
       <p>Each project says what it found, and beside it, the check behind the claim.</p>
     </div>
+    <div class="filter" data-filter hidden><p id="filter-label">Filter by skill</p><div class="chips" role="group" aria-labelledby="filter-label"><button type="button" class="chip" aria-pressed="true" data-skill="">All</button><button type="button" class="chip" aria-pressed="false" data-skill="SQL" aria-label="SQL, 3 of 7 projects">SQL<span class="chip-n" aria-hidden="true">3</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Python and pandas" aria-label="Python and pandas, 6 of 7 projects">Python and pandas<span class="chip-n" aria-hidden="true">6</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Forecasting and regression" aria-label="Forecasting and regression, 1 of 7 projects">Forecasting and regression<span class="chip-n" aria-hidden="true">1</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Classification" aria-label="Classification, 2 of 7 projects">Classification<span class="chip-n" aria-hidden="true">2</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Validation and monitoring" aria-label="Validation and monitoring, 3 of 7 projects">Validation and monitoring<span class="chip-n" aria-hidden="true">3</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Data cleaning and modelling" aria-label="Data cleaning and modelling, 3 of 7 projects">Data cleaning and modelling<span class="chip-n" aria-hidden="true">3</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Dashboards and BI" aria-label="Dashboards and BI, 3 of 7 projects">Dashboards and BI<span class="chip-n" aria-hidden="true">3</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Excel" aria-label="Excel, 1 of 7 projects">Excel<span class="chip-n" aria-hidden="true">1</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Automated testing" aria-label="Automated testing, 2 of 7 projects">Automated testing<span class="chip-n" aria-hidden="true">2</span></button><button type="button" class="chip" aria-pressed="false" data-skill="Software engineering" aria-label="Software engineering, 1 of 7 projects">Software engineering<span class="chip-n" aria-hidden="true">1</span></button></div><p class="filter-status" role="status" data-filter-status>7 projects</p></div>
     <div class="work">
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="SQL|Python and pandas|Forecasting and regression|Validation and monitoring|Data cleaning and modelling|Dashboards and BI" style="view-transition-name:row-05-bc-housing-forecast">
       <div class="claim">
         <p class="kicker">Client engagement</p>
-        <h3><a href="projects/05-bc-housing-forecast/">BC Housing completions forecast</a></h3>
+        <h3 style="view-transition-name:title-05-bc-housing-forecast"><a href="projects/05-bc-housing-forecast/">BC Housing completions forecast</a></h3>
         <p class="finding">36-month forecasts of housing completions for every BC regional district, with error cut nearly in half against a naive forecast.</p>
         <p class="tools">Python, scikit-learn, Time series, Power BI, DAX</p>
       </div>
       <figure class="evidence evidence-stats"><dl class="stats"><div class="stat"><dt>of held-out actuals fell inside the 80% prediction band</dt><dd>83%</dd></div><div class="stat"><dt>regional series forecast from one pooled model</dt><dd>24</dd></div></dl><figcaption>Backtested on 12 months the model never saw.</figcaption></figure>
     </article>
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="Python and pandas|Classification|Validation and monitoring|Automated testing" style="view-transition-name:row-06-fraud-model-monitoring">
       <div class="claim">
         <p class="kicker">Model monitoring, simulated data</p>
-        <h3><a href="projects/06-fraud-model-monitoring/">Fraud model monitoring</a></h3>
+        <h3 style="view-transition-name:title-06-fraud-model-monitoring"><a href="projects/06-fraud-model-monitoring/">Fraud model monitoring</a></h3>
         <p class="finding">A monthly report that told a broken data feed apart from a new fraud pattern, on a year of simulated card transactions with three planted events.</p>
         <p class="tools">Python, scikit-learn, pandas, pytest, Matplotlib</p>
       </div>
-      <figure class="evidence evidence-bars"><div class="bars" role="img" aria-label="Baseline AUC 0.957; New fraud pattern 0.710"><div class="bar"><span class="bar-label">Baseline AUC</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:95.7%"></span></span><span class="bar-value">0.957</span></div><div class="bar"><span class="bar-label">New fraud pattern</span><span class="bar-track"><span class="bar-fill tone-fault" style="width:71.0%"></span></span><span class="bar-value">0.710</span></div></div><figcaption>No input and no score shifted that month. Only outcome monitoring caught the drop.</figcaption></figure>
+      <figure class="evidence evidence-bars"><div class="bars" role="img" aria-label="Baseline AUC 0.957; New fraud pattern 0.710"><div class="bar"><span class="bar-label">Baseline AUC</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:95.7%;--i:0"></span></span><span class="bar-value">0.957</span></div><div class="bar"><span class="bar-label">New fraud pattern</span><span class="bar-track"><span class="bar-fill tone-fault" style="width:71.0%;--i:1"></span></span><span class="bar-value">0.710</span></div></div><figcaption>No input and no score shifted that month. Only outcome monitoring caught the drop.</figcaption></figure>
     </article>
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="SQL|Dashboards and BI|Automated testing|Software engineering" style="view-transition-name:row-tessera">
       <div class="claim">
         <p class="kicker">Software, live app</p>
-        <h3><a href="projects/tessera/">Tessera, a SQL workbench</a></h3>
+        <h3 style="view-transition-name:title-tessera"><a href="projects/tessera/">Tessera, a SQL workbench</a></h3>
         <p class="finding">A SQL workbench that runs in the browser and as a desktop app: import a file, query it, chart the result and pin it to a dashboard.</p>
         <p class="tools">TypeScript, React, SQLite (WebAssembly), Electron, Playwright</p>
       </div>
       <figure class="evidence evidence-image"><a class="shot" href="projects/tessera/"><img src="assets/img/tessera-dashboard.webp" alt="Tessera&#x27;s dashboard showing revenue, orders and growth charts" width="1600" height="1000" loading="lazy"></a><figcaption>102 automated tests run on Windows, macOS and Linux on every change.</figcaption></figure>
     </article>
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="Python and pandas|Classification|Validation and monitoring" style="view-transition-name:row-03-customer-churn">
       <div class="claim">
         <p class="kicker">Classification</p>
-        <h3><a href="projects/03-customer-churn/">Customer churn: drivers and revenue at risk</a></h3>
+        <h3 style="view-transition-name:title-03-customer-churn"><a href="projects/03-customer-churn/">Customer churn: drivers and revenue at risk</a></h3>
         <p class="finding">An interpretable churn model for 7,032 telecom customers, turned into a three-step retention playbook and a figure for the revenue at stake.</p>
         <p class="tools">Python, scikit-learn, pandas, Matplotlib</p>
       </div>
-      <figure class="evidence evidence-bars"><div class="bars" role="img" aria-label="Model&#x27;s top 20% 2.5x; No targeting 1.0x"><div class="bar"><span class="bar-label">Model&#x27;s top 20%</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:100.0%"></span></span><span class="bar-value">2.5x</span></div><div class="bar"><span class="bar-label">No targeting</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:40.0%"></span></span><span class="bar-value">1.0x</span></div></div><figcaption>Churners reached per customer contacted, on a held-out test set (AUC 0.837).</figcaption></figure>
+      <figure class="evidence evidence-bars"><div class="bars" role="img" aria-label="Model&#x27;s top 20% 2.5x; No targeting 1.0x"><div class="bar"><span class="bar-label">Model&#x27;s top 20%</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:100.0%;--i:0"></span></span><span class="bar-value">2.5x</span></div><div class="bar"><span class="bar-label">No targeting</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:40.0%;--i:1"></span></span><span class="bar-value">1.0x</span></div></div><figcaption>Churners reached per customer contacted, on a held-out test set (AUC 0.837).</figcaption></figure>
     </article>
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="SQL|Python and pandas|Data cleaning and modelling" style="view-transition-name:row-02-sql-retail-analytics">
       <div class="claim">
         <p class="kicker">SQL</p>
-        <h3><a href="projects/02-sql-retail-analytics/">Retail sales analytics in SQL</a></h3>
+        <h3 style="view-transition-name:title-02-sql-retail-analytics"><a href="projects/02-sql-retail-analytics/">Retail sales analytics in SQL</a></h3>
         <p class="finding">A flat retail file normalized into a four-table schema, then seven queries that find where profit is made, where discounts destroy it and who to win back.</p>
         <p class="tools">SQL, SQLite, CTEs, Window functions, Python</p>
       </div>
       <figure class="evidence evidence-stats"><dl class="stats"><div class="stat"><dt>analytical queries over a 4-table schema</dt><dd>7</dd></div><div class="stat"><dt>high-value customers found at risk of leaving</dt><dd>82</dd></div></dl><figcaption>Every result rebuilds from the raw file with two scripts.</figcaption></figure>
     </article>
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="Python and pandas|Data cleaning and modelling" style="view-transition-name:row-01-ttc-subway-delays">
       <div class="claim">
         <p class="kicker">Toronto Open Data</p>
-        <h3><a href="projects/01-ttc-subway-delays/">TTC subway delay analysis</a></h3>
+        <h3 style="view-transition-name:title-01-ttc-subway-delays"><a href="projects/01-ttc-subway-delays/">TTC subway delay analysis</a></h3>
         <p class="finding">Two years of real subway delay logs, cleaned and quantified: 126 days of service lost, and the leading causes are people, not equipment.</p>
         <p class="tools">Python, pandas, NumPy, Matplotlib</p>
       </div>
       <figure class="evidence evidence-stats"><dl class="stats"><div class="stat"><dt>raw records from Toronto Open Data</dt><dd>64,485</dd></div><div class="stat"><dt>of service time lost to delays</dt><dd>126 days</dd></div></dl><figcaption>One script regenerates every chart and figure from the raw extracts.</figcaption></figure>
     </article>
-    <article class="work-row">
+    <article class="work-row" data-reveal data-skills="Python and pandas|Dashboards and BI|Excel" style="view-transition-name:row-04-excel-kpi-dashboard">
       <div class="claim">
         <p class="kicker">Excel</p>
-        <h3><a href="projects/04-excel-kpi-dashboard/">Executive KPI dashboard in Excel</a></h3>
+        <h3 style="view-transition-name:title-04-excel-kpi-dashboard"><a href="projects/04-excel-kpi-dashboard/">Executive KPI dashboard in Excel</a></h3>
         <p class="finding">A three-sheet executive workbook where every number is a live formula, built by a script so it can be regenerated from the data.</p>
         <p class="tools">Excel, openpyxl, Python</p>
       </div>
@@ -130,32 +128,32 @@
 
 <section id="more" class="section">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <h2>More on GitHub</h2>
       <p>Graduate coursework and research, with the code in its own repositories.</p>
     </div>
-    <ul class="more"><li><p class="kicker">Deep learning, MGTA 611</p><h3><a href="https://github.com/mohdaktham/projects/tree/main/611-group-project">Walmart retail sales forecasting</a></h3><p>Weekly sales prediction across 45 stores: feature engineering for holidays, rolling statistics and markdowns, an XGBoost baseline with a holiday-weighted loss, a tuned LSTM, and SHAP to explain store-level demand drivers.</p></li><li><p class="kicker">Client analysis, MGTA 621</p><h3><a href="https://github.com/mohdaktham/projects/tree/main/621%20Field%20Project">BC Housing: starts or registrations as the leading indicator</a></h3><p>Field project on which measure better predicts completions. Quantified conversion rates and time lags from registration to start to completion across 36 years of CMHC data.</p></li><li><p class="kicker">Research, INDUCE Lab, UAE University</p><h3><a href="https://github.com/mohdaktham/NS-3_Sumo">Vehicular network simulation with NS-3 and SUMO</a></h3><p>Simulation framework for vehicular ad hoc network research, linking SUMO traffic simulation with NS-3 network simulation, with validation checks in the data collection pipeline.</p></li><li><p class="kicker">Web app, finance</p><h3><a href="https://github.com/mohdaktham/projects/tree/main/BackTest%20Buddy">BackTest Buddy, an equity strategy backtester</a></h3><p>Web application for testing trading strategies against historical prices: define entry and exit rules and get back the Sharpe ratio and maximum drawdown.</p></li></ul>
+    <ul class="more"><li data-reveal><p class="kicker">Deep learning, MGTA 611</p><h3><a href="https://github.com/mohdaktham/projects/tree/main/611-group-project">Walmart retail sales forecasting</a></h3><p>Weekly sales prediction across 45 stores: feature engineering for holidays, rolling statistics and markdowns, an XGBoost baseline with a holiday-weighted loss, a tuned LSTM, and SHAP to explain store-level demand drivers.</p></li><li data-reveal><p class="kicker">Client analysis, MGTA 621</p><h3><a href="https://github.com/mohdaktham/projects/tree/main/621%20Field%20Project">BC Housing: starts or registrations as the leading indicator</a></h3><p>Field project on which measure better predicts completions. Quantified conversion rates and time lags from registration to start to completion across 36 years of CMHC data.</p></li><li data-reveal><p class="kicker">Research, INDUCE Lab, UAE University</p><h3><a href="https://github.com/mohdaktham/NS-3_Sumo">Vehicular network simulation with NS-3 and SUMO</a></h3><p>Simulation framework for vehicular ad hoc network research, linking SUMO traffic simulation with NS-3 network simulation, with validation checks in the data collection pipeline.</p></li><li data-reveal><p class="kicker">Web app, finance</p><h3><a href="https://github.com/mohdaktham/projects/tree/main/BackTest%20Buddy">BackTest Buddy, an equity strategy backtester</a></h3><p>Web application for testing trading strategies against historical prices: define entry and exit rules and get back the Sharpe ratio and maximum drawdown.</p></li></ul>
   </div>
 </section>
 
 <section id="skills" class="section">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <h2>Skills, and where to see them</h2>
-      <p>A filled square means the project uses that skill. Choose a project name to open it.</p>
+      <p>A filled square means the project uses that skill. Choose a skill to filter the work above, or a project name to open it.</p>
     </div>
-    <div class="matrix-scroll" tabindex="0" role="region" aria-label="Skills by project"><table class="matrix"><thead><tr><td></td><th scope="col"><a href="projects/05-bc-housing-forecast/">BC Housing</a></th><th scope="col"><a href="projects/06-fraud-model-monitoring/">Fraud monitoring</a></th><th scope="col"><a href="projects/tessera/">Tessera</a></th><th scope="col"><a href="projects/03-customer-churn/">Churn</a></th><th scope="col"><a href="projects/02-sql-retail-analytics/">SQL retail</a></th><th scope="col"><a href="projects/01-ttc-subway-delays/">TTC delays</a></th><th scope="col"><a href="projects/04-excel-kpi-dashboard/">Excel KPIs</a></th></tr></thead><tbody><tr><th scope="row">SQL</th><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row">Python and pandas</th><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td></tr><tr><th scope="row">Forecasting and regression</th><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row">Classification</th><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row">Validation and monitoring</th><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row">Data cleaning and modelling</th><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td></tr><tr><th scope="row">Dashboards and BI</th><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td></tr><tr><th scope="row">Excel</th><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td></tr><tr><th scope="row">Automated testing</th><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row">Software engineering</th><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr></tbody></table></div>
-    <dl class="toolkit"><div><dt>Querying and data</dt><dd>SQL (joins, CTEs, window functions), SQLite and MySQL, data modelling, Python (pandas, NumPy), R</dd></div><div><dt>Models and statistics</dt><dd>Logistic and Ridge regression, gradient boosting, time-series forecasting, out-of-time validation, prediction intervals, missing-data imputation</dd></div><div><dt>Monitoring and quality</dt><dd>AUC, Gini and KS, PSI and CSI drift checks, alert and false-alarm rates, validation checks, unit testing with pytest</dd></div><div><dt>BI and communication</dt><dd>Power BI (DAX, data modelling), Tableau, Excel dashboards, Matplotlib, presenting models to non-technical audiences, Git</dd></div></dl>
+    <div class="matrix-scroll" tabindex="0" role="region" aria-label="Skills by project"><table class="matrix"><thead><tr><td></td><th scope="col"><a href="projects/05-bc-housing-forecast/">BC Housing</a></th><th scope="col"><a href="projects/06-fraud-model-monitoring/">Fraud monitoring</a></th><th scope="col"><a href="projects/tessera/">Tessera</a></th><th scope="col"><a href="projects/03-customer-churn/">Churn</a></th><th scope="col"><a href="projects/02-sql-retail-analytics/">SQL retail</a></th><th scope="col"><a href="projects/01-ttc-subway-delays/">TTC delays</a></th><th scope="col"><a href="projects/04-excel-kpi-dashboard/">Excel KPIs</a></th></tr></thead><tbody><tr><th scope="row"><a href="#work" data-skill="SQL">SQL</a></th><td><span class="mark" aria-label="yes" style="--d:0"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:2"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:4"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row"><a href="#work" data-skill="Python and pandas">Python and pandas</a></th><td><span class="mark" aria-label="yes" style="--d:1"></span></td><td><span class="mark" aria-label="yes" style="--d:2"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:4"></span></td><td><span class="mark" aria-label="yes" style="--d:5"></span></td><td><span class="mark" aria-label="yes" style="--d:6"></span></td><td><span class="mark" aria-label="yes" style="--d:7"></span></td></tr><tr><th scope="row"><a href="#work" data-skill="Forecasting and regression">Forecasting and regression</a></th><td><span class="mark" aria-label="yes" style="--d:2"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row"><a href="#work" data-skill="Classification">Classification</a></th><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:4"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:6"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row"><a href="#work" data-skill="Validation and monitoring">Validation and monitoring</a></th><td><span class="mark" aria-label="yes" style="--d:4"></span></td><td><span class="mark" aria-label="yes" style="--d:5"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:7"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row"><a href="#work" data-skill="Data cleaning and modelling">Data cleaning and modelling</a></th><td><span class="mark" aria-label="yes" style="--d:5"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:9"></span></td><td><span class="mark" aria-label="yes" style="--d:10"></span></td><td><span class="sr">no</span></td></tr><tr><th scope="row"><a href="#work" data-skill="Dashboards and BI">Dashboards and BI</a></th><td><span class="mark" aria-label="yes" style="--d:6"></span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:8"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:12"></span></td></tr><tr><th scope="row"><a href="#work" data-skill="Excel">Excel</a></th><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:13"></span></td></tr><tr><th scope="row"><a href="#work" data-skill="Automated testing">Automated testing</a></th><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:9"></span></td><td><span class="mark" aria-label="yes" style="--d:10"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr><tr><th scope="row"><a href="#work" data-skill="Software engineering">Software engineering</a></th><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="mark" aria-label="yes" style="--d:11"></span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td><td><span class="sr">no</span></td></tr></tbody></table></div>
+    <dl class="toolkit" data-reveal><div><dt>Querying and data</dt><dd>SQL (joins, CTEs, window functions), SQLite and MySQL, data modelling, Python (pandas, NumPy), R</dd></div><div><dt>Models and statistics</dt><dd>Logistic and Ridge regression, gradient boosting, time-series forecasting, out-of-time validation, prediction intervals, missing-data imputation</dd></div><div><dt>Monitoring and quality</dt><dd>AUC, Gini and KS, PSI and CSI drift checks, alert and false-alarm rates, validation checks, unit testing with pytest</dd></div><div><dt>BI and communication</dt><dd>Power BI (DAX, data modelling), Tableau, Excel dashboards, Matplotlib, presenting models to non-technical audiences, Git</dd></div></dl>
   </div>
 </section>
 
 <section id="about" class="section">
   <div class="wrap about">
-    <div>
+    <div data-reveal>
       <h2>About</h2>
       <p>I&#x27;m a data analyst based in Toronto. I hold an MSc in Management Analytics from Wilfrid Laurier University (2026) and a BSc in Computer Science and Software Engineering from United Arab Emirates University.</p><p>My most recent work was a consulting engagement forecasting housing completions for BC Housing, where I handled the data preparation, the forecasting models and the Power BI build. I&#x27;m looking for data analyst and data science roles.</p>
     </div>
-    <div>
+    <div data-reveal>
       <h2>Contact</h2>
       <ul class="contact">
         <li><span>Email</span><a href="mailto:mohammadaktham@gmail.com">mohammadaktham@gmail.com</a></li>
