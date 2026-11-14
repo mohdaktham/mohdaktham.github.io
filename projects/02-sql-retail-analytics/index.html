@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail sales analytics in SQL | Mo Maghaireh</title>
+<meta name="description" content="A flat retail file normalized into a four-table schema, then seven queries that find where profit is made, where discounts destroy it and who to win back.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Retail sales analytics in SQL | Mo Maghaireh">
+<meta property="og:description" content="A flat retail file normalized into a four-table schema, then seven queries that find where profit is made, where discounts destroy it and who to win back.">
+<meta property="og:url" content="https://mohdaktham.github.io/projects/02-sql-retail-analytics/">
+<meta property="og:image" content="https://mohdaktham.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mohdaktham.github.io/projects/02-sql-retail-analytics/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="../../">Mo Maghaireh</a>
+    <nav aria-label="Main">
+      <a href="../../#work">Work</a>
+      <a href="../../#skills">Skills</a>
+      <a href="../../#about">About</a>
+      <button type="button" class="theme" id="theme-toggle" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18Z" fill="currentColor"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="case">
+  <header class="case-head">
+    <div class="wrap">
+      <p class="crumb"><a href="../../#work">All work</a></p>
+      <p class="kicker">SQL</p>
+      <h1>Retail sales analytics in SQL</h1>
+      <p class="lede">A national retailer wants to know where profit is actually made, which discounting destroys margin, and which customers are worth retention spend. Seven SQL queries answer it.</p>
+      <p class="context">Data: Superstore retail dataset, 9,994 order lines from 2015 to 2018.</p>
+      <p class="tools">SQL, SQLite, CTEs, Window functions, Python</p>
+      <p class="actions"><a class="btn btn-solid" href="https://github.com/mohdaktham/mohdaktham.github.io/tree/main/projects/02-sql-retail-analytics">View the queries on GitHub</a></p>
+    </div>
+  </header>
+  <div class="wrap case-body">
+    <div class="case-main">
+      
+      <dl class="stats stat-strip"><div class="stat"><dt>analytical queries</dt><dd>7</dd></div><div class="stat"><dt>tables in the normalized schema</dt><dd>4</dd></div><div class="stat"><dt>revenue analyzed</dt><dd>$2.3M</dd></div><div class="stat"><dt>at-risk customers identified</dt><dd>82</dd></div></dl>
+      
+      <section class="block"><h2 id="the-question">The question</h2><p>Where is profit actually made, which discounting behaviour destroys margin, and which customers are worth retention spend?</p></section><section class="block"><h2 id="what-i-did">What I did</h2><ul><li><strong>Normalized a flat 21-column CSV into a 4-table relational schema</strong> (<code>customers</code>, <code>products</code>, <code>orders</code>, <code>order_items</code>) with indexes.</li><li>Wrote <strong>7 analytical queries</strong> covering year-over-year growth, profitability ranking, discount-loss diagnosis, 12-month cohort retention, RFM customer segmentation and shipping lag.</li><li>Scripted the whole run: one script builds the database from the raw file, another executes every query and exports each result as a CSV.</li></ul></section><section class="block"><h2 id="what-i-found">What I found</h2><ul><li>Revenue grew from <strong>$484K in 2015 to $733K in 2018</strong>, up 29.5% and 20.4% in the last two years, while profit margin improved from 10.2% to 12.7%.</li><li><strong>Tables lose $17.7K despite heavy discounting</strong> (26% on average). Bookcases and Supplies also run negative. Recommendation: cap Table discounts at 15%.</li><li><strong>Copiers are the hidden star:</strong> only 8th in revenue but first in profit, $55.6K at a 37% margin.</li><li>RFM segmentation found <strong>82 at-risk customers averaging $4,444 in lifetime sales</strong> who haven&#x27;t ordered in about 200 days, the best win-back target.</li><li>The 12-month repeat-purchase rate for the 2015 cohort is <strong>69%</strong>, and rises for later cohorts.</li></ul></section><section class="block"><h2 id="sql-techniques-used">SQL techniques used</h2><p>Joins across a normalized schema, CTEs, the window functions <code>LAG</code>, <code>RANK</code>, <code>ROW_NUMBER</code> and <code>NTILE</code>, conditional aggregation, date arithmetic with <code>julianday</code>, and <code>HAVING</code> filters.</p></section><section class="block"><h2 id="run-it">Run it</h2><pre><code>pip install pandas
+python build_db.py      # builds superstore.db from superstore.csv
+python run_queries.py   # runs all 7 queries, exports to outputs/</code></pre></section>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol><li><a href="#the-question">The question</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#sql-techniques-used">SQL techniques used</a></li><li><a href="#run-it">Run it</a></li></ol>
+    </nav>
+  </div>
+  <nav class="pager" aria-label="Other projects">
+    <div class="wrap pager-inner">
+      <a href="../../projects/03-customer-churn/"><span>Previous</span>Customer churn: drivers and revenue at risk</a>
+      <a href="../../projects/01-ttc-subway-delays/"><span>Next</span>TTC subway delay analysis</a>
+    </div>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Mo Maghaireh, Toronto</p>
+    <p>
+      <a href="mailto:mohammadaktham@gmail.com">mohammadaktham@gmail.com</a>
+      <a href="https://linkedin.com/in/mo-maghaireh">LinkedIn</a>
+      <a href="https://github.com/mohdaktham">GitHub</a>
+      <a href="https://github.com/mohdaktham/mohdaktham.github.io">Source for this site</a>
+    </p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
