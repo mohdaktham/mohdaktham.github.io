@@ -15,12 +15,10 @@ Forecasts monthly housing completions 36 months ahead for every BC regional dist
 - Scenario engine: baseline vs ±100bp mortgage-rate paths; rate-sensitivity table quantifies % forecast change per +100bp
 - Pipeline anchor: forecasts cross-checked against units physically under construction (18-month conversion ratios)
 
-## Deliverables
-| File | Purpose |
-|---|---|
-| `BC_Housing_Forecast_v13_production.py` | Self-contained forecasting pipeline (509 lines) that writes 8 Power BI CSVs |
-| `PBI_Unified_Dashboard.csv` + 7 companion CSVs | Forecasts, scenarios, backtests, diagnostics, rate sensitivity |
-| `PowerBI_Upgrade_Guide_v13.md` | Guide for connecting the model outputs to the Power BI file |
-| `BC_Housing_Model_Card_v13.docx` | Model card: method, assumptions, validation |
+## What was delivered
+- A self-contained forecasting pipeline that writes eight data feeds for Power BI: forecasts, scenarios, backtests, diagnostics and rate sensitivity
+- The Power BI dashboard built on those feeds
+- A guide for connecting the model outputs to the Power BI file
+- A model card covering method, assumptions and validation
 
-*Note: the source CMHC workbook is not included here for data-sharing reasons; the script and outputs demonstrate the full pipeline.*
+*This folder is a write-up only. The forecasting script, its outputs and the model card belong to the client engagement and are not published, and the CMHC source workbook is not shared for data-sharing reasons.*
