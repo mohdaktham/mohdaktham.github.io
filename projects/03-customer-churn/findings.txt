@@ -1,0 +1,46 @@
+TELCO CHURN ANALYSIS - KEY FINDINGS
+========================================
+
+customers analyzed: 7032
+overall churn rate: 26.6%
+model test AUC: 0.837
+top-20% risk decile lift: 2.5x
+high-risk customers (p>=0.7) in test set: 456
+annualized revenue at risk (test set, p>=0.7): $445,451
+
+CHURN BY CONTRACT
+Contract
+Month-to-month    0.427
+One year          0.113
+Two year          0.028
+
+CHURN BY TENURE
+tenure
+0-6m      0.533
+7-12m     0.359
+13-24m    0.287
+25-48m    0.204
+49-72m    0.095
+
+CHURN BY INTERNET SERVICE
+InternetService
+Fiber optic    0.419
+DSL            0.190
+No             0.074
+
+CHURN BY PAYMENT METHOD
+PaymentMethod
+Electronic check             0.453
+Mailed check                 0.192
+Bank transfer (automatic)    0.167
+Credit card (automatic)      0.153
+
+CLASSIFICATION REPORT (test set)
+              precision    recall  f1-score   support
+
+      Stayed       0.91      0.72      0.80      1291
+     Churned       0.50      0.79      0.62       467
+
+    accuracy                           0.74      1758
+   macro avg       0.70      0.76      0.71      1758
+weighted avg       0.80      0.74      0.75      1758

@@ -1,0 +1,6 @@
+segment,customers,avg_lifetime_sales,avg_days_since_order
+Regular,288,2985.0,102.0
+Lost,175,1452.0,369.0
+Champions,162,4206.0,24.0
+New / Promising,86,1598.0,25.0
+At Risk (was loyal),82,4444.0,200.0
