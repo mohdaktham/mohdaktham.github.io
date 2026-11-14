@@ -213,6 +213,44 @@ PROJECTS = [
             },
             {
                 "h": "What the monitoring caught",
+                "monitor": {
+                    "csv": "outputs/monitoring_report.csv",
+                    "title": "The year, month by month",
+                    "hint": "Choose a month to see what the report said.",
+                    "start": "2025-10",
+                    "notes": {
+                        "2025-03": "The baseline. The model was validated on this month, out of time.",
+                        "2025-04": "Every check within thresholds.",
+                        "2025-05": "Every check within thresholds.",
+                        "2025-06": (
+                            "Planted event: online spending rose. One input, card_present, drifted "
+                            "past the watch line, but the model still ranked well."
+                        ),
+                        "2025-07": "Every check within thresholds.",
+                        "2025-08": (
+                            "Planted event: a feed delivered distance_from_home as 0 for 40% of "
+                            "transactions. The input check caught it, and fraud cases caught fell."
+                        ),
+                        "2025-09": "Back within thresholds once the feed fault ended.",
+                        "2025-10": (
+                            "Planted event: a new fraud type that looks like everyday spending. "
+                            "No input or score moved, yet ranking power dropped."
+                        ),
+                        "2025-11": (
+                            "Inputs and scores are stable. Performance is provisional until the "
+                            "fraud labels mature."
+                        ),
+                        "2025-12": (
+                            "Inputs and scores are stable. Performance is provisional until the "
+                            "fraud labels mature."
+                        ),
+                    },
+                    "caption": (
+                        "From the project's monitoring report (simulated data). August and October "
+                        "are both red, for opposite reasons: in August an input moved, in October "
+                        "nothing did."
+                    ),
+                },
                 "table": {
                     "head": ["Month", "What happened", "What the report showed", "Status", "Right response"],
                     "rows": [
@@ -749,15 +787,39 @@ PROJECTS = [
 # The evidence shown beside the headline on the home page.
 # ---------------------------------------------------------------------------
 
-HERO_EVIDENCE = {
-    "title": "For example: forecasting housing completions for BC Housing",
-    "bars": [
-        {"label": "This model", "value": 11.1, "display": "11.1%", "tone": "signal"},
-        {"label": "Naive forecast", "value": 20.7, "display": "20.7%", "tone": "baseline"},
-    ],
-    "caption": "Forecast error on 12 months the model never saw. Lower is better.",
-    "link": ("Read the case study", "05-bc-housing-forecast"),
-}
+HERO_SLIDES = [
+    {
+        "tab": "Forecasting",
+        "slug": "05-bc-housing-forecast",
+        "title": "Forecasting housing completions for BC Housing",
+        "bars": [
+            {"label": "This model", "value": 11.1, "display": "11.1%", "tone": "signal"},
+            {"label": "Naive forecast", "value": 20.7, "display": "20.7%", "tone": "baseline"},
+        ],
+        "caption": "Forecast error on 12 months the model never saw. Lower is better.",
+    },
+    {
+        "tab": "Monitoring",
+        "slug": "06-fraud-model-monitoring",
+        "title": "Monitoring a fraud model on simulated data",
+        "max": 1.0,
+        "bars": [
+            {"label": "Baseline AUC", "value": 0.957, "display": "0.957", "tone": "signal"},
+            {"label": "New fraud pattern", "value": 0.710, "display": "0.710", "tone": "fault"},
+        ],
+        "caption": "No input and no score shifted that month. Only outcome monitoring caught the drop.",
+    },
+    {
+        "tab": "Targeting",
+        "slug": "03-customer-churn",
+        "title": "Finding the customers most likely to churn",
+        "bars": [
+            {"label": "Model's top 20%", "value": 2.5, "display": "2.5x", "tone": "signal"},
+            {"label": "No targeting", "value": 1.0, "display": "1.0x", "tone": "baseline"},
+        ],
+        "caption": "Churners reached per customer contacted, on a held-out test set (AUC 0.837).",
+    },
+]
 
 # ---------------------------------------------------------------------------
 # Skills, mapped to the projects that show them. Keys are project slugs.

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="case">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,6 +32,7 @@
       </button>
     </nav>
   </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
 </header>
 <main id="main">
 
@@ -40,7 +41,7 @@
     <div class="wrap">
       <p class="crumb"><a href="../../#work">All work</a></p>
       <p class="kicker">Classification</p>
-      <h1>Customer churn: drivers and revenue at risk</h1>
+      <h1 style="view-transition-name:title-03-customer-churn">Customer churn: drivers and revenue at risk</h1>
       <p class="lede">26.6% of customers churn. This project finds which ones and why, and puts a number on how much revenue a targeted retention campaign could protect.</p>
       <p class="context">Data: IBM Telco Customer Churn, 7,032 customers.</p>
       <p class="tools">Python, scikit-learn, pandas, Matplotlib</p>
@@ -51,11 +52,11 @@
     <div class="case-main">
       
       <dl class="stats stat-strip"><div class="stat"><dt>AUC on the held-out test set</dt><dd>0.837</dd></div><div class="stat"><dt>annualized revenue with high-risk customers</dt><dd>$445K</dd></div><div class="stat"><dt>churners reached by targeting the top 20%</dt><dd>2.5x</dd></div><div class="stat"><dt>churn on month-to-month contracts</dt><dd>42.7%</dd></div></dl>
-      <figure class="evidence check"><p class="evidence-title">The check</p><div class="bars" role="img" aria-label="Model&#x27;s top 20% 2.5x; No targeting 1.0x"><div class="bar"><span class="bar-label">Model&#x27;s top 20%</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:100.0%"></span></span><span class="bar-value">2.5x</span></div><div class="bar"><span class="bar-label">No targeting</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:40.0%"></span></span><span class="bar-value">1.0x</span></div></div><figcaption>Churners reached per customer contacted, compared with the base rate, measured on customers the model was not trained on.</figcaption></figure>
+      <figure class="evidence check"><p class="evidence-title">The check</p><div class="bars" role="img" aria-label="Model&#x27;s top 20% 2.5x; No targeting 1.0x"><div class="bar"><span class="bar-label">Model&#x27;s top 20%</span><span class="bar-track"><span class="bar-fill tone-signal" style="width:100.0%;--i:0"></span></span><span class="bar-value">2.5x</span></div><div class="bar"><span class="bar-label">No targeting</span><span class="bar-track"><span class="bar-fill tone-baseline" style="width:40.0%;--i:1"></span></span><span class="bar-value">1.0x</span></div></div><figcaption>Churners reached per customer contacted, compared with the base rate, measured on customers the model was not trained on.</figcaption></figure>
       <section class="block"><h2 id="the-question">The question</h2><p>Which customers churn, why, and how much revenue can a targeted retention campaign realistically protect?</p></section><section class="block"><h2 id="what-i-did">What I did</h2><ul><li>Cleaned and explored the dataset, measuring churn rates across contract type, tenure, internet service and payment method.</li><li>Built a <strong>logistic regression classifier</strong> with balanced class weights, chosen for interpretability: every coefficient maps to an action a retention team can take.</li><li>Translated model scores into business terms: <strong>$445K of annualized revenue</strong> sits with high-risk customers (churn probability of 0.7 or more) in the test set alone.</li><li>Showed the efficiency case for scored outreach over blanket discounts: the model&#x27;s top 20% by risk reaches churners at 2.5 times the base rate.</li></ul></section><section class="block"><h2 id="what-i-found">What I found</h2><ul><li><strong>Month-to-month contracts churn at 42.7%</strong> against 2.8% on two-year contracts, so contract migration is the single biggest lever.</li><li><strong>The first 6 months are the danger zone:</strong> 53% churn, falling to 9.5% after 4 years, so onboarding investment pays off.</li><li><strong>Fiber-optic customers churn at 41.9%</strong> against 19% on DSL despite paying more, a price or service-quality red flag.</li><li><strong>Electronic-check payers churn at 45.3%</strong>, about 3 times auto-payment users, so nudging customers to auto-pay is a cheap retention win.</li></ul></section><figure class="fig plate"><img src="charts/churn_drivers.png" alt="Churn rate by contract type and by tenure" width="1500" height="570" loading="lazy"><figcaption>Churn rate by contract type and by tenure.</figcaption></figure><figure class="fig plate"><img src="charts/model_coefficients.png" alt="Logistic regression coefficients, the drivers of churn" width="1200" height="750" loading="lazy"><figcaption>Model coefficients: what pushes churn risk up and down.</figcaption></figure><section class="block"><h2 id="recommended-playbook">Recommended playbook</h2><ol><li>Offer a first-year discount for month-to-month customers with high risk scores who move to a one-year contract.</li><li>Run proactive 90-day onboarding check-ins for new fiber customers.</li><li>Target an auto-pay sign-up incentive at electronic-check payers.</li></ol></section><section class="block"><h2 id="run-it">Run it</h2><pre><code>pip install pandas scikit-learn matplotlib
 python churn_analysis.py</code></pre></section>
     </div>
-    <nav class="toc" aria-label="On this page">
+    <nav class="toc" aria-label="On this page" data-toc>
       <p>On this page</p>
       <ol><li><a href="#the-question">The question</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#recommended-playbook">Recommended playbook</a></li><li><a href="#run-it">Run it</a></li></ol>
     </nav>

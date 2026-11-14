@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="case">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/site.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,6 +32,7 @@
       </button>
     </nav>
   </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
 </header>
 <main id="main">
 
@@ -40,7 +41,7 @@
     <div class="wrap">
       <p class="crumb"><a href="../../#work">All work</a></p>
       <p class="kicker">Excel</p>
-      <h1>Executive KPI dashboard in Excel</h1>
+      <h1 style="view-transition-name:title-04-excel-kpi-dashboard">Executive KPI dashboard in Excel</h1>
       <p class="lede">An executive dashboard workbook for the Superstore retail dataset: six KPI cards and four native Excel charts, with no hardcoded numbers.</p>
       <p class="context">Data: Superstore retail dataset, 2015 to 2018.</p>
       <p class="tools">Excel, openpyxl, Python</p>
@@ -54,7 +55,7 @@
       
       <section class="block"><h2 id="what-it-is">What it is</h2><ul><li><strong>Dashboard sheet:</strong> 6 KPI cards (revenue, profit, margin, orders, average order value, best month) and 4 native Excel charts: monthly revenue trend, sales and profit by category, revenue by segment, and sales by region.</li><li><strong>Data sheet:</strong> clean monthly, category, segment and region aggregates that feed every KPI.</li><li><strong>Top Products sheet:</strong> a sortable, filterable sub-category table with live margin formulas.</li></ul></section><section class="block"><h2 id="why-it-holds-up">Why it holds up</h2><ul><li><strong>Every KPI is a live Excel formula</strong> referencing the Data sheet. Change the data and the whole dashboard recalculates.</li><li>Delivered with <strong>zero formula errors</strong>, confirmed by an automated recalculation of the workbook.</li><li>Follows finance formatting conventions: whole-dollar currency, one-decimal percentages and negatives in parentheses.</li></ul></section><section class="block"><h2 id="headline-numbers">Headline numbers</h2><p>Total revenue of $2.30M and profit of $286K, a 12.5% margin, across 5,009 orders. Technology is the top category and the West region leads sales.</p></section>
     </div>
-    <nav class="toc" aria-label="On this page">
+    <nav class="toc" aria-label="On this page" data-toc>
       <p>On this page</p>
       <ol><li><a href="#what-it-is">What it is</a></li><li><a href="#why-it-holds-up">Why it holds up</a></li><li><a href="#headline-numbers">Headline numbers</a></li></ol>
     </nav>
