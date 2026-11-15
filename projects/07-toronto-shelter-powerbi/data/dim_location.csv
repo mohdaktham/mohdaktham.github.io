@@ -1,0 +1,150 @@
+LocationKey,Location,City,Address,PostalCode,PostalArea
+0,Not reported,Not reported,,,
+1001,Red Door Family Shelter,Toronto,189B Booth Ave,M4M 2M5,M4M
+1002,Na-Me-Res,Toronto,14 Vaughan Rd,M6G 2N1,M6G
+1004,Streets to Homes Assessment and Referral Centre (SHARC),Toronto,129 Peter St,M5V 2H3,M5V
+1005,TSSS Womens' Residence,Toronto,674 Dundas St W,M5H 1H9,M5H
+1006,SSHA Bellwoods House,Toronto,63 Bellwoods Ave,M6J 3M4,M6J
+1007,Adelaide Resource Centre for Women,Toronto,67 Adelaide St E,M5C 1K6,M5C
+1008,TSSS Seaton House,Toronto,339 George St,M5A 2N2,M5A
+1009,TSSS Downsview Dells,Toronto,1651 Sheppard Ave W,M3M 2X4,M3M
+1011,TSSS Fort York Residence,Toronto,38 Bathurst St,M5V 3W3,M5V
+1013,Sagatay,Toronto,26 Vaughan Rd,M6G 2C4,M6G
+1014,Scott Mission,Toronto,502 Spadina Ave,M5S 2H1,M5S
+1015,Dixon Hall Heyworth House,Toronto,2714 Danforth Ave,M4C 1L7,M4C
+1018,Native Child & Family Services Toronto,Toronto,558 Bathurst St,M5S 2P9,M5S
+1019,Horizons for Youth,Toronto,422 Gilbert Ave,M6E 4X3,M6E
+1020,Dixon Hall Schoolhouse,Toronto,349 George St,M5A 2N2,M5A
+1021,Good Shepherd Centre Barrett House,Toronto,35 Sydenham St,M5A 4H5,M5A
+1022,Good Shepherd Centre,Toronto,412 Queen St E,M5A 1T3,M5A
+1023,Eva's Satellite,Toronto,25 Canterbury Pl,M3N 0E3,M3N
+1024,Eva's Place,Toronto,360 Lesmill Rd,M3B 2T5,M3B
+1025,Eva's Phoenix,Toronto,60 Brant St,M5V 3G9,M5V
+1026,Covenant House Gerrard St E,Toronto,20 Gerrard St E,M5B 2P3,M5B
+1027,Covenant House McGill St,Toronto,21 McGill St,M5B 1H3,M5B
+1028,Cornerstone Place,Toronto,616 Vaughan Rd,M6C 2R5,M6C
+1029,CONC Men's Shelter Lansdowne Ave,Toronto,973 Lansdowne Ave,M6H 3Z5,M6H
+1031,HFS St. Clair Ave E Shelter,Toronto,3576 St Clair Ave E,M1K 1M2,M1K
+1033,HFS Strachan House,Toronto,805A Wellington St W,M5V 1G8,M5V
+1035,Nellie's Women's Shelter,Not reported,,,
+1036,SA Evangeline Residence,Toronto,2808 Dundas St W,M6P 1Y5,M6P
+1037,SA Gateway,Toronto,107 Jarvis St,M5C 2H4,M5C
+1038,St.Simon's Shelter,Toronto,525 Bloor St E,M4W 1J1,M4W
+1039,SVDP St. Clare's Residence,Toronto,3410 Bayview Ave,M2M 3S3,M2M
+1041,Turning Point Youth Services,Toronto,95 Wellesley St E,M4Y 2X9,M4Y
+1045,Street Haven,Toronto,87 Pembroke St,M5A 2N9,M5A
+1048,SVDP Mary's Home,Toronto,70 Gerrard St E,M5B 1G6,M5B
+1049,SVDP Elisa House,Toronto,60 Newcastle St,M8Y 1A3,M8Y
+1050,SVDP Amelie House,Toronto,126 Pape Ave,M4M 2V8,M4M
+1051,COSTI Reception Centre,Toronto,100 Lippincott St,M5S 2P1,M5S
+1052,Christie Refugee Welcome Centre,Toronto,43 Christie St,M6G 3B1,M6G
+1053,Fife House Denison Ave,Toronto,70 Denison Ave,M5T 2M8,M5T
+1054,Fife House Sherbourne St,Toronto,490 Sherbourne St,M4X 1K9,M4X
+1055,Fred Victor Centre Bethlehem United Shelter,Toronto,1161 Caledonia Rd,M6A 2W9,M6A
+1057,Maxwell Meighen Centre,Toronto,135 Sherbourne St,M5A 2R5,M5A
+1059,Sojourn House Ontario St,Toronto,101 Ontario St,M5A 2V2,M5A
+1062,YWCA 1st Stop Woodlawn,Toronto,80 Woodlawn Ave E,M4T 1C1,M4T
+1064,Youth Without Shelter,Etobicoke,6 Warrendale Ct,M9V 1P9,M9V
+1065,TSSS Family Residence,Toronto,4222 Kingston Rd,M1E 2M6,M1E
+1066,Kingston Residence SWS,Toronto,4674 Kingston Rd,M1E 2P9,M1E
+1067,TSSS Scarborough Hotel Program 4,Toronto,4540 Kingston Rd,M1E 2N8,M1E
+1069,Robertson House,Toronto,291 Sherbourne St,M5A 2R9,M5A
+1070,TSSS Birkdale Residence,Toronto,1229 Ellesmere Rd,M1P 4V8,M1P
+1078,Metro Hall,Toronto,55 John St,M5V 3C6,M5V
+1080,Kennedy House Youth Shelter,Toronto,1076 Pape Ave,M4K 3W5,M4K
+1081,Fred Victor Mary Sheffield House,Toronto,512 Jarvis St,M4Y 2H6,M4Y
+1096,Wagner Green YMCA,Toronto,7 Vanauley St,M5T 2V9,M5T
+1099,Fred Victor Centre Transition to Housing Dundas St E,Toronto,386 Dundas St E,M5A 2A5,M5A
+1101,YMCA Sprott House,Toronto,21 Walmer Rd,M5R 2W7,M5R
+1102,CONC Men's Shelter Bloor St W,Toronto,850 Bloor St W,M6G 1M2,M6G
+1103,TSSS North York West Hotel Program,North York,1677 Wilson Ave,M3L 1A5,M3L
+1104,Sistering,Toronto,962 Bloor St W,M6H 1L6,M6H
+1105,St. Felix Centre 25 Augusta Ave. Respite,Toronto,25 Augusta Ave,M5T 2K7,M5T
+1108,HFS Kennedy Rd Women's Shelter,Toronto,702 Kennedy Rd,M1K 2B5,M1K
+1114,COSTI Uptown Hotel Program,North York,55 Hallcrown Pl,M2J 4R1,M2J
+1115,Warden Woods 705 Progress Ave Respite,Toronto,705 Progress Ave,M1H 2X1,M1H
+1118,Margaret's 21 Park Rd Respite,Toronto,21 Park Rd,M4W 2N1,M4W
+1120,Toronto Community Hostel (MUC),Toronto,191 Spadina Rd,M5R 2T9,M5R
+1123,TSSS North Hotel Program,Vaughan,3600 Steeles Ave W,L4L 8P5,L4L
+1124,TSSS Downtown Hotel Program,Toronto,77 Ryerson Ave,M5T 2V4,M5T
+1125,HFS 195 Princes' Blvd,Toronto,195 Princes' Blvd,M6K 3C3,M6K
+1126,SA New Hope Leslieville,Toronto,29A Leslie St,M4M 3C3,M4M
+1128,Dixon Hall 354 George St,Scarborough,354 George St,M5A 2N3,M5A
+1129,YWCA Davenport Shelter,Toronto,348 Davenport Road,M5R 1K6,M5R
+1130,Fred Victor Uptown Hotel Program,North York,185 Yorkland Blvd,M2J 4R2,M2J
+1132,Sojourn House Hotel Program,Toronto,165 Grange Ave,M5T 2V5,M5T
+1146,SA Islington Seniors' Shelter,Toronto,2671 Islington Ave,M9V 2X6,M9V
+1147,YouthLink,Scarborough,747 Warden Ave,M1L 4A1,M1L
+1148,St. Felix Centre 69 Fraser Ave. Respite,Toronto,69 Fraser Ave,M6K 1E9,M6K
+1149,Dixon Hall 351 Lake Shore Blvd E Respite,Toronto,351 Lake Shore Blvd E,M5A 1C1,M5A
+1150,HFS 545 Lake Shore Blvd W Shelter,Toronto,545 Lake Shore Blvd W,M5V 1A3,M5V
+1151,TSSS Scarborough Village Residence,Toronto,3306 Kingston Rd,M1M 1P8,M1M
+1152,Fred Victor Centre 1A Strachan Ave Respite,Toronto,1A Strachan Ave,M6K 3C3,M6K
+1153,HFS Willowdale Centre,North York,5800 Yonge St,M2M 3T3,M2M
+1154,TSSS Junction Place,Toronto,731 Runnymede Rd,M6N 3V7,M6N
+1155,Scarborough Hotel Program 1,Scarborough,4584 Kingston Rd,M1E 2P4,M1E
+1157,354 George Street,Toronto,354 George St,M5A 2N3,M5A
+1158,Warden Hilltop CC,Scarborough,25 Mendelssohn St,M1L 0G8,M1L
+1160,CONC Etobicoke Hotel Program,Etobicoke,445 Rexdale Blvd,M9W 6P8,M9W
+1163,TSSS Etobicoke Hotel Program,Not reported,,,
+1165,Jimmie Simpson CC,Toronto,870 Queen St E,M4M 3G9,M4M
+1166,SA Scarborough Hotel Program,Scarborough,50 Estate Dr,M1H 2Z1,M1H
+1167,Downtown Hotel Program - York,Toronto,60 York St,M5J 1S8,M5J
+1168,Good Shepherd Centre West End Hotel Program,Toronto,335 Jarvis St,M5B 2C2,M5B
+1169,Youth Agencies Downtown Hotel Program,Toronto,222 Spadina Ave,M5T 3B3,M5T
+1171,SSHA East End Hotel Program,Toronto,1684 Queen St E,M4L 1G6,M4L
+1172,CONC West End Hotel Program,Toronto,14 Roncesvalles Ave,M6R 2K3,M6R
+1173,Multiple Youth & Adult Agencies Scarborough Hotel Program,Scarborough,2035 Kennedy Rd,M1T 3G2,M1T
+1174,Multiple Youth & Adult Agencies Scarborough Hotel Program,Scarborough,2035 Kennedy Rd,M1T 3G2,M1T
+1175,SA North Hotel Program,North York,30 Norfinch Dr,M3N 1X1,M3N
+1176,Dixon Hall Bond Place Hotel Program,Toronto,65 Dundas St E,M5B 2G8,M5B
+1177,Dixon Hall Downtown Hotel,Toronto,56 Yonge St,M5E 1G5,M5E
+1178,St. Felix Centre Esplanade Response Program,Toronto,98 The Esplanade,M5E 1A9,M5E
+1179,Multiple Youth & Adult Agencies Scarborough Hotel Program,Scarborough,2035 Kennedy Rd,M1T 3G2,M1T
+1180,Street Haven Downtown Hotel Program,Toronto,26 Gerrard St E,M5B 1G3,M5B
+1181,SSHA Roehampton Hotel Program,Toronto,808 Mt Pleasant Rd,M4P 2L2,M4P
+1182,SSHA Scarborough Response Program,Scarborough,2685 Kingston Rd,M1M 1M4,M1M
+1183,Woodgreen Regent Park Interim Housing 1,Toronto,274 Sackville St,M5A 3S7,M5A
+1184,Woodgreen Regent Park Interim Housing 2,Toronto,295 Sackville St,M5A 3G1,M5A
+1185,Woodgreen Regent Park Interim Housing 3,Toronto,325 Gerrard St E,M5A 2G6,M5A
+1186,Woodgreen Regent Park Interim Housing 4,Toronto,355 Gerrard St E,M5A 2G5,M5A
+1187,Friends of Ruby,Not reported,257 Dundas St E,M5A 1Z8,M5A
+1189,Etobicoke Hotel Site 1,North York,66 Norfinch Dr,M3N 1X1,M3N
+1190,TSSS Downtown Response Program,Toronto,76 Church St,M5C 2G1,M5C
+1191,45 The Esplanade,Toronto,45 The Esplanade,M5E 1W2,M5E
+1192,St. Simon's Clubbe House,Toronto,556 Sherbourne St,M4X 1L4,M4X
+1193,Fred Victor Centre Fatima House,Toronto,1059 College Street,M6H 1B1,M6H
+1194,Scarborough Women's Shelter - Milner,Scarborough,20 Milner Business Ct,M1B 3M6,M1B
+1195,HFS - Lawrence East Shelter,Scarborough,4117 Lawrence Ave E,M1E 2S2,M1E
+1198,Multiple Youth Agencies Downtown Hotel Program,Toronto,92 Peter St,M5V 2G5,M5V
+1200,HFS Placer,Toronto,101 Placer Ct,M2H 3H9,M2H
+1220,HFS - Metro Strachan,Toronto,22 Metropolitan Rd,M1R 2T5,M1R
+1240,Masaryk-Cowan CC,Toronto,220 Cowan Ave,M6K 2N6,M6K
+1280,Nellie's Women's Shelter,Not reported,,,
+1300,The Scott Mission - Kensington location,Toronto,346 Spadina Ave.,M5T 1J5,M5T
+1320,COSTI Hotel Program Dixon,Toronto,640 Dixon Rd.,M9W 1J1,M9W
+1360,Progress Avenue Shelter,Toronto,705 Progress Ave,M1H 2X1,M1H
+1380,Homes First Society - Pacewood,Not reported,,,
+1400,Mitchell Field CC,Toronto,89 Church Ave.,M2N 6C9,M2N
+1420,Scarborough Civic Centre,Toronto,150 Borough Dr,M1P 4N7,M1P
+1440,TSSS - Warming Centre - Cecil,Not reported,58 Cecil Street,M5T 1N6,M5T
+1460,Dixon Hall - Warming Centre North York,Toronto,12 Holmes Ave,M2N 4N4,M2N
+1500,Native Child & Family - Spadina,Toronto,111 Spadina Rd,M5R 2T1,M5R
+1521,Fred Victor Elizabeth,Toronto,81 Elizabeth Street,M5G 1P4,M5G
+1541,Christie Ossington - Spadina Rd,Toronto,136 Spadina Rd,M5R 2T8,M5R
+1561,885 Scarborough Golf Club Road,Toronto,885 Scarborough Golf Club Road,M1G 1J6,M1G
+1581,CRC Hotel Program Eglinton,Toronto,5515 Eglinton Ave West,M9C5K5,M9C
+1601,CRC Hotel Program Dixon,Toronto,970 Dixon Rd,M9W 1 J,M9W
+1621,Covenant House - Madison,Toronto,158 Madison Ave.,M5R 2S5,M5R
+1641,Romero-Edna Lane House,Toronto,2387 Dundas Street West,M6P 1X2,M6P
+1661,CHT Thrive Transitional Shelter,Toronto,18 Fourteenth Street,M8V 3H9,M8V
+1681,Centre for Refugee Children - Anchor House,Not reported,,,
+1701,Matthew House - Dundas House,Toronto,981 Dundas St W,M6J 1W4,M6J
+1721,213 Carlton Street,Toronto,213 Carlton Street,M5A 2K9,M5A
+1741,La Passerelle I.D.E. L'Agapanthe,Toronto,179 Gerrard St. East,M5A 2E5,M5A
+1761,Warden Woods - Kingston Road Shelter,Toronto,4584 Kingston Road,M1E 2P4,M1E
+1781,St. Felix Ctr - Adelaide Shelter,Toronto,629 Adelaide St W,M6J 1A8,M6J
+1821,Matthew House - Eunice House,North York,30 Eunice Rd,M2K 2V5,M2K
+1861,DH Warming Centre - 81 Elizabeth,Toronto,81 Elizabeth St.,M5G 1P4,M5G
+1941,John Innes Community Centre,Toronto,150 Sherbourne St.,M5A 2R6,M5A
+2041,FCJ - Indian Rd,Toronto,302 Indian Rd,M6R 2X6,M6R

@@ -1,0 +1,20 @@
+Measure,Filter,Expected
+Program Nights,all dates,"289,916"
+Person Nights,all dates,"17,941,778"
+Nights Reported,all dates,"2,130"
+Programs,all dates,279
+Locations,all dates,148
+People per Night,all dates,"8,423.4"
+Occupancy %,"all dates, beds",97.55%
+Occupancy %,"all dates, rooms",98.41%
+Full Program Nights %,all dates,72.56%
+Latest Month,,October 2026
+People per Night (Latest Month),2026-10,"6,976.9"
+People per Night (Year Earlier),2025-10,"8,697.6"
+Change vs Year Earlier %,2026-10,-19.78%
+Bed Occupancy % (Latest Month),2026-10,96.23%
+Room Occupancy % (Latest Month),2026-10,99.22%
+Full Program Nights % (Latest Month),2026-10,67.35%
+Peak Month,,January 2025
+People per Night (Peak Month),2025-01,"10,227.5"
+Change from Peak %,2026-10,-31.78%

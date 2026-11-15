@@ -1,0 +1,326 @@
+ProgramKey,ProgramID,Program,Organization,ShelterGroup,Sector,ProgramModel,ServiceType,ProgramArea,CapacityType,FirstNight,LastNight,IsCurrent
+1,11791,Red Door - Family Shelter,WoodGreen Red Door Family Shelter,Red Door Family Shelter,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2026-10-31,True
+2,11794,Na-Me-Res (Native Men's Residence),Na-Me-Res (Native Men's Residence),Na-Me-Res,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+3,11798,Womens' Residence - Main Program,City of Toronto,Women's Residence,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+4,11799,Womens' Residence - Bellwoods House,City of Toronto,Women's Residence,Women,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-07-15,True
+5,11811,Seaton House - Hostel Program,City of Toronto,Seaton House,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-11-01,True
+6,11812,Seaton House - Annex Harm Reduction & Managed Alcohol Program,City of Toronto,Seaton House,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+7,11815,Downsview Dells Bedded Program,City of Toronto,Downsview Dells,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2025-12-06,True
+8,11831,Fort York Residence Bedded Program,City of Toronto,Fort York Residence,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+9,11871,Sagatay,Na-Me-Res (Native Men's Residence),Na-Me-Res,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+10,11891,Scott Mission - Men's Ministry Overnight Program,The Scott Mission Inc.,Scott Mission Men's Ministry,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+11,11892,Dixon Hall - Heyworth House,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+12,11895,Native Child & Family Services Toronto,Native Child & Family Services Toronto,Eagles Nest Transition House,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2024-12-31,False
+13,11895,Native Child & Family Services Toronto,Native Child & Family Services Toronto,Eagles Nest Transition House,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2025-01-01,2026-10-31,True
+14,11896,Horizons for Youth,Horizon for Youth,Horizons for Youth,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+15,11897,Dixon Hall - Schoolhouse,Dixon Hall,Dixon Hall - Schoolhouse,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2025-10-30,True
+16,11898,Good Shepherd Ministries - Barrett House,Good Shepherd Ministries,Good Shepherd Centre,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+17,11899,Good Shepherd - D.A.R.E.,Good Shepherd Ministries,Good Shepherd Centre,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+18,11900,Good Shepherd - Emergency/Resettlement,Good Shepherd Ministries,Good Shepherd Centre,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+19,11911,Eva's Satellite,Eva's Initiatives,Eva's Satellite,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-12-06,True
+20,11931,Eva's Place,Eva's Initiatives,Eva's Place,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+21,11932,Eva's Phoenix,Eva's Initiatives,Eva's Phoenix,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+22,11951,Covenant House Residence,Covenant House Toronto,Covenant House,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+23,11955,Covenant House Rights of Passage,Covenant House Toronto,Covenant House,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+24,11971,Cornerstone Place,Cornerstone Place,Cornerstone Place,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+25,12011,Christie Ossington Men's Hostel,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+26,12012,Homes First Society - Scarborough Shelter,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+27,12032,Homes First Society - Strachan House,Homes First Society,HFS - Strachan House,Mixed Adult,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-01-21,True
+28,12051,Nellie's Women's Shelter,Women's Hostels Inc.,Nellie's,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+29,12053,Salvation Army - Evangeline Residence - Women's Ministry,The Salvation Army of Canada,Salvation Army - Evangeline Res,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+30,12071,Salvation Army - Gateway - Men's Hostel,The Salvation Army of Canada,Salvation Army - Gateway,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+31,12092,St. Simon's Shelter,St. Simon's Shelter Inc.,St. Simon's Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-05-05,True
+32,12111,St.Vincent De Paul - St. Clare's Residence - Transitional Housing,Society of St.Vincent De Paul,SVDP - St. Clare's Residence,Women,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+33,12151,Turning Point Youth Services Shelter,Turning Point Youth Services,Turning Point Youth Services,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+34,12195,Street Haven - Emergency Hostel,Street Haven At The Crossroads,Street Haven,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+35,12211,St.Vincent De Paul - Mary's Home - Emergency Shelter,Society of St.Vincent De Paul,SVDP - Mary's Home,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+36,12231,St.Vincent De Paul - Elisa House,Society of St.Vincent De Paul,SVDP - Elisa House,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+37,12232,St.Vincent De Paul - Amelie House - Women's Shelter,Society of St.Vincent De Paul,SVDP - Amelie House,Women,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+38,12233,Christie Refugee Welcome Centre - Settlement and Support,"Christie Refugee Welcome Centre, Inc.",Christie Refugee Welcome Centre,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2022-12-31,False
+39,12233,Christie Refugee Welcome Centre - Settlement and Support,"Christie Refugee Welcome Centre, Inc.",Christie Refugee Welcome Centre,Families,Emergency,Shelter,Base Program - Refugee,Room,2023-01-01,2026-10-31,True
+40,12251,COSTI Reception Centre CITY Program,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-12-31,False
+41,12251,COSTI Reception Centre CITY Program,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Shelter,Base Program - Refugee,Bed,2023-01-01,2026-10-31,True
+42,12252,Fife House Denison Program,Fife House Foundation,Fife House Transitional Program,Mixed Adult,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+43,12253,Fife-Sherbourne Transitional Program,Fife House Foundation,Fife House Transitional Program,Mixed Adult,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+44,12254,Fred Victor Bethlehem United Program,Fred Victor Centre,"Fred Victor, BUS",Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+45,12256,Fred Victor Women's Hostel Program,Fred Victor Centre,Fred Victor Women's Hostel,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+46,12258,Salvation Army - Maxwell Meighen - Men's Hostel,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+47,12260,Salvation Army - Maxwell Meighen Primary Support Unit,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-03-28,True
+48,12273,Sojourn House Bedded Program,The MUC Shelter Corporation,Sojourn House,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-12-31,False
+49,12273,Sojourn House Bedded Program,The MUC Shelter Corporation,Sojourn House,Mixed Adult,Emergency,Shelter,Base Program - Refugee,Bed,2023-01-01,2026-10-31,True
+50,12274,Toronto Community Hostel (Refugee Families),Toronto Community Hostel,Toronto Community Hostel,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2022-12-31,False
+51,12274,Toronto Community Hostel (Refugee Families),Toronto Community Hostel,Toronto Community Hostel,Families,Emergency,Shelter,Base Program - Refugee,Room,2023-01-01,2025-11-12,True
+52,12277,YWCA - Adult Women Shelter,YWCA Toronto,YWCA - First Stop Woodlawn,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+53,12278,YWCA - Youth Shelter,YWCA Toronto,YWCA - First Stop Woodlawn,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+54,12291,Youth without Shelter Stay In School Program,Youth Without Shelter,Youth Without Shelter,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+55,12292,Youth without Shelter Emergency Shelter Program,Youth Without Shelter,Youth Without Shelter,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+56,12311,Family Residence - Main Program,City of Toronto,Family Residence,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2026-10-31,True
+57,12331,Robertson House - Main Program,City of Toronto,Robertson House,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2026-10-31,True
+58,12351,Birkdale Residence - Bedded Program,City of Toronto,Birkdale Residence,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2026-10-31,True
+59,12391,TSSS Scarborough Hotel 4 - Family Program,City of Toronto,Family Residence,Families,Emergency,Motel/Hotel Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2025-03-30,True
+60,12392,Kingston Residence SWS-Family Program,City of Toronto,Family Residence,Families,Emergency,Motel/Hotel Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2025-12-31,False
+61,12392,Kingston Residence SWS-Family Program,City of Toronto,Family Residence,Families,Emergency,Shelter,Base Shelter and Overnight Services System,Room,2026-01-01,2026-10-31,True
+62,12471,Women's Residence Extreme Weather Program,City of Toronto,Women's Residence,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2023-11-05,True
+63,12711,Fort York SRO Units Program,City of Toronto,Fort York Residence,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+64,12871,Sojourn House Transitional Housing Program,The MUC Shelter Corporation,Sojourn House,Families,Transitional,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2022-12-31,False
+65,12871,Sojourn House Transitional Housing Program,The MUC Shelter Corporation,Sojourn House,Families,Transitional,Shelter,Base Program - Refugee,Room,2023-01-01,2026-10-31,True
+66,12952,Streets to Homes Bedded Program,City of Toronto,Streets To Homes,Mixed Adult,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+67,13031,Fort York Extreme Weather Program,City of Toronto,Fort York Residence,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2022-01-11,2022-11-25,True
+68,13151,Kennedy House Youth Shelter Bedded Program,Kennedy House Youth Services,Kennedy House Youth Shelter,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+69,13171,Salvation Army Maxwell Meighen Transition to Housing,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-03-30,True
+70,13191,Fred Victor Transition to Housing Bedded Program,Fred Victor Centre,FV Women's Transition to Housing,Women,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+71,13291,YMCA House - Wagner Green,YMCA of Greater Toronto,YMCA House,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+72,13311,Homes First Society - Flex Program,Homes First Society,HFS - Strachan House,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-01-20,True
+73,13331,Fred Victor T2H Bedded Program,Fred Victor Centre,FV Women's Transition to Housing,Women,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+74,13371,Covenant House -  Transitional Safe Beds for women,Covenant House Toronto,Covenant House,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-26,2026-10-31,True
+75,13451,YMCA Sprott House,YMCA of Greater Toronto,YMCA Sprott House,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+76,13591,Homes First Society- Kennedy Shelter Women's Program,Homes First Society,HFS - Kennedy Shelter,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+77,13611,Christie Ossington Men's Hostel South,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+78,13671,Birkdale North York West Hotel Program Single Males,City of Toronto,Birkdale Residence,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-01-28,True
+79,13751,COSTI Uptown Hotel Family Program,COSTI Immigrant Services,COSTI Reception Centre,Families,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2021-01-01,2026-10-31,True
+80,13851,Seaton House - Extended Hostel Program,City of Toronto,Seaton House,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2022-02-16,2022-04-28,True
+81,13932,Toronto Community Hostel (Refugee Singles),Toronto Community Hostel,Toronto Community Hostel,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-12-31,False
+82,13932,Toronto Community Hostel (Refugee Singles),Toronto Community Hostel,Toronto Community Hostel,Mixed Adult,Emergency,Shelter,Base Program - Refugee,Bed,2023-01-01,2025-11-20,True
+83,14051,Fort York Residence North Hotel Program,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+84,14051,Fort York Residence North Hotel Program,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+85,14091,Salvation Army - New Hope - Men's Hostel,The Salvation Army of Canada,Salvation Army - New Hope Leslie,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+86,14251,Sojourn House - Refugee Family Hotel Program,The MUC Shelter Corporation,Sojourn House,Families,Transitional,Shelter,Base Shelter and Overnight Services System,Room,2021-01-01,2022-12-31,False
+87,14251,Sojourn House - Refugee Family Hotel Program,The MUC Shelter Corporation,Sojourn House,Families,Transitional,Shelter,Base Program - Refugee,Room,2023-01-01,2026-10-31,True
+88,14371,Seaton House - O'Neill Harm Reduction Program,City of Toronto,Seaton House,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2022-05-17,True
+89,14471,Birkdale North York West Hotel Program - Family Program,City of Toronto,Birkdale Residence,Families,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-03-02,True
+90,14571,Salvation Army - Islington Seniors' Shelter Men's Program,The Salvation Army of Canada,Salvation Army Islington Seniors,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+91,14572,Salvation Army - Islington Seniors' Shelter Women's Program,The Salvation Army of Canada,Salvation Army Islington Seniors,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+92,14611,St. Felix Centre 69 Fraser Respite,St. Felix Social Ministries Outreach,St. Felix Centre,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+93,14631,TSSS Downtown Hotel Women's Program,City of Toronto,Women's Residence,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+94,14631,TSSS Downtown Hotel Women's Program,City of Toronto,Women's Residence,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+95,14651,YWCA Davenport - Adult,YWCA Toronto,YWCA-348 Davenport,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-12-21,2026-10-31,True
+96,14671,YWCA Davenport - Youth,YWCA Toronto,YWCA-348 Davenport,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-12-21,2026-10-31,True
+97,14791,Dixon Hall 351 Lake Shore Blvd E. Respite,Dixon Hall,351 Lakeshore Respite Services,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+98,14811,Scarborough Village Residence Main Program,City of Toronto,Scarborough Village Residence,Mixed Adult,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+99,14831,545 Lake Shore Blvd W. Couples,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-08-24,True
+100,14832,545 Lake Shore Blvd W. Women,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-07-16,True
+101,14891,YouthLink Emergency Program,YouthLink,YouthLink Shelter,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-12-31,False
+102,14891,YouthLink Emergency Program,YouthLink,YouthLink Shelter,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2022-01-01,2026-10-31,True
+103,14911,YouthLink Transitional Program,YouthLink,YouthLink Shelter,Mixed Adult,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2021-12-31,False
+104,14911,YouthLink Transitional Program,YouthLink,YouthLink Shelter,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2022-01-01,2026-10-31,True
+105,14931,Fred Victor 1A Strachan Ave Respite,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+106,14951,545 Lake Shore Blvd W. Men,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-07-16,True
+107,15031,Margaret's 21 Park Rd. Respite,Margaret's Housing and Community Support Services,Margaret's Toronto East Drop-In,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+108,15051,Seaton House - Fourth Floor Program,City of Toronto,Seaton House,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-12,True
+109,15071,St. Felix Centre 25 Augusta Ave. Respite,St. Felix Social Ministries Outreach,St. Felix Centre,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2023-08-01,True
+110,15091,Warden Woods 705 Progress Ave Respite,Warden Woods Community Centre,Scarborough Cold Weather Drop-IN,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2025-06-24,True
+111,15111,Homes First Society - Willowdale Centre - Men,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2023-09-14,True
+112,15112,Homes First Society - Willowdale Centre - Women,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2023-09-14,True
+113,15131,545 Lakeshore Blvd W. Men - Lower Level,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-06-14,True
+114,15131,545 Lakeshore Blvd W. Men - Lower Level,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Shelter,Winter Programs,Bed,2022-11-15,2022-12-31,False
+115,15131,545 Lakeshore Blvd W. Men - Lower Level,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2023-01-01,2024-12-31,False
+116,15171,Junction Place,City of Toronto,Seaton House,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+117,15191,Seaton House - Infirmary Bedded Program,City of Toronto,Seaton House,Men,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+118,15251,COSTI North York West Hotel Program - Women's Program,COSTI Immigrant Services,COSTI Reception Centre,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-04,2021-01-07,True
+119,15252,COSTI Uptown Hotel - Women's Program,COSTI Immigrant Services,COSTI Reception Centre,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-05,2023-12-04,False
+120,15252,COSTI Uptown Hotel - Women's Program,COSTI Immigrant Services,COSTI Reception Centre,Women,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-03-05,2026-04-03,True
+121,15331,Dixon Hall - 354 George,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,24-Hour Respite Site,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+122,15371,COSTI North York West Hotel - Family Program,COSTI Immigrant Services,COSTI Reception Centre,Families,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-05-28,True
+123,15372,COSTI Uptown Hotel COVID-19 - Family Program,COSTI Immigrant Services,COSTI Reception Centre,Families,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+124,15372,COSTI Uptown Hotel COVID-19 - Family Program,COSTI Immigrant Services,COSTI Reception Centre,Families,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+125,15391,TSSS Recovery Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Isolation/Recovery Site,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+126,15391,TSSS Recovery Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Isolation/Recovery Site,Temporary Programs,Room,2024-01-01,2026-03-23,True
+127,15491,SA Scarborough Hotel - Men's Program,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+128,15491,SA Scarborough Hotel - Men's Program,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+129,15492,Homes First Society Downtown Hotel - Mixed Adult Program,Homes First Society,HFS - Savard's Womens' Shelter,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-04-02,True
+130,15511,Dixon Hall Downtown Hotel - Mixed Adult Program,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-08-13,True
+131,15531,Good Shepherd Centre West End Hotel - Men's Program,Good Shepherd Ministries,Good Shepherd Centre,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+132,15531,Good Shepherd Centre West End Hotel - Men's Program,Good Shepherd Ministries,Good Shepherd Centre,Men,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+133,15551,Covenant House - Hotel Program,Covenant House Toronto,Covenant House,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-04-18,True
+134,15591,YMCA Youth Hotel Program,YMCA of Greater Toronto,YMCA House,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-04-19,True
+135,15611,Native Child Youth Hotel Program,Native Child & Family Services Toronto,Eagles Nest Transition House,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-04-28,True
+136,15631,Fred Victor Uptown Hotel Program,Fred Victor Centre,"Fred Victor, BUS",Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+137,15631,Fred Victor Uptown Hotel Program,Fred Victor Centre,"Fred Victor, BUS",Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+138,15651,Fred Victor Centre Women's Hostel Hotel Program,Fred Victor Centre,Fred Victor Women's Hostel,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-09-01,True
+139,15671,YWCA Davenport Women's Hotel Program,YWCA Toronto,YWCA-348 Davenport,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-12-20,True
+140,15672,YWCA Davenport Youth Hotel Program,YWCA Toronto,YWCA-348 Davenport,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-12-20,True
+141,15673,SSHA Scarborough Hotel 1 - Mixed Adult Program,City of Toronto,Scarborough Village Residence,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-08-22,True
+142,15711,CONC Men's Hotel Program,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+143,15711,CONC Men's Hotel Program,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Men,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+144,15731,Kennedy House Hotel Program,Kennedy House Youth Services,Kennedy House Youth Shelter,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2022-07-28,True
+145,15751,705 -Progress Travellers Hostel,City of Toronto,Progress Shelter,Men,Emergency,Shelter,COVID-19 Response,Bed,2021-01-01,2022-12-31,False
+146,15751,705 -Progress Travellers Hostel,City of Toronto,Progress Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2023-01-01,2026-10-31,True
+147,15791,Eva's Initiatives Hotel Program,Eva's Initiatives,Eva's Place,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-11-28,True
+148,15811,Salvation Army Florence Booth Hotel Program,The Salvation Army of Canada,Salvation Army - Florence Booth,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2022-12-29,True
+149,15871,Salvation Army New Hope Hotel Program,The Salvation Army of Canada,Salvation Army - New Hope Leslie,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2022-12-29,True
+150,15891,Dixon Hall Downtown Hotel Program - Mixed Adult,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-02-23,True
+151,15911,St. Felix Respite - Esplanade Program,St. Felix Social Ministries Outreach,St. Felix Centre,Men,Emergency,24-Hour Respite Site,COVID-19 Response,Bed,2021-01-01,2021-03-18,True
+152,15951,Homes First Society - 5800 Yonge St. Building B - Men,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-04-17,2021-05-09,True
+153,15972,Street Haven Hotel Program,Street Haven At The Crossroads,Street Haven,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+154,15972,Street Haven Hotel Program,Street Haven At The Crossroads,Street Haven,Women,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+155,15991,Roehampton Residence,City of Toronto,Expansion  Sites,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-08-10,True
+156,16011,HFS Scarborough Hotel Program - Mixed Adult,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+157,16011,HFS Scarborough Hotel Program - Mixed Adult,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2025-10-22,True
+158,16031,Scarborough Women's Shelter Response Program,City of Toronto,Expansion  Sites,Women,Emergency,Shelter,COVID-19 Response,Room,2021-01-01,2021-05-17,True
+159,16051,Woodgreen Interim Housing 1 - Mixed Adult Program,City of Toronto,Central Intake,Mixed Adult,Emergency,Interim Housing,COVID-19 Response,Room,2021-01-01,2021-06-09,True
+160,16052,Woodgreen Interim Housing 1 - Family Program,City of Toronto,Central Intake,Families,Emergency,Interim Housing,COVID-19 Response,Room,2021-02-17,2021-06-09,True
+161,16053,Woodgreen Interim Housing 2 - Mixed Adult Program,City of Toronto,Central Intake,Mixed Adult,Emergency,Interim Housing,COVID-19 Response,Room,2021-01-01,2021-03-22,True
+162,16054,Woodgreen Interim Housing 2 - Family Program,City of Toronto,Central Intake,Families,Emergency,Interim Housing,COVID-19 Response,Room,2021-02-24,2021-06-09,True
+163,16055,Woodgreen Interim Housing 3 - Mixed Adult Program,City of Toronto,Central Intake,Mixed Adult,Emergency,Interim Housing,COVID-19 Response,Room,2021-01-01,2021-06-09,True
+164,16056,Woodgreen Interim Housing 3 - Family Program,City of Toronto,Central Intake,Families,Emergency,Interim Housing,COVID-19 Response,Room,2021-02-17,2021-04-09,True
+165,16057,Woodgreen Interim Housing 4 - Mixed Adult Program,City of Toronto,Central Intake,Mixed Adult,Emergency,Interim Housing,COVID-19 Response,Room,2021-01-01,2021-01-24,True
+166,16058,SSHA Isolation Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Isolation/Recovery Site,COVID-19 Response,Room,2021-01-01,2022-12-08,True
+167,16071,Woodgreen Interim Housing 4 - Family Program,City of Toronto,Central Intake,Families,Emergency,Interim Housing,COVID-19 Response,Room,2021-01-01,2021-01-24,True
+168,16091,Dixon Hall - Bond Place Hotel Program,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+169,16091,Dixon Hall - Bond Place Hotel Program,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2024-07-17,True
+170,16111,CONC Etobicoke Hotel Program - Mixed Adult,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-12-31,False
+171,16111,CONC Etobicoke Hotel Program - Mixed Adult,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+172,16131,Homes First Society - Better Living Centre - Warming Centre,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2021-01-22,2022-03-31,True
+173,16151,Homes First Society - Better Living Centre - Winter Program,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,24-Hour Respite Site,COVID-19 Response,Bed,2021-01-01,2022-04-05,True
+174,16171,Streets to Homes - 129 Peter Street - Warming Centre,City of Toronto,Streets To Homes,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2021-01-22,2022-04-21,True
+175,16191,COSTI North York West Hotel Program - Mixed Adult,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2022-01-16,True
+176,16192,COSTI North York West Hotel Program - Men,COSTI Immigrant Services,COSTI Reception Centre,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2022-01-16,True
+177,16193,COSTI North York West Hotel Program - Women,COSTI Immigrant Services,COSTI Reception Centre,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2022-01-15,True
+178,16194,Homes First Society - 5800 Yonge Street - Warming Centre,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2021-01-22,2022-05-23,True
+179,16211,COSTI North York West Hotel - Seniors Program,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2021-01-03,True
+180,16231,SSHA Scarborough Hotel 3 - Mixed Adult Winter Program,City of Toronto,Family Residence,Families,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-01,2023-10-01,True
+181,16232,Family Residence - Main Site - Winter Program,City of Toronto,Family Residence,Families,Emergency,Shelter,COVID-19 Response,Bed,2021-01-01,2022-03-26,True
+182,16251,Friends of Ruby - Transitional Housing,Friends of Ruby,Friends of Ruby,Youth,Transitional,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-01,2026-10-31,True
+183,16252,Friends of Ruby - Emergency Housing,Friends of Ruby,Friends of Ruby,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-01-15,2026-10-31,True
+184,16271,TSSS North York West Hotel Program - Mixed Adult,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-01-29,2023-12-31,False
+185,16271,TSSS North York West Hotel Program - Mixed Adult,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+186,16291,SSHA Recovery Expansion Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Isolation/Recovery Site,COVID-19 Response,Room,2021-02-09,2021-05-07,True
+187,16311,SSHA North York West Hotel Program - Couples,City of Toronto,Birkdale Residence,Families,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-02-04,2022-09-13,True
+188,16331,HFS 45 The Esplanade,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-02-26,2022-12-05,True
+189,16351,St. Simon's Clubbe House,St. Simon's Shelter Inc.,St. Simon's Shelter,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-02-23,2023-12-31,False
+190,16351,St. Simon's Clubbe House,St. Simon's Shelter Inc.,St. Simon's Shelter,Men,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+191,16371,Sistering Overnight Women's Program,Sistering: A Women's Place,Sistering,Women,Emergency,24-Hour Women's Drop-in,Base Shelter and Overnight Services System,Bed,2021-03-31,2026-10-31,True
+192,16391,Fred Victor The Phoenix Women's 24/7 Drop-In,Fred Victor Centre,Fred Victor Women's Hostel,Women,Emergency,24-Hour Women's Drop-in,Base Shelter and Overnight Services System,Bed,2021-05-07,2026-10-31,True
+193,16471,Scarborough Women's Shelter - Milner,City of Toronto,Expansion  Sites,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-05-17,2023-12-31,False
+194,16471,Scarborough Women's Shelter - Milner,City of Toronto,Expansion  Sites,Women,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+195,16491,HFS - Lawrence East Shelter,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2021-06-17,2026-10-31,True
+196,16533,COSTI Uptown Hotel Program - Couples,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-06-07,2021-10-20,True
+197,16534,COSTI Uptown Hotel Program - Women,COSTI Immigrant Services,COSTI Reception Centre,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-06-07,2021-10-20,True
+198,16535,COSTI Uptown Hotel Program - Refugee Singles,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2021-06-08,2022-12-24,True
+199,16551,TSSS Etobicoke Hotel Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Bed,2021-07-09,2021-12-31,False
+200,16551,TSSS Etobicoke Hotel Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-01-01,2023-12-31,False
+201,16551,TSSS Etobicoke Hotel Program,City of Toronto,SSHA Etobicoke Hotel Program,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+202,16611,Eva's Satellite Downtown Hotel Program.,Eva's Initiatives,Eva's Place,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2021-11-29,2023-04-17,True
+203,16631,Homes First Society - Placer Mixed Adult Program,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Not reported,Not reported,Not reported,Bed,2021-12-30,2021-12-31,False
+204,16631,Homes First Society - Placer Mixed Adult Program,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2022-01-01,2026-10-31,True
+205,16651,HFS - Metro Strachan - Co-ed,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Transitional,Motel/Hotel Shelter,Base Shelter and Overnight Services System,Room,2022-01-10,2024-01-21,True
+206,16671,TSSS North York West Hotel - North - Mixed Adult,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-01-16,2023-12-31,False
+207,16671,TSSS North York West Hotel - North - Mixed Adult,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+208,16691,SSHA NYW - North,City of Toronto,Birkdale Residence,Families,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-01-16,2022-09-13,True
+209,16711,COVID19 Response - Masaryk-Cowan,City of Toronto,Not reported,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2022-01-14,2022-02-27,True
+210,16731,COVID19 Response - Warden Hilltop,City of Toronto,Not reported,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2022-01-15,2022-04-17,True
+211,16771,SSHA Queen East Hotel Program,City of Toronto,Not reported,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-01-20,2022-04-07,True
+212,16891,COSTI - Hotel Program - Dixon (Refugee Singles),COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2022-03-14,2026-10-31,True
+213,16892,COSTI - Hotel Program - Dixon (Refugee Families),COSTI Immigrant Services,COSTI Reception Centre,Families,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2022-03-07,2026-10-31,True
+214,16911,Homes First Society - Willowdale Centre - Co-Ed,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2022-05-20,2023-01-26,True
+215,16932,Eva's Place Hotel,Eva's Initiatives,Eva's Place,Mixed Adult,Emergency,Motel/Hotel Shelter,Base Shelter and Overnight Services System,Bed,2022-05-17,2022-08-02,True
+216,16951,Progress Shelter,City of Toronto,Progress Shelter,Men,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2022-05-18,2026-10-31,True
+217,16971,Homes First Society - Metro - Refugee Singles,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2022-08-17,2026-10-31,True
+218,17011,TSSS North York West Hotel - South - Couples,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-09-14,2023-12-31,False
+219,17011,TSSS North York West Hotel - South - Couples,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+220,17012,TSSS North York West Hotel - North - Couples,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-09-14,2023-12-31,False
+221,17012,TSSS North York West Hotel - North - Couples,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+222,17071,Seaton House - Winter Program - O'Neill,City of Toronto,Seaton House,Men,Emergency,Shelter,Winter Programs,Bed,2022-11-28,2024-05-20,True
+223,17091,Seaton House Winter Program,City of Toronto,Seaton House,Men,Emergency,Shelter,Winter Programs,Bed,2022-11-16,2026-05-18,True
+224,17111,Homes First Society - Pacewood,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Temporary Refugee Response,Bed,2022-11-21,2026-10-31,True
+225,17131,Fred Victor Warming Centre - Metro Hall,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2022-12-15,2025-04-18,True
+226,17132,Scarborough Warming Centre - Scarborough CC,City of Toronto,Scarborough Village Residence,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2022-12-15,2023-04-01,True
+227,17171,Mitchell Field Warming Centre,Dixon Hall,Mitchell Field Warming Centre,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2022-12-22,2023-03-03,True
+228,17191,Homes First Society - Willowdale - Refugee - Building B,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Shelter,Temporary Refugee Response,Bed,2022-12-16,2023-09-14,True
+229,17211,Salvation Army - Florence Booth - Hotel 400 - Women,The Salvation Army of Canada,Salvation Army - Florence Booth,Women,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-12-29,2023-12-31,False
+230,17211,Salvation Army - Florence Booth - Hotel 400 - Women,The Salvation Army of Canada,Salvation Army - Florence Booth,Women,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+231,17212,Salvation Army - New Hope - Hotel 400 - Men,The Salvation Army of Canada,Salvation Army - New Hope Leslie,Men,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2022-12-30,2023-12-31,False
+232,17212,Salvation Army - New Hope - Hotel 400 - Men,The Salvation Army of Canada,Salvation Army - New Hope Leslie,Men,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2026-10-31,True
+233,17394,Christie Ossington Warming Centre - Cecil CC,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2023-02-01,2023-04-02,True
+234,17551,Dixon Hall Warming Centre - Willowdale,Dixon Hall,Mitchell Field Warming Centre,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2023-03-10,2026-04-09,True
+235,17631,Eva's Satellite - York Street,Eva's Initiatives,Eva's Place,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2023-04-18,2023-08-27,True
+236,17651,Covenant House - York St,Covenant House Toronto,Covenant House,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2023-04-19,2023-08-10,True
+237,17671,YMCA - York St.,YMCA of Greater Toronto,YMCA House,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2023-04-20,2023-08-15,True
+238,17691,Niizhoodenh Mshiikenhik - Twin Turtles,Native Child & Family Services Toronto,Eagles Nest Transition House,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2023-04-29,2026-10-31,True
+239,17751,Eva's Satellite - Kingston Road,Eva's Initiatives,Eva's Place,Youth,Emergency,Motel/Hotel Shelter,COVID-19 Response,Room,2023-08-28,2023-12-31,False
+240,17751,Eva's Satellite - Kingston Road,Eva's Initiatives,Eva's Place,Youth,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2024-01-01,2025-05-01,True
+241,17771,HFS - Willowdale - Building B - Refugee Women,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,Shelter,Temporary Refugee Response,Bed,2023-09-15,2026-04-20,True
+242,17772,HFS - Willowdale - Building A - Refugee Men,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Shelter,Temporary Refugee Response,Bed,2023-09-15,2026-04-26,True
+243,17791,HFS - Willowdale - Refugee Men - Building A - ASP,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Alternative Space Protocol,Temporary Refugee Response,Bed,2023-09-15,2023-12-31,False
+244,17791,HFS - Willowdale - Refugee Men - Building A - ASP,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2024-01-01,2025-03-10,True
+245,17811,HFS - Willowdale - Refugee Women - Building B - ASP,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,Alternative Space Protocol,Temporary Refugee Response,Bed,2023-09-22,2023-12-31,False
+246,17811,HFS - Willowdale - Refugee Women - Building B - ASP,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,Alternative Space Protocol,Winter Programs,Bed,2024-01-01,2025-09-08,True
+247,17831,Homes First Society - Metro - Winter Respite,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2023-11-03,2023-12-31,False
+248,17831,Homes First Society - Metro - Winter Respite,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,24-Hour Respite Site,Temporary Refugee Response,Bed,2024-01-01,2025-04-14,True
+249,17851,Covenant House Residence - Winter Respite,Covenant House Toronto,Covenant House,Youth,Emergency,24-Hour Respite Site,Winter Programs,Bed,2023-11-15,2026-04-20,True
+250,17871,Fred Victor Warming Centre - Elizabeth,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2023-11-15,2025-04-23,True
+251,17891,Christie Ossington Warming Centre - Spadina Rd,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2023-12-31,2026-04-08,True
+252,17911,TSSS - Warming Centre - Cecil Community Centre,City of Toronto,Birkdale Residence,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2024-01-16,2025-12-31,False
+253,17911,TSSS - Warming Centre - Cecil Community Centre,City of Toronto,Birkdale Residence,Mixed Adult,Emergency,Surge site,Winter Programs,Bed,2026-01-01,2026-03-01,True
+254,17931,TSSS - Warming Centre - Scarborough Golf Club Road,City of Toronto,Birkdale Residence,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2023-11-28,2026-04-23,True
+255,17951,Scott Mission - Respite,The Scott Mission Inc.,Scott Mission Men's Ministry,Men,Emergency,24-Hour Respite Site,Winter Programs,Bed,2023-11-27,2023-12-31,False
+256,17951,Scott Mission - Respite,The Scott Mission Inc.,Scott Mission Men's Ministry,Men,Emergency,24-Hour Respite Site,Temporary Programs,Bed,2024-01-01,2026-10-31,True
+257,17971,Fred Victor Winter Respite - BLC,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2023-12-21,2026-03-04,True
+258,17991,Dixon Hall Winter Respite - BLC,Dixon Hall,351 Lakeshore Respite Services,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2023-12-21,2025-04-06,True
+259,18011,Good Shepherd Centre - Top Bunk,Good Shepherd Ministries,Good Shepherd Centre,Men,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2024-03-05,2025-08-05,False
+260,18011,Good Shepherd Centre - Top Bunk,Good Shepherd Ministries,Good Shepherd Centre,Men,Emergency,Top Bunk Contingency Space,Winter Programs,Bed,2026-01-29,2026-04-28,True
+261,18031,Na-Me-Res (Native Men's Residence) - Top Bunk,Na-Me-Res (Native Men's Residence),Na-Me-Res,Men,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2024-03-06,2026-10-31,True
+262,18051,Dixon Hall - Heyworth House - Top Bunk,Dixon Hall,Dixon Hall - Heyworth House,Mixed Adult,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2024-03-11,2026-04-26,True
+263,18052,Dixon Hall - School TOP BUNK,Dixon Hall,Dixon Hall - Schoolhouse,Men,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2024-03-11,2024-05-29,True
+264,18053,COSTI Reception Ctr CITY Program - Top Bunk,COSTI Immigrant Services,COSTI Reception Centre,Mixed Adult,Emergency,Top Bunk Contingency Space,Base Program - Refugee,Bed,2024-03-13,2026-10-31,True
+265,18071,Christie Ossington Men's Hostel - Lansdowne - Top Bunk,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Men,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2025-01-23,2025-01-26,True
+266,18091,Canadian Red Cross - Hotel Program - Eglinton (Refugee Singles),The Canadian Red Cross Society,Canadian Red Cross,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2024-04-17,2025-06-29,True
+267,18111,Canadian Red Cross - Hotel Program - Eglinton (Refugee Families),The Canadian Red Cross Society,Canadian Red Cross,Families,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2024-04-18,2025-06-29,True
+268,18131,Canadian Red Cross - Hotel Program - Dixon (Refugee Singles),The Canadian Red Cross Society,Canadian Red Cross,Mixed Adult,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2024-04-17,2024-09-30,True
+269,18151,Canadian Red Cross - Hotel Program - Dixon (Refugee Families),The Canadian Red Cross Society,Canadian Red Cross,Families,Emergency,Motel/Hotel Shelter,Temporary Refugee Response,Room,2024-04-17,2024-09-30,True
+270,18171,Covenant House Residence - Refugee Youths,Covenant House Toronto,Covenant House,Youth,Emergency,Shelter,Temporary Refugee Response,Bed,2024-09-06,2026-10-31,True
+271,18191,Society of Saint Vincent de Paul - Elisa House - Top Bunk,Society of St.Vincent De Paul,SVDP - Elisa House,Women,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2024-09-25,2026-04-16,True
+272,18192,Society of Saint Vincent de Paul - Mary's Home - Top Bunk,Society of St.Vincent De Paul,SVDP - Mary's Home,Women,Emergency,Top Bunk Contingency Space,Base Shelter and Overnight Services System,Bed,2024-09-25,2025-07-28,True
+273,18211,Covenant House - Madison House - Refugee Youth,Covenant House Toronto,Covenant House,Youth,Transitional,Shelter,Temporary Refugee Response,Bed,2024-10-02,2026-10-31,True
+274,18231,Birkdale Residence - Toronto Plaza Hotel - SOUTH - ASP,City of Toronto,Toronto Plaza,Mixed Adult,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-25,True
+275,18251,Romero - Edna Lane House Transitional Shelter,Toronto Refugee Community Non-Profit Homes and Services,Romero House,Families,Transitional,Shelter,Temporary Refugee Response,Room,2024-10-18,2026-10-31,True
+276,18271,Fort York Residence - ASP,City of Toronto,Fort York Residence,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-23,True
+277,18291,Junction Place - ASP,City of Toronto,Seaton House,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-07,2026-07-26,True
+278,18311,Women's Residence - ASP,City of Toronto,Women's Residence,Women,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-21,True
+279,18331,Margaret's 21 Park Rd. Respite - ASP,Margaret's Housing and Community Support Services,Margaret's Toronto East Drop-In,Mixed Adult,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-07,2026-07-22,True
+280,18332,Homes First Society - 4117 Lawrence Ave East - ASP,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Alternative Space Protocol,Winter Programs,Bed,2024-12-21,2026-07-20,True
+281,18333,Homes First Society - 101 Placer - ASP,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-07,2026-07-21,True
+282,18334,Scarborough Village Residence - ASP,City of Toronto,Scarborough Village Residence,Mixed Adult,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-20,2026-07-26,True
+283,18351,Downsview Dells - ASP,City of Toronto,Downsview Dells,Men,Transitional,Alternative Space Protocol,Winter Programs,Bed,2025-01-20,2025-08-25,True
+284,18371,Covenant House Residence - ASP,Covenant House Toronto,Covenant House,Youth,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-22,True
+285,18372,Society of Saint Vincent de Paul - Mary's Home - ASP,Society of St.Vincent De Paul,SVDP - Mary's Home,Women,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-07,2026-07-19,True
+286,18373,Salvation Army - Islington Seniors' Shelter Women's Program - ASP,The Salvation Army of Canada,Salvation Army Islington Seniors,Women,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-02-18,2026-07-20,True
+287,18391,YouthLink Emergency Program - ASP,YouthLink,YouthLink Shelter,Youth,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-19,True
+288,18411,St Simon's Clubbe House - ASP,St. Simon's Shelter Inc.,St. Simon's Shelter,Men,Emergency,Alternative Space Protocol,Winter Programs,Room,2025-01-07,2025-02-25,True
+289,18412,Scarborough Progress centre- ASP,City of Toronto,Progress Shelter,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-26,True
+290,18431,Christie Ossington Men's Hostel - ASP,Christie Ossington Neighbourhood Centre,Christie Ossington Men's Hostel,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-18,2026-07-19,True
+291,18451,Eva's Place - ASP,Eva's Initiatives,Eva's Place,Youth,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-06-23,2026-07-19,True
+292,18471,Seaton House - ASP,City of Toronto,Seaton House,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2024-12-21,2025-01-29,True
+293,18491,Nellie's Women Shelter - ASP,Women's Hostels Inc.,Nellie's,Women,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-19,2026-07-19,True
+294,18511,Dixon Hall Warming Centre - Jimmie Simpson,Dixon Hall,Mitchell Field Warming Centre,Mixed Adult,Emergency,Surge site,Winter Programs,Bed,2024-12-21,2026-03-02,True
+295,18531,CHT Thrive Transitional shelter for refugee youth,Covenant House Toronto,Covenant House,Youth,Transitional,Shelter,Temporary Refugee Response,Bed,2024-12-06,2026-10-31,True
+296,18592,Fred Victor Winter Respite - BLC - TTC Surge Site,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,Surge site,Winter Programs,Bed,2024-12-21,2024-12-21,False
+297,18592,Fred Victor Winter Respite - BLC - TTC Surge Site,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2025-01-18,2026-03-02,True
+298,18611,Dixon Hall Winter Respite - BLC - TTC Surge Site,Dixon Hall,351 Lakeshore Respite Services,Mixed Adult,Emergency,Surge site,Winter Programs,Bed,2025-01-07,2025-03-05,True
+299,18631,Centre for Refugee Children - Anchor House,"Christie Refugee Welcome Centre, Inc.",Centre for Refugee Children - Anchor House,Youth,Transitional,Shelter,Temporary Refugee Response,Bed,2025-02-24,2026-10-31,True
+300,18672,Kennedy House Youth Shelter - Top Bunk,Kennedy House Youth Services,Kennedy House Youth Shelter,Youth,Not reported,Top Bunk Contingency Space,Winter Programs,Bed,2025-01-25,2025-01-28,True
+301,18691,Turning Point Youth Shelter - ASP,Turning Point Youth Services,Turning Point Youth Services,Youth,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-01-28,2026-02-09,True
+302,18711,Eva's Satellite - Canterbury Place,Eva's Initiatives,Eva's Satellite,Youth,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2025-05-01,2026-10-31,True
+303,18771,Matthew House Toronto - Dundas refugee Transitional Home,Matthew House Refugee Services-Toronto,Matthew house Refugee Services,Families,Transitional,Shelter,Temporary Refugee Response,Bed,2025-08-06,2026-10-31,True
+304,18831,CMHA-TO - Carlton House - Mental Health & Addictions - Solace 1,Canadian Mental Health Association - Toronto Branch,CMHA-TO - Refugee House,Mixed Adult,Transitional,Shelter,Temporary Refugee Response,Bed,2025-05-16,2026-10-31,True
+305,18851,CMHA-TO - Carlton House - Mental Health & Addictions -  Solace 2,Canadian Mental Health Association - Toronto Branch,CMHA-TO - Refugee House,Mixed Adult,Transitional,Shelter,Temporary Refugee Response,Bed,2025-05-06,2026-10-31,True
+306,18871,La Passerelle I.D.E. - L'Agapanthe - Maison de Transition,La Passerelle Integration et Development Economique,La Passerelle I.D.E. L'Agapanthe,Mixed Adult,Transitional,Shelter,Temporary Refugee Response,Bed,2025-06-09,2026-10-31,True
+307,18891,Warden Woods - Kingston Road Shelter,Warden Woods Community Centre,Warden Woods - Shelter Services,Mixed Adult,Emergency,Motel/Hotel Shelter,Base Shelter and Overnight Services System,Bed,2025-06-20,2026-10-31,True
+308,18931,St. Felix Centre - 629 Adelaide St.,St. Felix Social Ministries Outreach,St. Felix Centre Shelter Service,Mixed Adult,Emergency,Shelter,Base Shelter and Overnight Services System,Bed,2025-07-21,2026-10-31,True
+309,19011,Matthew House Toronto-Eunice Refugee Transitional Home,Matthew House Refugee Services-Toronto,Matthew house Refugee Services,Families,Transitional,Shelter,Temporary Refugee Response,Bed,2025-11-10,2026-10-31,True
+310,19031,Horizons for Youth - ASP,Horizon for Youth,Horizons for Youth,Youth,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-12-11,2026-07-18,True
+311,19051,Homes First Winter Respite - BLC,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2025-12-15,2026-03-03,True
+312,19073,Dixon Hall Warming Centre - Schoolhouse,Dixon Hall,Dixon Hall - Schoolhouse,Men,Emergency,Warming Centre,Winter Programs,Bed,2025-11-28,2026-04-11,True
+313,19075,Cornerstone Place - ASP,Cornerstone Place,Cornerstone Place,Men,Emergency,Alternative Space Protocol,Winter Programs,Bed,2025-12-07,2026-07-19,True
+314,19093,Dixon Hall Warming Centre - Elizabeth,Dixon Hall,Mitchell Field Warming Centre,Mixed Adult,Emergency,Warming Centre,Winter Programs,Bed,2025-11-09,2026-04-14,True
+315,19131,Homes First Winter Respite - BLC - TTC surge Site,Homes First Society,HFS - Scarborough Shelter,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2025-12-22,2026-03-01,True
+316,19171,Homes First Society - Metropolitan - Women Respite,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,24-Hour Respite Site,Winter Programs,Bed,2025-11-17,2026-04-25,True
+317,19271,HFS - 5800 - Building A - Men- Winter Program,Homes First Society,HFS - Scarborough Shelter,Men,Emergency,24-Hour Respite Site,Winter Programs,Bed,2026-01-23,2026-03-26,True
+318,19291,HFS - 5800 - Building B - Women- Winter Program,Homes First Society,HFS - Scarborough Shelter,Women,Emergency,24-Hour Respite Site,Winter Programs,Bed,2026-01-23,2026-03-18,True
+319,19311,50 Estate BLC Ramp-Down,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Emergency,24-Hour Respite Site,Winter Programs,Bed,2026-02-16,2026-05-15,True
+320,19331,TSSS John Innes Warming Centre,City of Toronto,Family Residence,Families,Emergency,Warming Centre,Winter Programs,Bed,2026-01-29,2026-01-30,True
+321,19351,TSSS - Warming Centre - John Innes,City of Toronto,Family Residence,Mixed Adult,Emergency,Surge site,Winter Programs,Bed,2026-01-30,2026-02-09,True
+322,19371,Fred Victor Winter Respite - Spadina,Fred Victor Centre,Fred Victor-Better Living Centre,Mixed Adult,Emergency,24-Hour Respite Site,Winter Programs,Bed,2026-02-16,2026-04-14,True
+323,19471,FCJ - Loretto House,FCJ Refugee Centre,Not reported,Women,Transitional,Shelter,Base Program - Refugee,Bed,2026-03-12,2026-10-31,True
+324,19831,COSTI - Hotel Program - Dixon (Local Families),COSTI Immigrant Services,COSTI Reception Centre,Families,Emergency,Motel/Hotel Shelter,Temporary Programs,Room,2026-06-18,2026-10-31,True
+325,19911,Salvation Army - Holiday Inn Express - Florence Booth Women's Program,The Salvation Army of Canada,Salvation Army - Maxwell Meighen,Men,Not reported,Motel/Hotel Shelter,Base Shelter and Overnight Services System,Room,2026-10-19,2026-10-31,True
