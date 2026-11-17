@@ -28,6 +28,22 @@ SITE = {
 
 REPO_TREE = SITE["repo"] + "/tree/main/projects/"
 
+# The shelter report's headline figures, recalculated in pandas by reconcile.py.
+RECONCILIATION_ROWS = [
+    ["Program nights", "289,916"],
+    ["Person nights", "17,941,778"],
+    ["Programs", "279"],
+    ["People per night, all dates", "8,423.4"],
+    ["Bed occupancy, all dates", "97.55%"],
+    ["Room occupancy, all dates", "98.41%"],
+    ["People per night, October 2026", "6,976.9"],
+    ["People per night, October 2025", "8,697.6"],
+    ["Change from a year earlier", "-19.78%"],
+    ["Bed occupancy, October 2026", "96.23%"],
+    ["Program nights full, October 2026", "67.35%"],
+    ["Peak month", "January 2025, 10,227.5 a night"],
+]
+
 # ---------------------------------------------------------------------------
 # Projects. The order here is the order on the home page.
 #
@@ -134,6 +150,191 @@ PROJECTS = [
             },
         ],
         "links": [("Read the write-up on GitHub", REPO_TREE + "05-bc-housing-forecast")],
+    },
+    {
+        "slug": "07-toronto-shelter-powerbi",
+        "short": "Shelter system",
+        "kicker": "Power BI, public data",
+        "title": "Toronto's shelter system in Power BI",
+        "finding": (
+            "A Power BI report on 290,000 nights of Toronto shelter data: 20% fewer people a "
+            "night than a year earlier, most of the fall in refugee programs, and beds still "
+            "96% full."
+        ),
+        "tools": ["Power BI", "DAX", "Power Query", "Python", "pandas"],
+        "evidence": {
+            "kind": "image",
+            "src": "assets/img/shelter-overview.webp",
+            "alt": "The Overview page of the Power BI report: four headline cards, people per night by program area, and charts by sector and against a year earlier",
+            "size": (1600, 900),
+            "caption": "Each headline figure is recalculated independently in Python for comparison.",
+        },
+        "summary": (
+            "How many people Toronto's shelters hold each night, how full they are, and what "
+            "changed over the past year, in a four-page Power BI report built on a star schema "
+            "with 47 documented DAX measures."
+        ),
+        "context": (
+            "Data: City of Toronto Open Data, daily shelter occupancy and capacity, January 2021 "
+            "to October 2026. 289,916 program nights."
+        ),
+        "stats": [
+            ("6,977", "people sheltered per night, October 2026"),
+            ("19.8%", "fewer than in October 2025"),
+            ("96.2%", "of beds occupied in October 2026"),
+            ("47", "DAX measures, each with a description"),
+        ],
+        "hero_image": {
+            "src": "assets/img/shelter-overview.webp",
+            "alt": "The Overview page of the Power BI report",
+            "size": (1600, 900),
+        },
+        "sections": [
+            {
+                "h": "The question",
+                "p": [
+                    "How many people does Toronto's shelter system hold each night, how full is "
+                    "it, and what changed over the past year?"
+                ],
+            },
+            {
+                "h": "What the report shows",
+                "ul": [
+                    "**Fewer people are in shelters than a year ago, but the system is still "
+                    "full.** An average of 6,977 people were sheltered each night in October 2026, "
+                    "19.8% fewer than in October 2025 and 31.8% below the peak of 10,228 in "
+                    "January 2025. Beds stayed 96.2% occupied and rooms 99.2%, because capacity "
+                    "shrank too: beds available per night fell from 4,288 to 3,756.",
+                    "**Most of the fall came from the temporary refugee response.** That program "
+                    "area went from 1,969 people a night to 738, which is 72% of the total drop. "
+                    "The base shelter system fell by 446 people a night.",
+                    "**Two in three program nights were completely full** in October 2026 "
+                    "(67.3%), down from a high of 88.8% in August 2024. Youth and family "
+                    "programs were full least often, mixed adult programs most often.",
+                ],
+                "figs": [
+                    {
+                        "src": "assets/img/shelter-capacity.webp",
+                        "alt": "The Capacity page: bed and room occupancy by month, beds and rooms available, and a heat map of the share of program nights that were full",
+                        "size": (1600, 900),
+                        "caption": "The Capacity page. The heat map takes its colours from a DAX measure.",
+                        "root": True,
+                    },
+                    {
+                        "src": "assets/img/shelter-programs.webp",
+                        "alt": "The Programs page: organizations ranked by people per night against a year earlier, with charts by city, service type and program model",
+                        "size": (1600, 900),
+                        "caption": "The Programs page, for the latest complete month.",
+                        "root": True,
+                    },
+                ],
+            },
+            {
+                "h": "How it is built",
+                "ul": [
+                    "**Data preparation in Python.** `prepare_data.py` downloads six yearly files "
+                    "from Toronto Open Data, reconciles three different date formats and stray "
+                    "spaces in names, and writes a star schema as three CSV files.",
+                    "**A star schema with history kept.** The fact table has one row per program "
+                    "per night. The city reclassifies programs over time (44 of 279 changed at "
+                    "least once), so the program table keeps one row per version, the idea "
+                    "behind a type 2 slowly changing dimension.",
+                    "**Beds and rooms are never added together.** Family and hotel programs count "
+                    "rooms, the rest count beds, so occupancy is reported separately for each.",
+                    "**Measures only.** Implicit measures are turned off and every fact column is "
+                    "hidden, so each number on a visual comes from one of 47 named measures, "
+                    "grouped in folders and documented with descriptions.",
+                    "**Titles that update themselves.** Card and chart titles are measures, such "
+                    "as \"People sheltered per night, October 2026\", so they stay right after "
+                    "every refresh.",
+                    "**Saved as a Power BI project.** The model is in TMDL and the report in "
+                    "PBIR, so every change to a measure or a visual reads as text in Git.",
+                ],
+                "figs": [
+                    {
+                        "src": "images/data-model.png",
+                        "alt": "Star schema: the Occupancy fact table joined to the Dates, Program and Location tables",
+                        "caption": "The data model. Filters flow from each dimension to the fact table.",
+                    }
+                ],
+            },
+            {
+                "h": "DAX worth a look",
+                "p": [
+                    "The prior-year comparison only shifts dates that have data, so a part year "
+                    "is compared with the same part of the year before. The latest-month cards "
+                    "ignore the date filter but still respond to the sector and program filters."
+                ],
+                "code": (
+                    "People per Night = DIVIDE ( [Person Nights], [Nights Reported] )\n"
+                    "\n"
+                    "People per Night PY =\n"
+                    "CALCULATE (\n"
+                    "    [People per Night],\n"
+                    "    CALCULATETABLE (\n"
+                    "        SAMEPERIODLASTYEAR ( Dates[Date] ),\n"
+                    "        Dates[Has Data] = TRUE ()\n"
+                    "    )\n"
+                    ")\n"
+                    "\n"
+                    "People per Night (Latest Month) =\n"
+                    "CALCULATE (\n"
+                    "    [People per Night],\n"
+                    "    REMOVEFILTERS ( Dates ),\n"
+                    "    Dates[Month Offset] = 0\n"
+                    ")"
+                ),
+            },
+            {
+                "h": "How the numbers are checked",
+                "p": [
+                    "`reconcile.py` loads the same three CSV files with pandas and recalculates "
+                    "the headline figures without Power BI. The report's Checks page shows the "
+                    "same figures from the DAX measures, so a wrong relationship or filter shows "
+                    "up as a mismatch."
+                ],
+                "table": {
+                    "head": ["Figure", "Python"],
+                    "rows": RECONCILIATION_ROWS,
+                },
+                "figs": [
+                    {
+                        "src": "assets/img/shelter-checks.webp",
+                        "alt": "The Checks page of the report: tables of headline figures for all dates, the latest month, the peak month and each year",
+                        "size": (1600, 900),
+                        "caption": "The Checks page.",
+                        "root": True,
+                    }
+                ],
+            },
+            {
+                "h": "Files",
+                "table": {
+                    "head": ["File", "What it is"],
+                    "rows": [
+                        ["`ShelterSystem.pbix`", "The report as one Power BI file, with the data loaded"],
+                        ["`powerbi/`", "The same report as a Power BI project: TMDL model and PBIR report"],
+                        ["`prepare_data.py`", "Downloads the source files and writes the star schema to `data/`"],
+                        ["`reconcile.py`", "Recalculates the headline figures in pandas"],
+                        ["`checks/expected_values.csv`", "The figures the report has to match"],
+                    ],
+                },
+            },
+            {
+                "h": "Run it",
+                "p": [
+                    "To see the report, open `ShelterSystem.pbix` in Power BI Desktop, or open "
+                    "`powerbi/ShelterSystem.pbip` and choose Refresh. The model reads the data "
+                    "from this repository at a fixed commit, so a refresh gives the same numbers. "
+                    "To rebuild the data and the expected figures:"
+                ],
+                "code": "pip install pandas\npython prepare_data.py\npython reconcile.py",
+            },
+        ],
+        "links": [
+            ("Download the Power BI file", "ShelterSystem.pbix"),
+            ("View the project on GitHub", REPO_TREE + "07-toronto-shelter-powerbi"),
+        ],
     },
     {
         "slug": "06-fraud-model-monitoring",
@@ -831,6 +1032,7 @@ SKILLS = [
         "Python and pandas",
         [
             "05-bc-housing-forecast",
+            "07-toronto-shelter-powerbi",
             "06-fraud-model-monitoring",
             "03-customer-churn",
             "02-sql-retail-analytics",
@@ -842,10 +1044,27 @@ SKILLS = [
     ("Classification", ["06-fraud-model-monitoring", "03-customer-churn"]),
     (
         "Validation and monitoring",
-        ["05-bc-housing-forecast", "06-fraud-model-monitoring", "03-customer-churn"],
+        [
+            "05-bc-housing-forecast",
+            "07-toronto-shelter-powerbi",
+            "06-fraud-model-monitoring",
+            "03-customer-churn",
+        ],
     ),
-    ("Data cleaning and modelling", ["05-bc-housing-forecast", "02-sql-retail-analytics", "01-ttc-subway-delays"]),
-    ("Dashboards and BI", ["05-bc-housing-forecast", "04-excel-kpi-dashboard", "tessera"]),
+    (
+        "Data cleaning and modelling",
+        [
+            "05-bc-housing-forecast",
+            "07-toronto-shelter-powerbi",
+            "02-sql-retail-analytics",
+            "01-ttc-subway-delays",
+        ],
+    ),
+    ("Power BI and DAX", ["05-bc-housing-forecast", "07-toronto-shelter-powerbi"]),
+    (
+        "Dashboards and BI",
+        ["05-bc-housing-forecast", "07-toronto-shelter-powerbi", "04-excel-kpi-dashboard", "tessera"],
+    ),
     ("Excel", ["04-excel-kpi-dashboard"]),
     ("Automated testing", ["tessera", "06-fraud-model-monitoring"]),
     ("Software engineering", ["tessera"]),
@@ -855,7 +1074,7 @@ TOOLKIT = [
     ("Querying and data", "SQL (joins, CTEs, window functions), SQLite and MySQL, data modelling, Python (pandas, NumPy), R"),
     ("Models and statistics", "Logistic and Ridge regression, gradient boosting, time-series forecasting, out-of-time validation, prediction intervals, missing-data imputation"),
     ("Monitoring and quality", "AUC, Gini and KS, PSI and CSI drift checks, alert and false-alarm rates, validation checks, unit testing with pytest"),
-    ("BI and communication", "Power BI (DAX, data modelling), Tableau, Excel dashboards, Matplotlib, presenting models to non-technical audiences, Git"),
+    ("BI and communication", "Power BI (DAX, star schemas, Power Query, time intelligence), Tableau, Excel dashboards, Matplotlib, presenting models to non-technical audiences, Git"),
 ]
 
 # ---------------------------------------------------------------------------

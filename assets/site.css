@@ -1483,7 +1483,8 @@ pre code {
 .matrix:has(tbody td:nth-child(5):hover) tr > :nth-child(5),
 .matrix:has(tbody td:nth-child(6):hover) tr > :nth-child(6),
 .matrix:has(tbody td:nth-child(7):hover) tr > :nth-child(7),
-.matrix:has(tbody td:nth-child(8):hover) tr > :nth-child(8) {
+.matrix:has(tbody td:nth-child(8):hover) tr > :nth-child(8),
+.matrix:has(tbody td:nth-child(9):hover) tr > :nth-child(9) {
   background-color: color-mix(in srgb, var(--ink) 6%, var(--paper));
 }
 

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-page="case">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toronto&#x27;s shelter system in Power BI | Mo Maghaireh</title>
+<meta name="description" content="A Power BI report on 290,000 nights of Toronto shelter data: 20% fewer people a night than a year earlier, most of the fall in refugee programs, and beds still 96% full.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Toronto&#x27;s shelter system in Power BI | Mo Maghaireh">
+<meta property="og:description" content="A Power BI report on 290,000 nights of Toronto shelter data: 20% fewer people a night than a year earlier, most of the fall in refugee programs, and beds still 96% full.">
+<meta property="og:url" content="https://mohdaktham.github.io/projects/07-toronto-shelter-powerbi/">
+<meta property="og:image" content="https://mohdaktham.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mohdaktham.github.io/projects/07-toronto-shelter-powerbi/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t)d.dataset.theme=t}catch(e){}setTimeout(function(){if(!window.siteReady)d.classList.remove("js")},4000)})()</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="../../">Mo Maghaireh</a>
+    <nav aria-label="Main">
+      <a href="../../#work">Work</a>
+      <a href="../../#skills">Skills</a>
+      <a href="../../#about">About</a>
+      <button type="button" class="theme" id="theme-toggle" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18Z" fill="currentColor"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </nav>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+<main id="main">
+
+<article class="case">
+  <header class="case-head">
+    <div class="wrap">
+      <p class="crumb"><a href="../../#work">All work</a></p>
+      <p class="kicker">Power BI, public data</p>
+      <h1 style="view-transition-name:title-07-toronto-shelter-powerbi">Toronto&#x27;s shelter system in Power BI</h1>
+      <p class="lede">How many people Toronto&#x27;s shelters hold each night, how full they are, and what changed over the past year, in a four-page Power BI report built on a star schema with 47 documented DAX measures.</p>
+      <p class="context">Data: City of Toronto Open Data, daily shelter occupancy and capacity, January 2021 to October 2026. 289,916 program nights.</p>
+      <p class="tools">Power BI, DAX, Power Query, Python, pandas</p>
+      <p class="actions"><a class="btn btn-solid" href="ShelterSystem.pbix">Download the Power BI file</a><a class="btn" href="https://github.com/mohdaktham/mohdaktham.github.io/tree/main/projects/07-toronto-shelter-powerbi">View the project on GitHub</a></p>
+    </div>
+  </header>
+  <div class="wrap case-body">
+    <div class="case-main">
+      <figure class="fig lead-shot"><img src="../../assets/img/shelter-overview.webp" alt="The Overview page of the Power BI report" width="1600" height="900"></figure>
+      <dl class="stats stat-strip"><div class="stat"><dt>people sheltered per night, October 2026</dt><dd>6,977</dd></div><div class="stat"><dt>fewer than in October 2025</dt><dd>19.8%</dd></div><div class="stat"><dt>of beds occupied in October 2026</dt><dd>96.2%</dd></div><div class="stat"><dt>DAX measures, each with a description</dt><dd>47</dd></div></dl>
+      
+      <section class="block"><h2 id="the-question">The question</h2><p>How many people does Toronto&#x27;s shelter system hold each night, how full is it, and what changed over the past year?</p></section><section class="block"><h2 id="what-the-report-shows">What the report shows</h2><ul><li><strong>Fewer people are in shelters than a year ago, but the system is still full.</strong> An average of 6,977 people were sheltered each night in October 2026, 19.8% fewer than in October 2025 and 31.8% below the peak of 10,228 in January 2025. Beds stayed 96.2% occupied and rooms 99.2%, because capacity shrank too: beds available per night fell from 4,288 to 3,756.</li><li><strong>Most of the fall came from the temporary refugee response.</strong> That program area went from 1,969 people a night to 738, which is 72% of the total drop. The base shelter system fell by 446 people a night.</li><li><strong>Two in three program nights were completely full</strong> in October 2026 (67.3%), down from a high of 88.8% in August 2024. Youth and family programs were full least often, mixed adult programs most often.</li></ul></section><figure class="fig"><img src="../../assets/img/shelter-capacity.webp" alt="The Capacity page: bed and room occupancy by month, beds and rooms available, and a heat map of the share of program nights that were full" width="1600" height="900" loading="lazy"><figcaption>The Capacity page. The heat map takes its colours from a DAX measure.</figcaption></figure><figure class="fig"><img src="../../assets/img/shelter-programs.webp" alt="The Programs page: organizations ranked by people per night against a year earlier, with charts by city, service type and program model" width="1600" height="900" loading="lazy"><figcaption>The Programs page, for the latest complete month.</figcaption></figure><section class="block"><h2 id="how-it-is-built">How it is built</h2><ul><li><strong>Data preparation in Python.</strong> <code>prepare_data.py</code> downloads six yearly files from Toronto Open Data, reconciles three different date formats and stray spaces in names, and writes a star schema as three CSV files.</li><li><strong>A star schema with history kept.</strong> The fact table has one row per program per night. The city reclassifies programs over time (44 of 279 changed at least once), so the program table keeps one row per version, the idea behind a type 2 slowly changing dimension.</li><li><strong>Beds and rooms are never added together.</strong> Family and hotel programs count rooms, the rest count beds, so occupancy is reported separately for each.</li><li><strong>Measures only.</strong> Implicit measures are turned off and every fact column is hidden, so each number on a visual comes from one of 47 named measures, grouped in folders and documented with descriptions.</li><li><strong>Titles that update themselves.</strong> Card and chart titles are measures, such as &quot;People sheltered per night, October 2026&quot;, so they stay right after every refresh.</li><li><strong>Saved as a Power BI project.</strong> The model is in TMDL and the report in PBIR, so every change to a measure or a visual reads as text in Git.</li></ul></section><figure class="fig plate"><img src="images/data-model.png" alt="Star schema: the Occupancy fact table joined to the Dates, Program and Location tables" width="2000" height="1044" loading="lazy"><figcaption>The data model. Filters flow from each dimension to the fact table.</figcaption></figure><section class="block"><h2 id="dax-worth-a-look">DAX worth a look</h2><p>The prior-year comparison only shifts dates that have data, so a part year is compared with the same part of the year before. The latest-month cards ignore the date filter but still respond to the sector and program filters.</p><pre><code>People per Night = DIVIDE ( [Person Nights], [Nights Reported] )
+
+People per Night PY =
+CALCULATE (
+    [People per Night],
+    CALCULATETABLE (
+        SAMEPERIODLASTYEAR ( Dates[Date] ),
+        Dates[Has Data] = TRUE ()
+    )
+)
+
+People per Night (Latest Month) =
+CALCULATE (
+    [People per Night],
+    REMOVEFILTERS ( Dates ),
+    Dates[Month Offset] = 0
+)</code></pre></section><section class="block"><h2 id="how-the-numbers-are-checked">How the numbers are checked</h2><p><code>reconcile.py</code> loads the same three CSV files with pandas and recalculates the headline figures without Power BI. The report&#x27;s Checks page shows the same figures from the DAX measures, so a wrong relationship or filter shows up as a mismatch.</p><div class="table-scroll" tabindex="0" role="region" aria-label="How the numbers are checked"><table><thead><tr><th scope="col">Figure</th><th scope="col">Python</th></tr></thead><tbody><tr><td>Program nights</td><td>289,916</td></tr><tr><td>Person nights</td><td>17,941,778</td></tr><tr><td>Programs</td><td>279</td></tr><tr><td>People per night, all dates</td><td>8,423.4</td></tr><tr><td>Bed occupancy, all dates</td><td>97.55%</td></tr><tr><td>Room occupancy, all dates</td><td>98.41%</td></tr><tr><td>People per night, October 2026</td><td>6,976.9</td></tr><tr><td>People per night, October 2025</td><td>8,697.6</td></tr><tr><td>Change from a year earlier</td><td>-19.78%</td></tr><tr><td>Bed occupancy, October 2026</td><td>96.23%</td></tr><tr><td>Program nights full, October 2026</td><td>67.35%</td></tr><tr><td>Peak month</td><td>January 2025, 10,227.5 a night</td></tr></tbody></table></div></section><figure class="fig"><img src="../../assets/img/shelter-checks.webp" alt="The Checks page of the report: tables of headline figures for all dates, the latest month, the peak month and each year" width="1600" height="900" loading="lazy"><figcaption>The Checks page.</figcaption></figure><section class="block"><h2 id="files">Files</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Files"><table><thead><tr><th scope="col">File</th><th scope="col">What it is</th></tr></thead><tbody><tr><td><code>ShelterSystem.pbix</code></td><td>The report as one Power BI file, with the data loaded</td></tr><tr><td><code>powerbi/</code></td><td>The same report as a Power BI project: TMDL model and PBIR report</td></tr><tr><td><code>prepare_data.py</code></td><td>Downloads the source files and writes the star schema to <code>data/</code></td></tr><tr><td><code>reconcile.py</code></td><td>Recalculates the headline figures in pandas</td></tr><tr><td><code>checks/expected_values.csv</code></td><td>The figures the report has to match</td></tr></tbody></table></div></section><section class="block"><h2 id="run-it">Run it</h2><p>To see the report, open <code>ShelterSystem.pbix</code> in Power BI Desktop, or open <code>powerbi/ShelterSystem.pbip</code> and choose Refresh. The model reads the data from this repository at a fixed commit, so a refresh gives the same numbers. To rebuild the data and the expected figures:</p><pre><code>pip install pandas
+python prepare_data.py
+python reconcile.py</code></pre></section>
+    </div>
+    <nav class="toc" aria-label="On this page" data-toc>
+      <p>On this page</p>
+      <ol><li><a href="#the-question">The question</a></li><li><a href="#what-the-report-shows">What the report shows</a></li><li><a href="#how-it-is-built">How it is built</a></li><li><a href="#dax-worth-a-look">DAX worth a look</a></li><li><a href="#how-the-numbers-are-checked">How the numbers are checked</a></li><li><a href="#files">Files</a></li><li><a href="#run-it">Run it</a></li></ol>
+    </nav>
+  </div>
+  <nav class="pager" aria-label="Other projects">
+    <div class="wrap pager-inner">
+      <a href="../../projects/05-bc-housing-forecast/"><span>Previous</span>BC Housing completions forecast</a>
+      <a href="../../projects/06-fraud-model-monitoring/"><span>Next</span>Fraud model monitoring</a>
+    </div>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Mo Maghaireh, Toronto</p>
+    <p>
+      <a href="mailto:mohammadaktham@gmail.com">mohammadaktham@gmail.com</a>
+      <a href="https://linkedin.com/in/mo-maghaireh">LinkedIn</a>
+      <a href="https://github.com/mohdaktham">GitHub</a>
+      <a href="https://github.com/mohdaktham/mohdaktham.github.io">Source for this site</a>
+    </p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
