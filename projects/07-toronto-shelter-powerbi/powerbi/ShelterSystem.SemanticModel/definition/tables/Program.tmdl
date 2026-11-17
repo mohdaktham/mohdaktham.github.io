@@ -1,0 +1,154 @@
+/// One row per program version. A program gets a new row when the city reclassifies it, so history is kept.
+table Program
+	lineageTag: aa17c9a9-cf7b-5251-9d42-f673c293a4d9
+
+	column ProgramKey
+		dataType: int64
+		isKey
+		isHidden
+		formatString: 0
+		lineageTag: b821eef3-a8b3-5935-b7fb-ad21370ea779
+		summarizeBy: none
+		sourceColumn: ProgramKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// The city's ID for the program. Stays the same across versions.
+	column 'Program ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 85eb1ae2-ddfc-58eb-b96f-b98e59a4b798
+		summarizeBy: none
+		sourceColumn: ProgramID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Program
+		dataType: string
+		lineageTag: 151595e9-cd52-5fe0-8e49-130f312a2398
+		summarizeBy: none
+		sourceColumn: Program
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organization
+		dataType: string
+		lineageTag: 38a8c99e-b0ec-573d-8256-6a13ee32c9b0
+		summarizeBy: none
+		sourceColumn: Organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shelter Group'
+		dataType: string
+		lineageTag: 5ceae850-adf6-5a2c-b796-9215eca54cf3
+		summarizeBy: none
+		sourceColumn: ShelterGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Who the program serves: men, women, youth, families or mixed adult.
+	column Sector
+		dataType: string
+		lineageTag: 66b0c8ee-216c-592c-876e-3c4c4d0e026b
+		summarizeBy: none
+		sourceColumn: Sector
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Emergency or transitional.
+	column 'Program Model'
+		dataType: string
+		lineageTag: 910eaf82-f863-5eb4-9c6e-4665450aeb99
+		summarizeBy: none
+		sourceColumn: ProgramModel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Service Type'
+		dataType: string
+		lineageTag: a40c8929-e2cf-5579-b1e9-994d03a00e81
+		summarizeBy: none
+		sourceColumn: ServiceType
+
+		annotation SummarizationSetBy = Automatic
+
+	/// The funding stream, such as the base system, refugee response or winter programs.
+	column 'Program Area'
+		dataType: string
+		lineageTag: ac848582-4b1e-52b1-9dd1-70cb034476f7
+		summarizeBy: none
+		sourceColumn: ProgramArea
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Bed or Room. Beds and rooms cannot be added together.
+	column 'Capacity Type'
+		dataType: string
+		lineageTag: e1503817-eea4-522c-8359-38acfd0275ec
+		summarizeBy: none
+		sourceColumn: CapacityType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'First Night'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 82e966c8-b0ce-5a61-8cd6-85551485a186
+		summarizeBy: none
+		sourceColumn: FirstNight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Last Night'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c593d20f-e6a9-5dbb-9696-9b27b950631a
+		summarizeBy: none
+		sourceColumn: LastNight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// True for the classification in force on the program's most recent night.
+	column 'Is Current'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b2f770f3-8417-5e32-aae1-e91426677489
+		summarizeBy: none
+		sourceColumn: IsCurrent
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Program = m
+		mode: import
+		source =
+				let
+				    Source = LoadCsv("dim_program.csv"),
+				    Typed = Table.TransformColumnTypes(
+				        Source,
+				        {
+				            {"ProgramKey", Int64.Type},
+				            {"ProgramID", Int64.Type},
+				            {"Program", type text},
+				            {"Organization", type text},
+				            {"ShelterGroup", type text},
+				            {"Sector", type text},
+				            {"ProgramModel", type text},
+				            {"ServiceType", type text},
+				            {"ProgramArea", type text},
+				            {"CapacityType", type text},
+				            {"FirstNight", type date},
+				            {"LastNight", type date},
+				            {"IsCurrent", type logical}
+				        },
+				        "en-US"
+				    )
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "79116acdacae22c27aed",
+  "position": {
+    "x": 24,
+    "y": 368,
+    "z": 3000,
+    "height": 120,
+    "width": 1232,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Peak Month Label"
+                }
+              },
+              "queryRef": "Occupancy.Peak Month Label",
+              "nativeQueryRef": "Peak Month Label",
+              "displayName": "Peak month"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "People per Night (Peak Month)"
+                }
+              },
+              "queryRef": "Occupancy.People per Night (Peak Month)",
+              "nativeQueryRef": "People per Night (Peak Month)",
+              "format": "#,0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Change from Peak %"
+                }
+              },
+              "queryRef": "Occupancy.Change from Peak %",
+              "nativeQueryRef": "Change from Peak %",
+              "format": "+0.00%;-0.00%;0.00%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Data Through"
+                }
+              },
+              "queryRef": "Occupancy.Data Through",
+              "nativeQueryRef": "Data Through",
+              "displayName": "Data"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Peak month'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

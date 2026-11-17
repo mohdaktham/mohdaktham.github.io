@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "004c505000e0469b826e",
+  "position": {
+    "x": 24,
+    "y": 96,
+    "z": 1000,
+    "height": 120,
+    "width": 1232,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Program Nights"
+                }
+              },
+              "queryRef": "Occupancy.Program Nights",
+              "nativeQueryRef": "Program Nights"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Person Nights"
+                }
+              },
+              "queryRef": "Occupancy.Person Nights",
+              "nativeQueryRef": "Person Nights"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Nights Reported"
+                }
+              },
+              "queryRef": "Occupancy.Nights Reported",
+              "nativeQueryRef": "Nights Reported"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Programs"
+                }
+              },
+              "queryRef": "Occupancy.Programs",
+              "nativeQueryRef": "Programs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Locations"
+                }
+              },
+              "queryRef": "Occupancy.Locations",
+              "nativeQueryRef": "Locations"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "People per Night"
+                }
+              },
+              "queryRef": "Occupancy.People per Night",
+              "nativeQueryRef": "People per Night",
+              "format": "#,0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Bed Occupancy %"
+                }
+              },
+              "queryRef": "Occupancy.Bed Occupancy %",
+              "nativeQueryRef": "Bed Occupancy %",
+              "format": "0.00%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Room Occupancy %"
+                }
+              },
+              "queryRef": "Occupancy.Room Occupancy %",
+              "nativeQueryRef": "Room Occupancy %",
+              "format": "0.00%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Full Program Nights %"
+                }
+              },
+              "queryRef": "Occupancy.Full Program Nights %",
+              "nativeQueryRef": "Full Program Nights %",
+              "format": "0.00%"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'All dates'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

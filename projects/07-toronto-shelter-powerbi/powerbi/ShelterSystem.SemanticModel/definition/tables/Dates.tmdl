@@ -1,0 +1,144 @@
+/// Calendar built in DAX from the first and last years in the data. Marked as the date table.
+table Dates
+	lineageTag: 75dc7a25-15b9-5a8d-a1a8-c1986f1be7ae
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: Short Date
+		lineageTag: b9c7b045-5a9f-57d6-9e28-3f335b13cdaf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		formatString: 0
+		lineageTag: b1de5557-41ce-5f39-9f52-1a1569043372
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		isHidden
+		formatString: 0
+		lineageTag: 3f20f2b2-b3ea-566b-b7fa-8a3aa0e109c4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 55e59e59-1d3b-5f9c-b316-d0a5d669654a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: 'Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		lineageTag: 6d82eaed-ef52-5fd4-958a-b5ccd5144176
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// The first day of the month. Use it on a chart axis for a monthly trend.
+	column 'Month Start'
+		formatString: mmm yyyy
+		lineageTag: cf9be1af-47f8-59a5-b6b9-2887cef517d8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Start]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Quarter
+		lineageTag: 9417098c-5d32-5073-8da3-6c853a53ac66
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday Number'
+		isHidden
+		formatString: 0
+		lineageTag: 34a3f132-9f8d-5768-8841-5c8a899fd88a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: 9891d4b3-7b8c-5cae-a5d4-911ac438ac39
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+		sortByColumn: 'Weekday Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Winter runs November to April, when the city adds winter programs.
+	column Season
+		lineageTag: f8ad0db9-b80e-5592-b05c-25a6d999a45f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Season]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Months from the latest month in the data: 0 is the latest month, -12 is the same month a year earlier.
+	column 'Month Offset'
+		formatString: 0
+		lineageTag: 7ac70ec7-98e2-59e3-8c81-382a267231dd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Offset]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// False for calendar dates after the last night in the data.
+	column 'Has Data'
+		lineageTag: 5cc617bf-b8c7-5227-8a86-f45a887e3d58
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Has Data]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dates = calculated
+		mode: import
+		source =
+				VAR LastNight = MAX ( Occupancy[Date] )
+				VAR CalendarStart = DATE ( YEAR ( MIN ( Occupancy[Date] ) ), 1, 1 )
+				VAR CalendarEnd = DATE ( YEAR ( LastNight ), 12, 31 )
+				RETURN
+				    ADDCOLUMNS (
+				        CALENDAR ( CalendarStart, CalendarEnd ),
+				        "Year", YEAR ( [Date] ),
+				        "Month Number", MONTH ( [Date] ),
+				        "Month", FORMAT ( [Date], "MMM" ),
+				        "Year Month", FORMAT ( [Date], "YYYY-MM" ),
+				        "Month Start", DATE ( YEAR ( [Date] ), MONTH ( [Date] ), 1 ),
+				        "Quarter", "Q" & QUARTER ( [Date] ),
+				        "Weekday Number", WEEKDAY ( [Date], 2 ),
+				        "Weekday", FORMAT ( [Date], "DDD" ),
+				        "Season", IF ( MONTH ( [Date] ) >= 11 || MONTH ( [Date] ) <= 4, "Winter (Nov to Apr)", "Summer (May to Oct)" ),
+				        "Month Offset", ( YEAR ( [Date] ) - YEAR ( LastNight ) ) * 12 + MONTH ( [Date] ) - MONTH ( LastNight ),
+				        "Has Data", [Date] <= LastNight
+				    )
+
+	annotation PBI_Id = 56e7db1f2ab8588c8ab60fbf75ac9c60
+

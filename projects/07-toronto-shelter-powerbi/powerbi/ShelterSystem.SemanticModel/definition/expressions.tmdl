@@ -1,0 +1,26 @@
+/// Where the three data files live. Pinned to the commit that added them, so the numbers always reproduce.
+expression DataFolder = "https://raw.githubusercontent.com/mohdaktham/mohdaktham.github.io/55bb5d4d207467fdfdb5c5335396f076e7071b06/projects/07-toronto-shelter-powerbi/data/" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 2ee01f11-95c7-5dec-bf62-5fc8ac653e8a
+
+	annotation PBI_ResultType = Text
+
+/// Loads one CSV from the data folder and promotes its header row. Every table uses it.
+/// DataFolder can be a web address or a folder on this computer, such as C:\shelter\data\
+expression LoadCsv =
+		(fileName as text) as table =>
+		let
+		    Bytes =
+		        if Text.StartsWith(DataFolder, "http")
+		        then Web.Contents(DataFolder, [RelativePath = fileName])
+		        else File.Contents(DataFolder & fileName),
+		    Source = Csv.Document(
+		        Bytes,
+		        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+		    ),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true])
+		in
+		    Promoted
+	lineageTag: ad946aaa-fa8a-5e14-a6ae-bebc7211af84
+
+	annotation PBI_ResultType = Function
+

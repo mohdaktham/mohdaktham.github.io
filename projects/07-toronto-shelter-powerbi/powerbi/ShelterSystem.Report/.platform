@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ShelterSystem"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b287c099-bca7-5122-9e1c-406f3f83baa7"
+  }
+}

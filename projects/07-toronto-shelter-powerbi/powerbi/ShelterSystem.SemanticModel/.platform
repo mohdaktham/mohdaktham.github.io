@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "ShelterSystem"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f17e8f40-c938-5d5d-84fc-39c9e4d1a199"
+  }
+}

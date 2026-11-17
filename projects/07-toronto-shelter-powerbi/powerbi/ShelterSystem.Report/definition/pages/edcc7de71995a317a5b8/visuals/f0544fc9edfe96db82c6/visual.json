@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "f0544fc9edfe96db82c6",
+  "position": {
+    "x": 24,
+    "y": 232,
+    "z": 2000,
+    "height": 120,
+    "width": 1232,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Latest Month Label"
+                }
+              },
+              "queryRef": "Occupancy.Latest Month Label",
+              "nativeQueryRef": "Latest Month Label",
+              "displayName": "Latest month"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "People per Night (Latest Month)"
+                }
+              },
+              "queryRef": "Occupancy.People per Night (Latest Month)",
+              "nativeQueryRef": "People per Night (Latest Month)",
+              "format": "#,0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "People per Night (Year Earlier)"
+                }
+              },
+              "queryRef": "Occupancy.People per Night (Year Earlier)",
+              "nativeQueryRef": "People per Night (Year Earlier)",
+              "format": "#,0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Change vs Year Earlier %"
+                }
+              },
+              "queryRef": "Occupancy.Change vs Year Earlier %",
+              "nativeQueryRef": "Change vs Year Earlier %",
+              "format": "+0.00%;-0.00%;0.00%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Bed Occupancy % (Latest Month)"
+                }
+              },
+              "queryRef": "Occupancy.Bed Occupancy % (Latest Month)",
+              "nativeQueryRef": "Bed Occupancy % (Latest Month)",
+              "format": "0.00%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Room Occupancy % (Latest Month)"
+                }
+              },
+              "queryRef": "Occupancy.Room Occupancy % (Latest Month)",
+              "nativeQueryRef": "Room Occupancy % (Latest Month)",
+              "format": "0.00%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Occupancy"
+                    }
+                  },
+                  "Property": "Full Program Nights % (Latest Month)"
+                }
+              },
+              "queryRef": "Occupancy.Full Program Nights % (Latest Month)",
+              "nativeQueryRef": "Full Program Nights % (Latest Month)",
+              "format": "0.00%"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Latest month'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

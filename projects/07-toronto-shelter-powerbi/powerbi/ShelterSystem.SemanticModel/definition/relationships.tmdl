@@ -1,0 +1,12 @@
+relationship 15df7096-e875-5d3e-8819-8c7df697c6a9
+	fromColumn: Occupancy.Date
+	toColumn: Dates.Date
+
+relationship de6cc2d7-54a9-5263-a2da-59e88d8489fb
+	fromColumn: Occupancy.ProgramKey
+	toColumn: Program.ProgramKey
+
+relationship 6f5bc282-7cb4-5807-9682-4b29fa1d6f54
+	fromColumn: Occupancy.LocationKey
+	toColumn: Location.LocationKey
+

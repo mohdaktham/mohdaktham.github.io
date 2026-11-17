@@ -1,0 +1,78 @@
+/// One row per shelter location, with the most recent name and address.
+table Location
+	lineageTag: f72160d9-0b6a-5de1-ad9a-99d40672138d
+
+	column LocationKey
+		dataType: int64
+		isKey
+		isHidden
+		formatString: 0
+		lineageTag: 6a35cf3a-4e37-50a5-9213-cb09f0575c9b
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 32ee4c7d-a6d5-5a0f-8393-d846a8a3159e
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 79f6e15b-4e78-5a4e-b851-8704c84dd540
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: 24a1fe1e-7dab-5626-8af3-41ee90f423d4
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: 5a2bcaa5-06a0-54d0-853a-538125e234c9
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	/// The first three characters of the postal code.
+	column 'Postal Area'
+		dataType: string
+		lineageTag: aac15590-307d-5494-b3af-b0d6f0a9c93e
+		summarizeBy: none
+		sourceColumn: PostalArea
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Location = m
+		mode: import
+		source =
+				let
+				    Source = LoadCsv("dim_location.csv"),
+				    Typed = Table.TransformColumnTypes(
+				        Source,
+				        {
+				            {"LocationKey", Int64.Type},
+				            {"Location", type text},
+				            {"City", type text},
+				            {"Address", type text},
+				            {"PostalCode", type text},
+				            {"PostalArea", type text}
+				        },
+				        "en-US"
+				    )
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

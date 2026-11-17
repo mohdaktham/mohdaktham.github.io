@@ -1,0 +1,474 @@
+/// One row per program per night. Every column is hidden so the table shows as a list of measures.
+table Occupancy
+	lineageTag: 3a224757-4edb-5aa0-9312-99974bf8db0c
+
+	/// One person staying one night. The base for every people measure.
+	measure 'Person Nights' = SUM ( Occupancy[Service Users] )
+		formatString: #,0
+		displayFolder: 1 People
+		lineageTag: 0a90c906-0165-575c-acca-684a9e036e06
+
+	/// Nights with at least one program reporting, in the current filters.
+	measure 'Nights Reported' = DISTINCTCOUNT ( Occupancy[Date] )
+		formatString: #,0
+		displayFolder: 1 People
+		lineageTag: a6a6b167-a746-5486-97b6-155cb3fa6460
+
+	/// Average number of people sheltered on a night. Averages over nights that have data, so a part month is not understated.
+	measure 'People per Night' = DIVIDE ( [Person Nights], [Nights Reported] )
+		formatString: #,0
+		displayFolder: 1 People
+		lineageTag: dba959dd-cda9-5525-9d69-baf373dbc1b8
+
+	/// The highest single-night count of people in the current filters.
+	measure 'Peak Night' = MAXX ( VALUES ( Occupancy[Date] ), [Person Nights] )
+		formatString: #,0
+		displayFolder: 1 People
+		lineageTag: a74596be-f822-5529-af55-a6fae648e1f9
+
+	/// Programs that reported at least one night. Counts program IDs, not program versions.
+	measure Programs = CALCULATE ( DISTINCTCOUNT ( Program[Program ID] ), Occupancy )
+		formatString: #,0
+		displayFolder: 1 People
+		lineageTag: bc2658a0-6a16-5636-9140-99fb11e7503f
+
+	/// Shelter locations with at least one night reported. Leaves out rows with no location recorded.
+	measure Locations = CALCULATE ( DISTINCTCOUNT ( Occupancy[LocationKey] ), Occupancy[LocationKey] <> 0 )
+		formatString: #,0
+		displayFolder: 1 People
+		lineageTag: 71823768-5f6e-5697-a353-9a581583aa65
+
+	/// One program reporting for one night. The grain of the fact table.
+	measure 'Program Nights' = COUNTROWS ( Occupancy )
+		formatString: #,0
+		displayFolder: 2 Capacity
+		lineageTag: d9916478-807b-5a89-862b-fb9c703b64cc
+
+	/// Beds or rooms available, summed over nights. Beds and rooms are different units, so use this with Capacity Type.
+	measure 'Capacity Units' = SUM ( Occupancy[Capacity] )
+		formatString: #,0
+		displayFolder: 2 Capacity
+		lineageTag: 295c6d67-45fa-5292-beae-42532cd935d5
+
+	/// Beds or rooms occupied, summed over nights.
+	measure 'Occupied Units' = SUM ( Occupancy[Occupied] )
+		formatString: #,0
+		displayFolder: 2 Capacity
+		lineageTag: e3b42f7b-dd27-5669-ba69-3729de816727
+
+	/// Occupied units as a share of available units. Meaningful within one capacity type.
+	measure 'Occupancy %' = DIVIDE ( [Occupied Units], [Capacity Units] )
+		formatString: 0.0%
+		displayFolder: 2 Capacity
+		lineageTag: 47bdd4ab-b0b0-57ec-9ebb-daa36b5a5733
+
+	/// Occupancy of bed-based programs only.
+	measure 'Bed Occupancy %' =
+			CALCULATE (
+			    [Occupancy %],
+			    KEEPFILTERS ( Program[Capacity Type] = "Bed" )
+			)
+		formatString: 0.0%
+		displayFolder: 2 Capacity
+		lineageTag: 746d2d89-3047-54c9-a222-d2427c1d8a14
+
+	/// Occupancy of room-based programs only, such as family and hotel programs.
+	measure 'Room Occupancy %' =
+			CALCULATE (
+			    [Occupancy %],
+			    KEEPFILTERS ( Program[Capacity Type] = "Room" )
+			)
+		formatString: 0.0%
+		displayFolder: 2 Capacity
+		lineageTag: 3ee9b0de-827f-5f76-ade0-df77fddb3c14
+
+	/// Average number of beds available on a night.
+	measure 'Beds per Night' =
+			CALCULATE (
+			    DIVIDE ( [Capacity Units], [Nights Reported] ),
+			    KEEPFILTERS ( Program[Capacity Type] = "Bed" )
+			)
+		formatString: #,0
+		displayFolder: 2 Capacity
+		lineageTag: 8ac2db67-39cb-5f0a-9b7f-9ad310da190c
+
+	/// Average number of rooms available on a night.
+	measure 'Rooms per Night' =
+			CALCULATE (
+			    DIVIDE ( [Capacity Units], [Nights Reported] ),
+			    KEEPFILTERS ( Program[Capacity Type] = "Room" )
+			)
+		formatString: #,0
+		displayFolder: 2 Capacity
+		lineageTag: 13783a25-9dfa-5b18-a127-ce1a5010d888
+
+	/// Program nights with every available bed or room taken.
+	measure 'Full Program Nights' =
+			COUNTROWS (
+			    FILTER ( Occupancy, Occupancy[Occupied] >= Occupancy[Capacity] )
+			)
+		formatString: #,0
+		displayFolder: 2 Capacity
+		lineageTag: aaf6a43f-9a4d-5ff4-86c0-e3040599dbc0
+
+	/// Share of program nights that were completely full.
+	measure 'Full Program Nights %' = DIVIDE ( [Full Program Nights], [Program Nights] )
+		formatString: 0.0%
+		displayFolder: 2 Capacity
+		lineageTag: b29a2a47-85ba-54db-8a94-c21f7aa9c996
+
+	/// Share of funded beds and rooms that were out of service, for example for repairs.
+	measure 'Unavailable %' =
+			VAR OutOfService = SUM ( Occupancy[Unavailable] )
+			RETURN
+			    DIVIDE ( OutOfService, [Capacity Units] + OutOfService )
+		formatString: 0.0%
+		displayFolder: 2 Capacity
+		lineageTag: 61f661a9-f2dc-5feb-8a5c-4674e2e9ae3c
+
+	/// People per night in the same period a year earlier. Only shifts dates that have data, so a part year is compared with the same part of the year before.
+	measure 'People per Night PY' =
+			CALCULATE (
+			    [People per Night],
+			    CALCULATETABLE (
+			        SAMEPERIODLASTYEAR ( Dates[Date] ),
+			        Dates[Has Data] = TRUE ()
+			    )
+			)
+		formatString: #,0
+		displayFolder: 3 Time comparisons
+		lineageTag: 0ff62613-1da4-5629-8fcf-a2c6b773ccbf
+
+	/// Change in people per night from the same period a year earlier.
+	measure 'People per Night YoY %' =
+			VAR Prior = [People per Night PY]
+			RETURN
+			    IF (
+			        NOT ISBLANK ( Prior ),
+			        DIVIDE ( [People per Night] - Prior, Prior )
+			    )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 3 Time comparisons
+		lineageTag: 57b88f3b-528e-5299-aa15-0d4722a03623
+
+	/// Average over the 28 nights ending on the last date in the filters. Smooths the daily line.
+	measure 'People per Night 28D' =
+			VAR LastDay = MAX ( Dates[Date] )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( [Person Nights] ),
+			        CALCULATE (
+			            [People per Night],
+			            DATESINPERIOD ( Dates[Date], LastDay, -28, DAY )
+			        )
+			    )
+		formatString: #,0
+		displayFolder: 3 Time comparisons
+		lineageTag: 98ec17bf-b40e-5a6b-aabe-4251f3eecb57
+
+	/// People per night in the latest complete month, whatever dates are selected. Still responds to sector and program filters.
+	measure 'People per Night (Latest Month)' =
+			CALCULATE (
+			    [People per Night],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = 0
+			)
+		formatString: #,0
+		displayFolder: 4 Latest month
+		lineageTag: d88f668e-2665-5c9c-8963-2c1d6979e89f
+
+	/// People per night in the same month one year before the latest month.
+	measure 'People per Night (Year Earlier)' =
+			CALCULATE (
+			    [People per Night],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = -12
+			)
+		formatString: #,0
+		displayFolder: 4 Latest month
+		lineageTag: 5185d211-14a0-58f3-81f3-76a23f73f4f7
+
+	/// Change in people per night, latest month against the same month a year earlier.
+	measure 'Change vs Year Earlier %' =
+			VAR Prior = [People per Night (Year Earlier)]
+			RETURN
+			    IF (
+			        NOT ISBLANK ( Prior ),
+			        DIVIDE ( [People per Night (Latest Month)] - Prior, Prior )
+			    )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 4 Latest month
+		lineageTag: b71778bd-d5ba-5f68-9d5f-3efadd6bbf61
+
+	/// Occupancy in the latest complete month. Meaningful within one capacity type.
+	measure 'Occupancy % (Latest Month)' =
+			CALCULATE (
+			    [Occupancy %],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = 0
+			)
+		formatString: 0.0%
+		displayFolder: 4 Latest month
+		lineageTag: 805c11c3-ba3e-5155-9d54-474e2b6254b8
+
+	/// Bed occupancy in the latest complete month.
+	measure 'Bed Occupancy % (Latest Month)' =
+			CALCULATE (
+			    [Bed Occupancy %],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = 0
+			)
+		formatString: 0.0%
+		displayFolder: 4 Latest month
+		lineageTag: 47ffaf7b-ab61-5b64-b274-3a6ce84c9182
+
+	/// Room occupancy in the latest complete month.
+	measure 'Room Occupancy % (Latest Month)' =
+			CALCULATE (
+			    [Room Occupancy %],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = 0
+			)
+		formatString: 0.0%
+		displayFolder: 4 Latest month
+		lineageTag: 7ca68cd8-3024-5fa7-827b-e88140909e01
+
+	/// Share of program nights completely full in the latest complete month.
+	measure 'Full Program Nights % (Latest Month)' =
+			CALCULATE (
+			    [Full Program Nights %],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = 0
+			)
+		formatString: 0.0%
+		displayFolder: 4 Latest month
+		lineageTag: c21dc015-e72a-535e-aa0f-cf39e3a53157
+
+	/// Share of funded capacity out of service in the latest complete month.
+	measure 'Unavailable % (Latest Month)' =
+			CALCULATE (
+			    [Unavailable %],
+			    REMOVEFILTERS ( Dates ),
+			    Dates[Month Offset] = 0
+			)
+		formatString: 0.0%
+		displayFolder: 4 Latest month
+		lineageTag: e17ecb7f-e0c9-5c15-b041-b393f250c812
+
+	/// The highest monthly average of people per night across all months.
+	measure 'People per Night (Peak Month)' =
+			VAR Months =
+			    CALCULATETABLE (
+			        ADDCOLUMNS ( VALUES ( Dates[Month Start] ), "@People", [People per Night] ),
+			        REMOVEFILTERS ( Dates ),
+			        Dates[Has Data] = TRUE ()
+			    )
+			RETURN
+			    MAXX ( Months, [@People] )
+		formatString: #,0
+		displayFolder: 4 Latest month
+		lineageTag: 2bad2a76-7dea-5249-b434-d6daec7e9ce3
+
+	/// Latest month against the peak month.
+	measure 'Change from Peak %' =
+			VAR Peak = [People per Night (Peak Month)]
+			RETURN
+			    DIVIDE ( [People per Night (Latest Month)] - Peak, Peak )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 4 Latest month
+		lineageTag: e121ff6a-e72f-5ca6-905f-32a767aa8c9f
+
+	/// The latest complete month as text, for example October 2026.
+	measure 'Latest Month Label' =
+			FORMAT (
+			    CALCULATE ( MAX ( Occupancy[Date] ), REMOVEFILTERS () ),
+			    "MMMM YYYY"
+			)
+		displayFolder: 5 Titles
+		lineageTag: 0a8bb650-8923-536e-bdeb-b7597d0ca851
+
+	/// The month with the highest people per night, as text.
+	measure 'Peak Month Label' =
+			VAR Months =
+			    CALCULATETABLE (
+			        ADDCOLUMNS ( VALUES ( Dates[Month Start] ), "@People", [People per Night] ),
+			        REMOVEFILTERS ( Dates ),
+			        Dates[Has Data] = TRUE ()
+			    )
+			VAR Peak = MAXX ( Months, [@People] )
+			RETURN
+			    FORMAT ( MAXX ( FILTER ( Months, [@People] = Peak ), Dates[Month Start] ), "MMMM YYYY" )
+		displayFolder: 5 Titles
+		lineageTag: fbafc5c0-28b4-560d-87f2-2ca2027458ba
+
+	/// Shown under the report title so a reader knows how current the data is.
+	measure 'Data Through' =
+			"Data through "
+			    & FORMAT ( CALCULATE ( MAX ( Occupancy[Date] ), REMOVEFILTERS () ), "MMMM D, YYYY" )
+		displayFolder: 5 Titles
+		lineageTag: 5d1401d0-728a-528a-a11a-51ea7145a12e
+
+	measure 'Title People' = "People sheltered per night, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: bfeb8819-3115-5bed-9e2d-f43796681e96
+
+	measure 'Title Change' = "Change from " & FORMAT ( EDATE ( CALCULATE ( MAX ( Occupancy[Date] ), REMOVEFILTERS () ), -12 ), "MMMM YYYY" )
+		displayFolder: 5 Titles
+		lineageTag: 01c593c9-d430-5a15-a8b8-5b19133d3565
+
+	measure 'Title Bed Occupancy' = "Bed occupancy, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: 69b06510-5b64-5414-abb5-eda697f4d9c1
+
+	measure 'Title Room Occupancy' = "Room occupancy, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: 413fa4a6-1113-58ed-9bdd-9a9306302d68
+
+	measure 'Title Full' = "Program nights completely full, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: 93ab1681-e617-56ec-b4d5-7f36f65817ee
+
+	measure 'Title Unavailable' = "Funded capacity out of service, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: c0cfe17e-db66-5621-8237-9d07a2c92487
+
+	measure 'Title Peak' = "Change from the peak in " & [Peak Month Label]
+		displayFolder: 5 Titles
+		lineageTag: e8519b09-669c-58f9-b19d-38fb56744cb6
+
+	measure 'Title Sector' = "People per night by sector, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: e19ec6a8-3111-5ccd-a219-cb630028210c
+
+	measure 'Title City' = "People per night by city, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: e60ed1c5-1b8e-5406-9916-1122ddae1cc2
+
+	measure 'Title Service Type' = "People per night by service type, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: d8fd208c-ae7f-549a-b258-055d423b14a2
+
+	measure 'Title Program Model' = "People per night by program model, " & [Latest Month Label]
+		displayFolder: 5 Titles
+		lineageTag: 82daa3bc-42eb-5b4b-9f8e-060bfde1d74a
+
+	measure 'Title Organizations' = "Organizations, " & [Latest Month Label] & " against a year earlier"
+		displayFolder: 5 Titles
+		lineageTag: 1764fb1d-78fd-5233-8c44-b32fc7e031b8
+
+	/// Cell colour for the heat map. Darker means a larger share of program nights were full.
+	measure 'Full Nights Colour' =
+			VAR Share = [Full Program Nights %]
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        ISBLANK ( Share ), BLANK (),
+			        Share >= 0.85, "#B4441A",
+			        Share >= 0.75, "#C87A55",
+			        Share >= 0.65, "#DBA588",
+			        Share >= 0.55, "#EBCFBD",
+			        "#F6EDE6"
+			    )
+		displayFolder: 6 Formatting
+		lineageTag: b9c76917-94fc-5474-b83e-f88eff1ce795
+
+	/// Keeps the heat map text readable on dark cells.
+	measure 'Full Nights Font Colour' = IF ( [Full Program Nights %] >= 0.75, "#FFFFFF", "#15211D" )
+		displayFolder: 6 Formatting
+		lineageTag: 64004c05-94c4-5b22-8530-116e3e770276
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 17e7c86b-5619-5a7a-b900-7f81164ae862
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ProgramKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ecaf4c52-4ff7-534c-8f1d-0271ae77d00e
+		summarizeBy: none
+		sourceColumn: ProgramKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 11788720-0809-5c5e-9822-56962c4baf00
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Service Users'
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: c1e01558-5b17-5a9b-afea-e96dfddfe6d4
+		summarizeBy: none
+		sourceColumn: ServiceUsers
+
+		annotation SummarizationSetBy = Automatic
+
+	column Capacity
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 9ed6b54e-9eda-57c8-b36c-739aa9137433
+		summarizeBy: none
+		sourceColumn: Capacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Occupied
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: dfed1c6d-fc90-5cca-b0cc-89cbe6bebe56
+		summarizeBy: none
+		sourceColumn: Occupied
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unavailable
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: b71b80c9-b097-506c-a75c-1a1ce897c88d
+		summarizeBy: none
+		sourceColumn: Unavailable
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Occupancy = m
+		mode: import
+		source =
+				let
+				    Source = LoadCsv("fact_occupancy.csv"),
+				    Typed = Table.TransformColumnTypes(
+				        Source,
+				        {
+				            {"Date", type date},
+				            {"ProgramKey", Int64.Type},
+				            {"LocationKey", Int64.Type},
+				            {"ServiceUsers", Int64.Type},
+				            {"Capacity", Int64.Type},
+				            {"Occupied", Int64.Type},
+				            {"Unavailable", Int64.Type}
+				        },
+				        "en-US"
+				    )
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+
